@@ -1,0 +1,627 @@
+//===============================================================================
+// IMPORTS
+//===============================================================================
+// normalize.css v3.0.0 | MIT License | git.io/normalize
+@import "_normalize.scss";
+
+// define mixins & functions
+@import "_mixins.scss";
+
+// define variables
+@import "_variables.scss";
+
+//===============================================================================
+// MAIN ELEMENTS
+//===============================================================================
+
+html,body {
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: 14px;
+  background-color: $earth;
+  height: 100%;
+  @include box-sizing;
+}
+
+body {
+	overflow-y: hidden;
+}
+
+div {
+	@include box-sizing;
+}
+
+h1 {
+	font-family: 'Oswald', helvetica, arial, sans-serif;
+	font-weight: 700;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	line-height: 1em;
+	padding-top: 0.25em;
+	span {
+		color: $green;
+	}
+
+	@media screen and (max-width: 500px){
+		font-size: 2em;
+	}
+}
+
+header {
+	height:84px;
+	background-color: $lblue;
+	text-align:center;
+
+	@media screen and (max-width: 500px){
+		height: 70px;
+	}
+}
+
+a, h2 {
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	text-decoration:none;
+	color: $earth;
+}
+
+ul, h1, h2 {
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+}
+//===============================================================================
+// STANDARD COLOURS: TEXT & BACKGROUND
+//===============================================================================
+
+.text-dblue{ color: $dblue; }
+.text-green{ color: $green; }
+.text-earth{ color: $earth; }
+.text-mud{ color: $mud; }
+.text-lblue{ color: $lblue; }
+
+.bg-dblue{ background-color: $dblue; }
+.bg-green{ background-color: $green; }
+.bg-earth{ background-color: $earth; }
+.bg-mud{ background-color: $mud; }
+.bg-lblue{ background-color: $lblue; }
+
+
+
+#key3 {
+ &:hover {
+ 	transform: scale(2);
+ }
+
+}
+
+.info {
+
+	.info-i {
+		color: $green;
+		font-weight: bold;
+		font-size: 1em;
+		position: absolute;
+		right: 10%;
+		bottom: 5%;
+		margin: 0;
+		padding: 3px 10px;
+		height: 30px;
+		width: 30px;
+		border: 3px solid $green;
+		border-radius: 50px;
+		text-align: center;
+		cursor: pointer;
+
+	}
+
+	.info-panel {
+		width: 50%;
+		background-color: darken($earth, 30%);
+		// color: lighten($mud, 10%);
+		color: $lblue;
+		position: absolute;
+		bottom: 5%;
+		right: -100%;
+		border-radius: 20px;
+
+		font-size: 14px;
+		padding: 20px 40px;
+
+		transition: all $long ease;
+
+		li {
+			list-style-type: disc;
+			margin-left: 1.3em;
+			font-weight: bold;
+		}
+
+		a {
+			color: $green;
+			font-weight: bold;
+		}
+
+		@media screen and (max-width: 500px){
+			width: 80%;
+		}
+	
+	
+
+	}
+
+	&:hover {
+		.info-panel {
+			right: 10%;;
+		}
+	}
+
+}
+
+.phone-width {
+	// width: 320px;
+	// height: 568px;
+	// margin-top: 50px;
+	width: 100%;
+	min-height: 100%;
+
+	@include margin-auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.chart-wrapper {
+	position:relative;
+	width: 320px;
+	height: 320px;
+	margin: auto;
+
+	@media screen and (max-width: 500px){
+		width: 280px;
+		height: 270px;
+	}
+
+	@media screen and (min-width: 900px){
+		width: 500px;
+		height: 500px;
+	}
+}
+
+.main-crop-selection {
+	width: 50%;
+	position: absolute;
+	top: 32%;
+	left: 24.5%;
+	text-align: center;
+	color: $lblue;
+
+	img {
+		width: 50%;
+		display: block;
+		@include margin-auto;
+	}
+
+	h3 {
+		margin: 0;
+		font-size: 1em;
+	}
+
+	.crop-intro-text {
+		margin-top: 25px;
+
+		@media screen and (min-width: 900px){
+			font-size: 2em;
+		}
+	}
+
+}
+
+.main-nav {
+	width: 70%;
+	margin-top: 10px;
+	height: 35px;
+	@include margin-auto;
+	a {
+		float: left;
+		text-align: center;
+		width: 46%;
+		margin: 0 2% 0 2%;
+		height: 45px;
+		display: inline;
+		font-size: 1.6em;
+		font-weight: 700;	
+		border-radius: 3px;
+		padding-top: 0.25em;
+		transition: all $short ease;
+		&:hover {
+			background-color: $green;
+		}
+
+		@media screen and ( max-width: 500px ) {
+		  height: 35px;
+		  font-size: 1.4em;
+		  padding-top: 0.18em;
+		}
+
+	}
+
+	@media screen and ( min-width: 500px ) {
+			width: 60%;
+		  padding-bottom: 70px;
+	}
+	@media screen and ( min-width: 900px ) {
+		  width: 50%;
+	}
+	@media screen and ( min-width: 1100px ) {
+		  width: 30%;
+	}
+}
+
+.menu-crops, .menu-months {
+	position: absolute;
+	display: block;
+	top: 200%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all $long ease-out;
+}
+
+.menu-crops-background, .menu-months-background {
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	opacity: 0.9;
+}
+
+.menu-crops-background {
+	background-color: $lblue;
+}
+
+.menu-months-background {
+	background-color: $dblue;
+}
+
+.menu-items-holder {
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.menu-items-holder-margin {
+	top: 100px;
+	height: calc(90% - 100px);
+	border-top: 1px solid $earth;
+}
+
+.menu-close{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 10%;
+	background-color: $earth;
+
+	&::after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		transform: rotate(45deg);
+		border-bottom: 3px solid $lblue;
+		border-right: 3px solid $lblue;
+		position: absolute;
+		top: 20%;
+		left: calc(50% - 10px);
+		transition: all $short ease-out;
+	}	
+
+	&:hover {
+		&::after {
+			top: 40%;
+			border-color: $green;
+		}
+	}
+}
+
+.menu-crops-item, .menu-months-item {
+	width: 33.3333333%;
+	max-width: 100%;
+	float: left;
+	box-sizing: border-box;
+	border-right: 1px solid $earth;
+	border-bottom: 1px solid $earth;
+	text-align: center;
+
+	transition: all $long ease;
+	transform-origin: 0% 0%;
+
+	img {
+		width: 80%;
+		display: block;
+		@include margin-auto;
+		padding-top: 10%;
+		transition: all $long ease;
+	}
+
+	h2 {
+		color: $earth;
+		font-weight: 700;
+		font-size: 14px;
+		padding-bottom: 5%;
+		transition: all $long ease;
+	}
+
+	&:hover{
+		img, h2 {
+			transform: scale(1.075);
+		}
+	}
+
+	@media screen and (min-width: 650px) {
+		width:25%;
+	}
+
+	@media screen and (min-width: 900px) {
+		width:16.666%;
+	}
+
+}
+
+.menu-crops-item{
+	&:hover{
+		background-color: $green;
+	}
+}
+
+.menu-months-item{
+	&:hover{
+		background-color: $lblue;
+	}
+}
+
+.month-1 { transform:rotate(30deg) }
+.month-2 { transform:rotate(60deg) }
+.month-3 { transform:rotate(90deg) }
+.month-4 { transform:rotate(120deg) }
+.month-5 { transform:rotate(150deg) }
+.month-6 { transform:rotate(180deg) }
+.month-7 { transform:rotate(210deg) }
+.month-8 { transform:rotate(240deg) }
+.month-9 { transform:rotate(270deg) }
+.month-10 { transform:rotate(300deg) }
+.month-11 { transform:rotate(330deg) }
+
+.hide {
+	transform: scale(0);
+	max-width: 0;
+	// max-height: 0;
+	border: none;
+}
+
+.visible {
+	// top: 0;
+	transform: translate(0, -200%);
+}
+
+.months-form-header {
+	height: 50px;
+	width: 100%;
+	background-color: $lblue;
+	float: left;
+	text-align: center;
+	color: $earth;
+	position: relative;
+	display: none;
+	border-bottom: 1px solid $earth;
+	
+	@include no-text-select;
+
+	p {
+		font-weight: bold;
+		font-size: 20px;
+		padding: 10px;
+	  margin: 0 auto;
+  	width: 80%;
+  	height: 50px;;
+	}
+	
+}
+
+.months-form-left, .months-form-right {
+	height: 50px;
+	width: 50px;
+	background-color: $lblue;
+	border-bottom: 1px solid $earth;
+}
+
+.months-form-left {
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	&::after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		transform: rotate(45deg);
+		border-bottom: 3px solid $green;
+		border-left: 3px solid $green;
+		position: absolute;
+		top: 30%;
+		left: 45%;
+		transition: all $short ease-out;
+	}	
+
+	&:hover {
+		&::after {
+			left: 30%;
+			border-color: $dblue;
+		}
+	}
+}
+
+.months-form-phase-left {
+	top: 50px;
+	left: 50px;
+}
+
+.months-form-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	&::after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		transform: rotate(-45deg);
+		border-bottom: 3px solid $green;
+		border-right: 3px solid $green;
+		position: absolute;
+		top: 30%;
+		right: 45%;
+		transition: all $short ease-out;
+	}	
+
+	&:hover {
+		&::after {
+			right: 30%;
+			border-color: $dblue;
+		}
+	}
+}
+
+
+[class*='months-btn-'] {
+	width: 33.333%;
+	height: 50px;
+	text-align: center;
+	float: left;
+  padding-top: 14px;
+  color: $earth;
+  margin: 0;
+  opacity: 0.3;
+
+  @include box-sizing;
+
+  p {
+  	line-height: 0;
+  	font-size: 16px;
+  	font-weight: bold;
+  }
+
+	&:hover {
+		transition: all $short ease;
+		opacity: 1;
+	}
+
+  &.active {
+  	opacity: 1;
+  }
+  
+}
+
+.months-btn-inside { background-color: $sowIn; }
+.months-btn-outside { background-color: $sowOut; }
+.months-btn-harvest { background-color: $harvest; }
+
+
+.main-key {
+	width: 50%;
+  margin: auto;
+  margin-top: 10px;
+  position: relative;
+
+  @media screen and (min-width: 700px){
+		width: 35%;
+	}
+
+	@media screen and (min-width: 900px){
+		width: 25%;
+	}
+
+}
+
+.main-key-section {
+	position: relative;
+	float: left;
+	width: 33.333%;
+
+	img {
+		width: 100%;
+		cursor: pointer;
+	}
+
+	.key-section-title {
+		opacity: 0;
+		z-index: -1;
+		width: 150%;
+		height: 60px;
+		background: $dblue;
+		color: $earth;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 1em;
+		padding: 17px 5px;
+		text-align: center;
+		border-radius: 3px;
+		position: absolute;
+		top: -90px;
+		left: -25%;
+		box-shadow: 0 0 5px #111;
+
+		transition: all $short ease;
+
+
+		&::after {
+			content: "";
+			border-top: 15px solid $dblue;
+			border-right: 15px solid transparent;
+			border-left: 15px solid transparent;
+			position: absolute;
+			bottom: -14px;
+			left: calc(50% - 15px);
+		}
+
+		&.section-outside {	background-color: $sowOut;
+			&::after { border-top: 15px solid $sowOut; }
+		}
+
+		&.section-harvest {	background-color: $harvest;
+			&::after { border-top: 15px solid $harvest; }
+		}
+
+	}
+
+	&:hover {
+		.key-section-title {
+			z-index: 10;
+			opacity: 1;
+		}
+	}
+
+}
+
+.svg-all-circle {
+	width: 98%;
+	height: auto;
+	margin: 0 1%;
+
+	path {
+		transition: all $vLong ease-out;
+	}
+}
+
+.sow-inside-active {	fill: $sowIn; }
+.sow-outside-active {	fill: $sowOut; }
+.harvest-active { 	fill: $harvest; }
+.svg-inactive { fill: lighten($earth, 3); } 
+
+.opacity-change {
+	animation: changeOpac 1s ease forwards;
+}
+
+@keyframes changeOpac {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
