@@ -57,3 +57,8 @@
         -ms-box-sizing: $type;
             box-sizing: $type;
 }
+
+
+@mixin changeCol {
+  animation: changeCol 60s infinite;
+}

@@ -19,11 +19,12 @@ html, body {
   font-size: 16px;
   background-color: #FFF;
   height: 100%;
+  overflow-x: hidden;
   @include box-sizing;
 
   .home-body {
   	background-color: $yellow;
-  	animation: changeCol 60s infinite;
+  	@include changeCol;
   }
 }
 
@@ -95,6 +96,7 @@ header {
 
 	.header-band {
 		background-color: $yellow;
+		@include changeCol;
 		opacity: 0.5;
 		text-align: right;
 		height: 100%;
@@ -116,14 +118,21 @@ header {
 	height: 40px;
 	position: relative;
 	top: 10px;
+	cursor: pointer;
+
 	transition: all $short ease;
 
-	img {
-		opacity: 1;
-		transition: all $short ease;
-	}
+}
 
-	.menu-button-pseudos {
+.menu-button-text {
+	opacity: 1;
+	transition: all $short ease;
+	cursor: pointer;
+}
+
+.menu-button-pseudos {
+	cursor: pointer;
+
 		&::before {
 			content: " ";
 			background-color: $ink;
@@ -132,6 +141,8 @@ header {
 			position: absolute;
 			top: 5px;
 			right: 69px;
+
+			transition: all $short ease;
 		}
 		&::after {
 			content: " ";
@@ -141,28 +152,46 @@ header {
 			position: absolute;
 			bottom: 5px;
 			right: 69px;
+
+			transition: all $long ease;
 		}
 	}
 
-	input[type=checkbox]:checked ~ img {
+.menu-panel {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background: $ink;
+	opacity: 0.9;
+	left: 150%;
+
+	transition: all $long ease;
+}
+
+input[type=checkbox]:checked ~ .menu-button-text {
    opacity: 0;
 	}
 	
-	
-	input[type=checkbox]:checked ~ div{
-		background-color: red;
-		&::before {
-			transform: rotate(50deg);
-		}
-		&::after {
-			background-color: blue;
-		}
+input[type=checkbox]:checked ~ .menu-button-pseudos{
+	background-color: red;
+	&::before {
+		transform: rotate(45deg);
+		top: 14px;
+		right: 29px;
+		background-color: $coral;
+	}
+	&::after {
+		transform: rotate(135deg);
+		bottom: 13px;
+		right: 29px;
+		background-color: $coral;
 	}
 }
 
-
-
-
+input[type=checkbox]:checked ~ .menu-panel{
+		left: 0;	
+}
 
 
 //===============================================================================
