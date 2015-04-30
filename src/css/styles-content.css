@@ -1,0 +1,68 @@
+/* line 23, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+*, *::before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; }
+
+/* line 29, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+ul {
+  padding: 0;
+  list-style: none; }
+
+/* line 11, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.content-block {
+  width: 100%;
+  height: 100%;
+  padding: 60px 20px 30px 20px; }
+  @media screen and (min-width: 350px) {
+    .content-block {
+      padding: 80px 20px 30px 20px; } }
+  @media screen and (min-width: 480px) {
+    .content-block {
+      padding: 100px 30px 30px 30px; } }
+
+/* line 25, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.content-intro {
+  width: 100%;
+  float: left;
+  margin-bottom: 30px; }
+  /* line 30, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .content-intro h1 {
+    display: none; }
+    @media screen and (min-width: 350px) {
+      .content-intro h1 {
+        display: inline; } }
+  @media screen and (min-width: 850px) {
+    .content-intro {
+      width: 50%; } }
+
+/* line 43, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.content-sect-wrap {
+  float: left;
+  width: 100%; }
+  @media screen and (min-width: 350px) {
+    .content-sect-wrap {
+      width: 80%; } }
+
+/* line 52, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.content-para {
+  float: left;
+  border-left: solid 1px #CACCD9;
+  padding-left: 1em;
+  margin-top: 1em; }
+  /* line 59, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .content-para p:first-child {
+    margin-top: 0; }
+  /* line 62, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .content-para p:last-child {
+    margin-bottom: 0; }
+
+/* line 68, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.content-images {
+  float: left;
+  width: 100%;
+  margin-bottom: 50px; }
+  @media screen and (min-width: 850px) {
+    .content-images {
+      width: 50%; } }
