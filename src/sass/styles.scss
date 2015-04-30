@@ -213,6 +213,10 @@ input[type=checkbox] {
 		&:hover {
 			background-color: $coral;
 		}
+
+		@media screen and (max-width: 480px) {
+			height: 2.3em;
+		}
 	}
 
 	a {
@@ -225,8 +229,8 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:checked ~ .menu-button-text {
-   opacity: 0;
-	}
+  opacity: 0;
+}
 	
 input[type=checkbox]:checked ~ .menu-button-pseudos{
 	background-color: red;
