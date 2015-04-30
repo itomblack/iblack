@@ -389,7 +389,7 @@ input[type=checkbox] {
   background: #000030;
   opacity: 0.9;
   left: 150%;
-  padding-top: 5em;
+  padding-top: 3em;
   -webkit-transition: all 0.85s ease;
   transition: all 0.85s ease; }
   /* line 206, /Users/itomblack/Repos/iblack/src/sass/styles.scss */
