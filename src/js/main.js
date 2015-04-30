@@ -9,7 +9,11 @@ $( document ).ready(function() {
   'blog'
   ]
 
-  // load svgs into home page
+  //load menu & footer
+  $('header').load('menu.html');
+  $('footer').load('footer.html');
+
+  // load svgs into home page <a> tags
   for (i=0; i<menuItems.length; i++) {
       $( "#home-ill-" + menuItems[i] ).load("img/home-svgs/" + menuItems[i] + ".svg");
   }

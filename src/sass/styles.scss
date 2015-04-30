@@ -22,12 +22,11 @@ html, body {
   overflow-x: hidden;
   @include box-sizing;
 
-  .home-body {
-  	background-color: $yellow;
-  	@include changeCol;
-  }
 }
 
+header {
+	text-align: center;
+}
 
 div, img {
 	@include box-sizing;
@@ -53,6 +52,17 @@ h2 {
 	font-size: 2.5em;
 	color: $ink;
 }
+
+h6 {
+	color: $yellow;
+	font-size: 0.875em;
+	font-weight: 300;
+	padding: 0;
+	line-height: 1em;
+	margin: 0;
+	font-family: 'Oswald', helvetica, arial, sans-serif;
+}
+
 
 ul, h1, h2 {
 	margin: 0;
@@ -91,7 +101,7 @@ input[type=checkbox] {
 .header-band {
 	background-color: $yellow;
 	@include changeCol;
-	opacity: 0.5;
+	opacity: 1;
 	text-align: right;
 	height: 60px;
 	width: 100%;
@@ -99,9 +109,20 @@ input[type=checkbox] {
 	top: 0;
 	left: 0;
 
+	.home-body & {
+		opacity: 0.5;
+	}
+
 	@media screen and (max-width: 480px) {
 		height: 40px;
 	}
+}
+
+.home-body {
+	background-color: $yellow;
+	@include changeCol;
+	padding-top: 60px;
+	padding-bottom: 50px;
 }
 
 .menu-button-text {
@@ -169,8 +190,29 @@ input[type=checkbox] {
 	background: $ink;
 	opacity: 0.9;
 	left: 150%;
+	padding-top: 5em;
 
 	transition: all $long ease;
+
+	ul li {
+		width: 100%;
+		text-align: center;
+		height: 3em;
+		padding-top: 1em;
+		transition: all $short ease;
+
+		&:hover {
+			background-color: $coral;
+		}
+	}
+
+	a {
+		font-family: 'Oswald', helvetica, arial, sans-serif;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: white;
+
+	}
 }
 
 input[type=checkbox]:checked ~ .menu-button-text {
@@ -209,18 +251,69 @@ input[type=checkbox]:checked ~ .menu-panel{
 
 [class*="home-ill"] {
   width: 100%;
-  padding: 10px 50px;
+  height: 300px;
   float: left;
+
+  svg {
+  	max-height: 100%;
+  }
+
+  #shadow, #face {
+  	transform: translate(0,0);
+  	transition: transform $long ease;
+  }
+
+  &:hover {
+
+  // 	path {
+		// 	animation: heartBeat 3s infinite;
+		// }
+
+		& #shadow, #face {
+			transform: translate(6px, 6px);
+		}
+  }
 
 	@media screen and (min-width: 480px) {
 		width: 50%;
+		padding: 10px 20px;
+	}
+
+	@media screen and (min-width: 750px) {
+		width: 33.33%;
 	}
 
 }
 
 .home-ill-1 {
-	padding: 10px 80px;
+	 padding: 0 0px 30px 0px;
 }
+
+.fade-in {
+	opacity: 0;
+	animation: fadeIn 4s forwards;
+}
+
+.footer-bar {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height: 40px;
+	padding: 0.8em 1.3em 0 1.3em;
+	background-color: $ink;
+
+	h6 {
+		&:first-child {
+			float: left;
+		}
+		&:last-child {
+			float: right;
+		}
+	}
+}
+
+
+
 
 
 //===============================================================================
@@ -233,3 +326,20 @@ input[type=checkbox]:checked ~ .menu-panel{
 	50% { background-color: $coral; }
 	100% { background-color: $yellow; }
 }
+
+@keyframes heartBeat {
+  0% { stroke: $ink;}
+  50% { stroke: $coral; }
+  100% { stroke: $ink;}
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+
+
+
+
