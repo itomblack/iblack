@@ -32,6 +32,14 @@ div, img {
 	@include box-sizing;
 }
 
+ul, h1, h2 {
+	margin: 0 0 0 0;
+}
+
+h1, h2 {
+	float: left;
+	line-height: 1em;
+}
 h1 {
 	font-family: 'Oswald', helvetica, arial, sans-serif;
 	font-weight: 400;
@@ -39,6 +47,7 @@ h1 {
 	text-transform: uppercase;
 	font-style: italic;
 	color: $yellow;
+	margin-top: -0.35em;
 
 	@media screen and (max-width: 500px){
 		// font-size: 2em;
@@ -61,11 +70,6 @@ h6 {
 	line-height: 1em;
 	margin: 0;
 	font-family: 'Oswald', helvetica, arial, sans-serif;
-}
-
-
-ul, h1, h2 {
-	margin: 0;
 }
 
 p {
@@ -312,7 +316,51 @@ input[type=checkbox]:checked ~ .menu-panel{
 	}
 }
 
+.content-intro {
+ width: 100%;
+ padding: 60px 20px 0 20px;
 
+ 	h1 {
+ 		display: none;
+
+ 		@media screen and (min-width: 350px){
+ 			display: inline;
+ 		}
+ 	}
+
+ 	@media screen and (min-width: 350px) {
+		padding: 80px 20px 0 20px;
+ 	}
+
+ 	@media screen and (min-width: 480px) {
+		padding: 100px 30px 0 30px;
+ 	}
+}
+
+.content-sect-wrap {
+	float: left;
+	width: 100%;
+
+	@media screen and (min-width: 350px){
+ 		width: 80%;
+ 	}
+}
+
+.content-para {
+	float: left;
+	border-left: solid 1px $grey;
+  padding-left: 1em;
+  margin-top: 1em;
+
+  p {
+	  &:first-child {
+	  	margin-top: 0;
+	  }
+	  &:last-child {
+	  	margin-bottom: 0;
+	  }
+	}
+}
 
 
 
