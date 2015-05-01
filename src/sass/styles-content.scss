@@ -8,6 +8,7 @@
 // define variables
 @import "_variables.scss";
 
+
 .content-block {
   width: 100%;
   height: 100%;
@@ -25,7 +26,8 @@
 .content-intro {
  width: 100%;
  float: left;
- margin-bottom: 30px;
+ // overflow-x: hidden;
+ // margin-bottom: 30px;
 
   h1 {
     display: none;
@@ -43,17 +45,146 @@
 .content-sect-wrap {
   float: left;
   width: 100%;
+  position: relative;
 
   @media screen and (min-width: 350px){
     width: 80%;
   }
 }
 
-.content-para {
+.content-images {
   float: left;
+  width: 100%;
+  margin-bottom: 3.5em;
+  max-height: 90%;
+
+  @media screen and (min-width: 850px) {
+    width: 50%;
+  }
+}
+
+.content-img {
+  max-height: 500px;
+}
+
+.content-img-intro {
+  @media screen and (max-width: 850px) {
+    display: none;
+  }
+}
+
+.content-nav {
+  width: 85%; //for non calc browsers
+  width: calc( 100% - 90px );
+  font-family: 'Oswald', helvetica, arial, sans-serif;
+  font-weight: 300;
+  text-align: center;
+  float: left;
+  border-bottom: solid 1px $grey;
+  padding-bottom: 10px;
+  margin: 75px 0 35px 45px;
+  
+  @media screen and (max-width: 480px) { 
+    margin: 55px 0 35px 45px;
+  }
+  @media screen and (max-width: 350px) { 
+    margin: 55px 0 20px 20px;
+    width: 100%;
+  }
+    
+  li {
+
+    width: 50%;
+    height: 25px;
+    color: $ink;
+    float: left;
+    position: relative;
+
+    @media screen and (min-width: 450px){ 
+      width: 33.33%;
+      height: 30px;
+    }
+    @media screen and (min-width: 580px){ width: 25%; }
+    @media screen and (min-width: 920px){ width: 12.45%; }
+
+    a {
+      color: $ink;
+      text-decoration: none;
+      transition: all $short ease;
+    }
+
+    &::before, &::after {
+      content: "•";
+      font-size: 2.5em;
+      color: $yellow;
+      line-height: 0em;
+      height: 10px;
+      position: absolute;
+      top: 11px;
+      left: 0;
+      transition: all $short ease;
+    }
+
+    &::after { left: 100%; }
+
+    &:hover {
+      a { color: $coral; }
+    }
+
+  }
+}
+
+.content-prev, .content-next {
+  width: 40px;
+  height: 40px;
+  background-color: $grey;
+  border-radius: 50px;
+  float: left;
+  margin: 0 1em 0 0;
+  position: relative;
+  cursor: pointer;
+  transition: all $long ease;
+
+  &::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-bottom: solid 2px white;
+    border-right: solid 2px white;
+    display: block;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 13px;
+    left: 9px;
+  }
+
+  &:hover {
+    background-color: $ink;
+  }
+}
+
+.content-prev {
+  clear: left;
+  &::after {
+    transform: rotate(135deg);
+    left: 15px;
+  }
+}
+
+.content-para {
+  position: absolute;
   border-left: solid 1px $grey;
   padding-left: 1em;
-  margin-top: 1em;
+  top: 10px;
+
+  transform: translateX(-200%);
+  transition: all $long ease;
+  
+  h3 {
+    color: $ink;
+    transform: translateX(-40%);
+    transition: all $vLong ease;
+  }
 
   p {
     &:first-child {
@@ -65,14 +196,37 @@
   }
 }
 
-.content-images {
-  float: left;
-  width: 100%;
-  margin-bottom: 50px;
-
-  @media screen and (min-width: 850px) {
-    width: 50%;
+.content-visible {
+  transform: translateX(0);
+  h3 {
+    color: $midgrey;
+    transform: translateX(0%);
   }
 }
+
+.view-button {
+  font-family: 'Oswald', helvetica, arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $coral;
+  color: white;
+  padding: 2px 5px;
+  width: 145px;
+  display: block;
+
+  &::after {
+    content: "";
+    background: url(../img/icons/open-window.svg) 99% center no-repeat;
+    background-size: 20px;
+    padding-right: 27px;
+    display: inline-block;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    margin-bottom: -1px;
+  }
+}
+
 
 

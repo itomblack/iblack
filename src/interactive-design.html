@@ -13,20 +13,36 @@
 
 
   <body id="design-body" class="design-body">
-    <header>
-      <!-- Menu -->
-      <p class="fade-in">Please enable Javascript</p>  
-    </header>
+    
+
+    <!-- <div id="content-nav" class="content-nav">
+      <ul>
+        <li><a href="#">Bespokea</a></li>
+        <li><a href="#">Whisky Map</a></li>
+        <li><a href="#">Sow &amp; Grow</a></li>
+        <li><a href="#">Ally &amp; Alex</a></li>
+        <li><a href="#">Nutrition Data</a></li>
+        <li><a href="#">World Map</a></li>
+        <li><a href="#">UKPE</a></li>
+        <li><a href="#">Attain</a></li>
+      </ul>
+    </div> -->
 
 
     <!-- MAIN CONTENT -->
     <div id="content-block" class="content-block">
       <!-- LHS -->
       <div id="content-intro" class="content-intro">
-        <h1 id="content-sect-num">1.&nbsp;</h1>
+        <!-- Title -->
+         <h2 id="content-sect">Interactive Design</h2>
+         <!-- Nav buttons -->
+         <div id="content-prev" class="content-prev"></div>
+        <div id="content-next" class="content-next"></div>
+
+        <!-- content to swipe through -->
         <div class="content-sect-wrap">
-          <h2 id="content-sect">Interactive Design</h2>
-          <div id="content-para" class="content-para">
+         
+          <div id="content-para-1" class="content-para content-visible">
             <p>
               When I’m not sliding down moutains or scrambling up rocks, I spend most of my time designing &amp; building web content. I work with all kinds of clients, from industries in the FTSE 100 to small businesses and film directors.
             </p>
@@ -37,26 +53,50 @@
               If you would like to discuss a new project with me I would love to chat, so <a href="/contact.html">get in touch.</a>
             </p>
           </div>
-        </div>
+
+          <div id="content-para-2" class="content-para">
+            <h3>Bespokea</h3><br>
+            <p>
+              A new custom furniture brand, set up in 2014. The BrandNewStudio had created the brand, along with a style guide for a desktop site. I was asked to take this, make it mobile friendly, and build it using a CMS so the client could manage the site.
+            </p>
+            <a href="http://bespokea.london/" target="_blank" class="view-button">View In Browser</a>
+          </div>
+
+          <div id="content-para-2" class="content-para">
+            <h3>Grow &amp; Sow</h3><br>
+            <p>
+              Frustrated with the lack of easy-to-access data on growing vegetables at home in the UK, I created a web app to fulfil my needs.
+            </p>
+            <p>
+              Users can select either a crop or month of their choice. The crop selection will display which months are suitable for indoor growth, outdoor growth and harvesting. Selecting a month will show you what vegetables you could plant or harvest at that time of year.
+            </p>
+            <a href="http://iblack.co.uk/harvest/" target="_blank" class="view-button">View In Browser</a>
+          </div>
+
+        </div> <!-- Close content section wrap -->
+
       </div>
 
       <!-- RHS -->
 
       <div id="content-images" class="content-images">
-        <img src="img/home-svgs/interactive-design.svg"/>
+        <img class="content-img content-img-intro" src="img/home-svgs/interactive-design.svg"/>
       </div>
 
-    </div> <!-- content block end -->
- 
 
-    
+    </div> <!-- content block end -->
+
+
+
+
+
+ 
+    <header> <!-- Menu -->
+      <p class="fade-in">Please enable Javascript</p>  
+    </header> 
 
     <!-- Footer --> 
     <footer></footer>
-
-
-
-
 
     <script src="js/vendor/jquery-2.1.1.min.js"></script> 
     <script src="js/main.js"></script>

@@ -1,16 +1,16 @@
-/* line 23, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+/* line 24, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
 *, *::before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
 
-/* line 29, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+/* line 30, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
 ul {
   padding: 0;
   list-style: none; }
 
-/* line 11, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 12, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-block {
   width: 100%;
   height: 100%;
@@ -22,12 +22,11 @@ ul {
     .content-block {
       padding: 100px 30px 30px 30px; } }
 
-/* line 25, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 26, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-intro {
   width: 100%;
-  float: left;
-  margin-bottom: 30px; }
-  /* line 30, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  float: left; }
+  /* line 32, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   .content-intro h1 {
     display: none; }
     @media screen and (min-width: 350px) {
@@ -37,32 +36,193 @@ ul {
     .content-intro {
       width: 50%; } }
 
-/* line 43, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 45, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-sect-wrap {
   float: left;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   @media screen and (min-width: 350px) {
     .content-sect-wrap {
       width: 80%; } }
 
-/* line 52, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
-.content-para {
-  float: left;
-  border-left: solid 1px #CACCD9;
-  padding-left: 1em;
-  margin-top: 1em; }
-  /* line 59, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
-  .content-para p:first-child {
-    margin-top: 0; }
-  /* line 62, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
-  .content-para p:last-child {
-    margin-bottom: 0; }
-
-/* line 68, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 55, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-images {
   float: left;
   width: 100%;
-  margin-bottom: 50px; }
+  margin-bottom: 3.5em;
+  max-height: 90%; }
   @media screen and (min-width: 850px) {
     .content-images {
       width: 50%; } }
+
+/* line 66, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.content-img {
+  max-height: 500px; }
+
+@media screen and (max-width: 850px) {
+  .content-img-intro {
+    display: none; } }
+
+/* line 76, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.content-nav {
+  width: 85%;
+  width: -webkit-calc( 100% - 90px);
+  width: calc( 100% - 90px);
+  font-family: 'Oswald', helvetica, arial, sans-serif;
+  font-weight: 300;
+  text-align: center;
+  float: left;
+  border-bottom: solid 1px #CACCD9;
+  padding-bottom: 10px;
+  margin: 75px 0 35px 45px; }
+  @media screen and (max-width: 480px) {
+    .content-nav {
+      margin: 55px 0 35px 45px; } }
+  @media screen and (max-width: 350px) {
+    .content-nav {
+      margin: 55px 0 20px 20px;
+      width: 100%; } }
+  /* line 95, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .content-nav li {
+    width: 50%;
+    height: 25px;
+    color: #000030;
+    float: left;
+    position: relative; }
+    @media screen and (min-width: 450px) {
+      .content-nav li {
+        width: 33.33%;
+        height: 30px; } }
+    @media screen and (min-width: 580px) {
+      .content-nav li {
+        width: 25%; } }
+    @media screen and (min-width: 920px) {
+      .content-nav li {
+        width: 12.45%; } }
+    /* line 110, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+    .content-nav li a {
+      color: #000030;
+      text-decoration: none;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    /* line 116, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+    .content-nav li::before, .content-nav li::after {
+      content: "•";
+      font-size: 2.5em;
+      color: #F2DB00;
+      line-height: 0em;
+      height: 10px;
+      position: absolute;
+      top: 11px;
+      left: 0;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    /* line 128, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+    .content-nav li::after {
+      left: 100%; }
+    /* line 131, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+    .content-nav li:hover a {
+      color: #FF5754; }
+
+/* line 137, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.content-prev, .content-next {
+  width: 40px;
+  height: 40px;
+  background-color: #CACCD9;
+  border-radius: 50px;
+  float: left;
+  margin: 0 1em 0 0;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.85s ease;
+  transition: all 0.85s ease; }
+  /* line 148, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .content-prev::after, .content-next::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-bottom: solid 2px white;
+    border-right: solid 2px white;
+    display: block;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 13px;
+    left: 9px; }
+  /* line 161, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .content-prev:hover, .content-next:hover {
+    background-color: #000030; }
+
+/* line 166, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.content-prev {
+  clear: left; }
+  /* line 168, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .content-prev::after {
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    left: 15px; }
+
+/* line 174, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.content-para {
+  position: absolute;
+  border-left: solid 1px #CACCD9;
+  padding-left: 1em;
+  top: 10px;
+  -webkit-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  transform: translateX(-200%);
+  -webkit-transition: all 0.85s ease;
+  transition: all 0.85s ease; }
+  /* line 183, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .content-para h3 {
+    color: #000030;
+    -webkit-transform: translateX(-40%);
+    -ms-transform: translateX(-40%);
+    transform: translateX(-40%);
+    -webkit-transition: all 1.4s ease;
+    transition: all 1.4s ease; }
+  /* line 190, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .content-para p:first-child {
+    margin-top: 0; }
+  /* line 193, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .content-para p:last-child {
+    margin-bottom: 0; }
+
+/* line 199, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.content-visible {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0); }
+  /* line 201, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .content-visible h3 {
+    color: #555570;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%); }
+
+/* line 207, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.view-button {
+  font-family: 'Oswald', helvetica, arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #FF5754;
+  color: white;
+  padding: 2px 5px;
+  width: 145px;
+  display: block; }
+  /* line 218, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .view-button::after {
+    content: "";
+    background: url(../img/icons/open-window.svg) 99% center no-repeat;
+    -webkit-background-size: 20px;
+    background-size: 20px;
+    padding-right: 27px;
+    display: inline-block;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    margin-bottom: -1px; }

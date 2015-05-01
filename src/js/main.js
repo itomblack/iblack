@@ -19,7 +19,7 @@ $( document ).ready(function() {
   var drawingPaths = function (){
   
     var current_frame = 0;
-    var total_frames = 120;
+    var total_frames = 90;
     var path = [];
     var length = [];
 
@@ -54,6 +54,41 @@ $( document ).ready(function() {
 for (i=0; i<menuItems.length; i++) {
   $( "#home-ill-" + menuItems[i] ).load("img/home-svgs/" + menuItems[i] + ".svg", drawingPaths);
 }
+
+
+//*********** scrolling between projects ********//
+
+$('#content-prev').click(function(){
+  moveSection(-1);
+});
+$('#content-next').click(function(){
+  moveSection(1);
+});
+
+function moveSection(direction) {
+  var contentPara = $('.content-para'); 
+  var listLength = contentPara.length;
+  for(var i=0; i<listLength; i++){
+
+    if ( $(contentPara[i]).hasClass('content-visible') === true ) {
+      $(contentPara[i]).removeClass('content-visible');
+
+      //if at start of list go to end
+      if ( (i+direction) < 0 ) { i = listLength; }
+
+      //if at end of list go to start
+      if ( (i+direction) >= listLength ) { i = -1; }
+      
+      $(contentPara[i + direction]).addClass('content-visible');
+
+      i = listLength; //exit loop
+    }
+  }
+} //*************** END MOVESECTION ************//
+
+
+
+
 
 
 
