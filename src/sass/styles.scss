@@ -19,8 +19,10 @@ html, body {
   font-size: 16px;
   background-color: #FFF;
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   @include box-sizing;
+
+  @media screen and (min-width: 850px) { overflow-x: scroll; }
 
 }
 
