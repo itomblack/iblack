@@ -32,19 +32,19 @@ div, img {
 	@include box-sizing;
 }
 
-ul, h1, h2 {
+ul, h1, h2, h3 {
 	margin: 0 0 0 0;
 }
 
-h1, h2 {
+h1, h2, h3 {
 	float: left;
 	line-height: 1em;
+	font-weight: 400;
+	text-transform: uppercase;
 }
 h1 {
-	font-family: 'Oswald', helvetica, arial, sans-serif;
-	font-weight: 400;
+	font-family: helvetica, arial, sans-serif;
 	font-size: 4em;
-	text-transform: uppercase;
 	font-style: italic;
 	color: $yellow;
 	margin-top: -0.35em;
@@ -56,10 +56,15 @@ h1 {
 
 h2 {
 	font-family: 'Oswald', helvetica, arial, sans-serif;
-	font-weight: 400;
-	text-transform: uppercase;
 	font-size: 2.5em;
 	color: $ink;
+	margin-bottom: 10px;
+}
+
+h3 {
+	font-family: 'Oswald', helvetica, arial, sans-serif;
+	font-size: 1.8em;
+	color: $midgrey;
 }
 
 h6 {
@@ -234,7 +239,6 @@ input[type=checkbox]:checked ~ .menu-button-text {
 }
 	
 input[type=checkbox]:checked ~ .menu-button-pseudos{
-	background-color: red;
 
 	&::before {
 		transform: rotate(45deg);
