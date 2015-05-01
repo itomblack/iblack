@@ -759,12 +759,13 @@ ul {
   border-left: solid 1px #CACCD9;
   padding-left: 1em;
   top: 10px;
+  margin-bottom: 50px;
   -webkit-transform: translateX(-200%);
   -ms-transform: translateX(-200%);
   transform: translateX(-200%);
   -webkit-transition: all 0.85s ease;
   transition: all 0.85s ease; }
-  /* line 183, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 184, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   .content-para h3 {
     color: #000030;
     -webkit-transform: translateX(-40%);
@@ -772,26 +773,26 @@ ul {
     transform: translateX(-40%);
     -webkit-transition: all 1.4s ease;
     transition: all 1.4s ease; }
-  /* line 190, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 191, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   .content-para p:first-child {
     margin-top: 0; }
-  /* line 193, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 194, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   .content-para p:last-child {
     margin-bottom: 0; }
 
-/* line 199, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 200, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-visible {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0); }
-  /* line 201, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 202, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   .content-visible h3 {
     color: #555570;
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
     transform: translateX(0%); }
 
-/* line 207, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 208, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .view-button {
   font-family: 'Oswald', helvetica, arial, sans-serif;
   font-weight: 300;
@@ -802,7 +803,7 @@ ul {
   padding: 2px 5px;
   width: 145px;
   display: block; }
-  /* line 218, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 219, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   .view-button::after {
     content: "";
     background: url(../img/icons/open-window.svg) 99% center no-repeat;
