@@ -49,17 +49,21 @@
   width: 100%;
   height: 330px;
   position: relative;
+  clear: left;
 
   @media screen and (min-width: 350px) { width: 80%;}
-  @media screen and (min-width: 450px) { height: 280px;}
+  @media screen and (min-width: 450px) { height: 300px;}
   @media screen and (min-width: 750px) { height: 230px;}
 }
 
 .content-images {
   float: left;
-  width: 100%;
-  margin-bottom: 3.5em;
+  margin-bottom: 50px;
   max-height: 90%;
+
+  @media screen and (max-width: 850px) {
+    width: 100%;
+  }
 
   @media screen and (min-width: 850px) {
     position: absolute;
@@ -73,36 +77,102 @@
   }
 }
 
+
 [class*="content-img-wrap"] {
   float: left;
-  width: 100%;
-  margin-bottom: 20px;
-  @media screen and (min-width: 850px) {
-    position: absolute;
-  }
+  position: relative;
 }
 
+[class*="content-img-view"] {
+  position: absolute;
+}
+
+.content-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .content-img-wrap-mobile {
-  width: 40%;
-}
-.content-img-wrap-tablet {
-  width: 75%;
+  width: 280px;
+  height: 490px;
+
+  @media screen and (min-width: 451px) {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 850px) {
-  .content-img-wrap-mobile { 
-    width: 200px;
-    left: 0;
+.content-img-view-mobile {
+  top: 25px;
+  left: 25px;
+  width: 82%;
+  height: 79%;
+  background-color: red;
+}
+
+.content-img-wrap-tablet {
+  width: 410px;
+  height: 300px;
+
+  @media screen and (min-width: 650px) {
+    width: 550px;
+    height: 400px;
   }
-  .content-img-wrap-tablet {
-    width: 400px;
-    left: 220px;
+
+  @media screen and (max-width: 450px) {
+    display: none;
   }
-  .content-img-wrap-desktop {
-    width: 500px;
-    left: 640px;
+  @media screen and (min-width: 850px) {
+    display: none;
   }
 }
+
+.content-img-view-tablet {
+  top: 17px;
+  left: 20px;
+  width: 82%;
+  height: 80%;
+  background-color: red;
+}
+
+.content-img-wrap-desktop {
+  width: 700px;
+  height: 400px;
+  margin-right: 25px;
+
+  @media screen and (max-width: 849px) {
+    display: none;
+  }
+}
+
+.content-img-view-desktop {
+  top: 17px;
+  left: 65px;
+  width: 82%;
+  height: 81%;
+  background-color: red;
+}
+
+// .content-img-wrap-mobile {
+//   width: 40%;
+// }
+// .content-img-wrap-tablet {
+//   width: 75%;
+// }
+
+// @media screen and (min-width: 850px) {
+//   .content-img-wrap-mobile { 
+//     width: 200px;
+//     left: 0;
+//   }
+//   .content-img-wrap-tablet {
+//     width: 400px;
+//     left: 220px;
+//   }
+//   .content-img-wrap-desktop {
+//     width: 500px;
+//     left: 640px;
+//   }
+// }
 
 .content-nav {
   width: 85%; //for non calc browsers
