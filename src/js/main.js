@@ -59,9 +59,11 @@ for (i=0; i<menuItems.length; i++) {
 //*********** scrolling between projects ********//
 
 $('#content-prev').click(function(){
+  imgSwap(-1);
   moveSection(-1);
 });
 $('#content-next').click(function(){
+  imgSwap(1);
   moveSection(1);
 });
 
@@ -74,10 +76,10 @@ function moveSection(direction) {
       $(contentPara[i]).removeClass('content-visible');
 
       //if at start of list go to end
-      if ( (i+direction) < 0 ) { i = listLength; }
+      if ( (i + direction) < 0 ) { i = listLength; }
 
       //if at end of list go to start
-      if ( (i+direction) >= listLength ) { i = -1; }
+      if ( (i + direction) >= listLength ) { i = -1; }
       
       $(contentPara[i + direction]).addClass('content-visible');
 
@@ -85,6 +87,36 @@ function moveSection(direction) {
     }
   }
 } //*************** END MOVESECTION ************//
+
+function imgSwap(direction) {
+  var contentPara = $('.content-para'); 
+  var listLength = contentPara.length;
+  //get current visible section
+  var visibleContent = $('.content-visible').attr('id').slice(-1);
+  visibleContent = parseInt(visibleContent);
+  //if intro section then swap svgs
+  if ( visibleContent === 1) {
+    $('#content-img-intro').toggleClass('wrap-hide');
+    $('[id^=content-img-wrap]').toggleClass('wrap-hide');
+  }
+  //if not intro section, hide its images
+  $('[id^=content-img-view]').removeClass('content-view-' + visibleContent); 
+
+  //work out next to be shown - if intro then swap svgs
+    //if at start of list go to end
+    if ( (visibleContent + direction) <= 0 ) { visibleContent = listLength + 1; }
+    //if at end of list go to start
+    if ( (visibleContent + direction) > listLength ) { visibleContent = 0; }
+    var nextContent = visibleContent + direction;
+    if ( nextContent === 1 ) { 
+      $('#content-img-intro').toggleClass('wrap-hide');
+      $('[id^=content-img-wrap]').toggleClass('wrap-hide');
+     }
+  //if not intro load new images
+    
+
+  $('[id^=content-img-view]').addClass('content-view-' + nextContent);
+}
 
 
 
