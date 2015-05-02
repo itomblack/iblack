@@ -113,8 +113,6 @@ function imgSwap(direction) {
       $('[id^=content-img-wrap]').toggleClass('wrap-hide');
      }
   //if not intro load new images
-    
-
   $('[id^=content-img-view]').addClass('content-view-' + nextContent);
 }
 

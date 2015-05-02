@@ -5,13 +5,13 @@
 <g>
 	<g>
 		
-			<path fill="#FFFFFF" stroke="#CACCD9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+			<path fill="#000030" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 			M318.3,4H20.1C11.4,4,4.3,11.1,4.3,19.8v560.1c0,8.7,7.1,15.8,15.8,15.8h298.2c8.7,0,15.8-7.1,15.8-15.8V19.8
 			C334.2,11.1,327.1,4,318.3,4z M305.3,50.1v441.4H33.1V39.2h272.3v10.9H305.3z"/>
 		
-			<circle fill="#FFFFFF" stroke="#CACCD9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="169.3" cy="544.5" r="23"/>
+			<circle fill="#000030" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="169.3" cy="544.5" r="23"/>
 		
-			<path fill="#FFFFFF" stroke="#CACCD9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+			<path fill="#000030" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 			M324.9,9.2"/>
 	</g>
 </g>

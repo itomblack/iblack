@@ -86,6 +86,7 @@
 
 [class*="content-img-view"] {
   position: absolute;
+  transition: all $long ease;
 }
 
 .content-img {
