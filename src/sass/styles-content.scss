@@ -32,7 +32,7 @@
 
   @media screen and (min-width: 850px) {
     width: 50%;
-    max-width: 470px;
+    max-width: 440px;
   }
 }
 
@@ -392,9 +392,9 @@
 // DESIGN IMAGES
 //===============================================================================
 
-//.content-view-1 is to be ignored!!
+//.content-view-0 is to be ignored!!
 
-.content-view-2 {
+.content-view-1 {
   &.content-img-view-mobile {
     background: url(../img/content/bespokea-mobile.png) no-repeat;
     background-size: 224px 385px;
@@ -410,7 +410,7 @@
   }
 }
 
-.content-view-3 {
+.content-view-2 {
   &.content-img-view-mobile {
     background: url(../img/content/sowgrow-mobile.png) no-repeat;
     background-size: 224px 385px;

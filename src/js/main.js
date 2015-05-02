@@ -95,20 +95,22 @@ function imgSwap(direction) {
   var visibleContent = $('.content-visible').attr('id').slice(-1);
   visibleContent = parseInt(visibleContent);
   //if intro section then swap svgs
-  if ( visibleContent === 1) {
+  console.log('visi' + visibleContent);
+  if ( visibleContent === 0) {
+    console.log(true);
     $('#content-img-intro').toggleClass('wrap-hide');
     $('[id^=content-img-wrap]').toggleClass('wrap-hide');
   }
-  //if not intro section, hide its images
+  //remove image background from others
   $('[id^=content-img-view]').removeClass('content-view-' + visibleContent); 
 
   //work out next to be shown - if intro then swap svgs
     //if at start of list go to end
-    if ( (visibleContent + direction) <= 0 ) { visibleContent = listLength + 1; }
+    if ( (visibleContent + direction) < 0 ) { visibleContent = listLength; }
     //if at end of list go to start
-    if ( (visibleContent + direction) > listLength ) { visibleContent = 0; }
+    if ( (visibleContent + direction) >= listLength ) { visibleContent = -1; }
     var nextContent = visibleContent + direction;
-    if ( nextContent === 1 ) { 
+    if ( nextContent === 0 ) { 
       $('#content-img-intro').toggleClass('wrap-hide');
       $('[id^=content-img-wrap]').toggleClass('wrap-hide');
      }
