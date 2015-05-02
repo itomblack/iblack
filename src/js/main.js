@@ -95,9 +95,7 @@ function imgSwap(direction) {
   var visibleContent = $('.content-visible').attr('id').slice(-1);
   visibleContent = parseInt(visibleContent);
   //if intro section then swap svgs
-  console.log('visi' + visibleContent);
   if ( visibleContent === 0) {
-    console.log(true);
     $('#content-img-intro').toggleClass('wrap-hide');
     $('[id^=content-img-wrap]').toggleClass('wrap-hide');
   }
