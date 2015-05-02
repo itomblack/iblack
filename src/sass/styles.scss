@@ -95,6 +95,11 @@ p {
 	a {
 		color: $coral;
 		text-decoration: none;
+		
+		transition: all $short ease;
+		&:hover {
+			color: $orange;
+		}
 	}
 }
 
