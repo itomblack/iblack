@@ -78,6 +78,12 @@ h6 {
 	line-height: 1em;
 	margin: 0;
 	font-family: 'Oswald', helvetica, arial, sans-serif;
+
+	a & {
+		&:hover {
+			color: $coral;
+		}
+	}
 }
 
 p {
@@ -334,6 +340,8 @@ input[type=checkbox]:checked ~ .menu-panel{
 		&:last-child {
 			float: right;
 		}
+
+
 	}
 }
 

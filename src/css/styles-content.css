@@ -323,8 +323,11 @@ ul {
   color: white;
   padding: 2px 5px;
   width: 145px;
-  display: block; }
-  /* line 378, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative; }
+  /* line 380, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   .view-button::after {
     content: "";
     background: url(../img/icons/open-window.svg) 99% center no-repeat;
@@ -337,13 +340,32 @@ ul {
     width: 18px;
     height: 18px;
     margin-bottom: -1px; }
+  /* line 392, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .view-button::before {
+    content: "";
+    border-left: 0px solid #FF5754;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    right: 10px;
+    top: 0;
+    position: absolute;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  /* line 405, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  .view-button:hover {
+    width: 155px; }
+    /* line 407, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+    .view-button:hover::before {
+      content: "";
+      border-left: 14px solid #FF5754;
+      right: -14px; }
 
-/* line 399, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 423, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-view-1.content-img-view-mobile {
   background: url(../img/content/bespokea-mobile.png) no-repeat;
   -webkit-background-size: 224px 385px;
   background-size: 224px 385px; }
-/* line 403, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 427, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-view-1.content-img-view-tablet {
   background: url(../img/content/bespokea-tablet.png) no-repeat;
   -webkit-background-size: 439px 323px;
@@ -352,18 +374,18 @@ ul {
     .content-view-1.content-img-view-tablet {
       -webkit-background-size: 327px 242px;
       background-size: 327px 242px; } }
-/* line 408, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 432, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-view-1.content-img-view-desktop {
   background: url(../img/content/bespokea-desktop.png) no-repeat;
   -webkit-background-size: 567px 319px;
   background-size: 567px 319px; }
 
-/* line 415, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 439, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-view-2.content-img-view-mobile {
   background: url(../img/content/sowgrow-mobile.png) no-repeat;
   -webkit-background-size: 224px 385px;
   background-size: 224px 385px; }
-/* line 419, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 443, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-view-2.content-img-view-tablet {
   background: url(../img/content/sowgrow-tablet.png) no-repeat;
   -webkit-background-size: 439px 323px;
@@ -372,12 +394,12 @@ ul {
     .content-view-2.content-img-view-tablet {
       -webkit-background-size: 327px 242px;
       background-size: 327px 242px; } }
-/* line 424, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 448, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-view-2.content-img-view-desktop {
   background: url(../img/content/sowgrow-desktop.png) no-repeat;
   -webkit-background-size: 567px 319px;
   background-size: 567px 319px; }
 
-/* line 430, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 454, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .full-width {
   width: 100%; }
