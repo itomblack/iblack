@@ -28,6 +28,7 @@
 .content-intro {
  width: 100%;
  float: left;
+ position: relative;
 
   @media screen and (min-width: 850px) {
     width: 50%;
@@ -161,65 +162,134 @@
 }
 
 .content-nav {
-  width: 85%; //for non calc browsers
-  width: calc( 100% - 90px );
-  font-family: 'Oswald', helvetica, arial, sans-serif;
-  font-weight: 300;
-  text-align: center;
-  float: left;
-  border-bottom: solid 1px $grey;
-  padding-bottom: 10px;
-  margin: 75px 0 35px 45px;
-  
-  @media screen and (max-width: 480px) { 
-    margin: 55px 0 35px 45px;
+  width: 110px;
+  max-height: 30px;
+  overflow-y: hidden;
+  position: absolute;
+  top: 55px;
+  right: 0;
+  z-index: 10;
+
+  transition: all $short ease-in-out;
+
+  &::after, &::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background-color: $ink;
+    top: 18px;
+    transition: all $short ease;
   }
-  @media screen and (max-width: 350px) { 
-    margin: 55px 0 20px 20px;
-    width: 100%;
+  &::after {
+    transform: rotate(45deg);
+    right: 8px;
   }
-    
+  &::before {
+    transform: rotate(135deg);
+    right: 0;
+  }
+
+  &:hover {
+    max-height: 500px;
+    &::after {
+      transform: rotate(-135deg);
+      right: 0;
+    }
+  }
+
+  ul {
+    background-color: $coral;
+  }
+
   li {
+    font-family: 'Oswald', helvetica, arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 5px 5px 5px 7px;
+    color: white;
+    text-decoration: none;
 
-    width: 50%;
-    height: 25px;
-    color: $ink;
-    float: left;
-    position: relative;
-
-    @media screen and (min-width: 450px){ 
-      width: 33.33%;
-      height: 30px;
-    }
-    @media screen and (min-width: 580px){ width: 25%; }
-    @media screen and (min-width: 920px){ width: 12.45%; }
-
-    a {
-      color: $ink;
-      text-decoration: none;
-      transition: all $short ease;
-    }
-
-    &::before, &::after {
-      content: "•";
-      font-size: 2.5em;
-      color: $yellow;
-      line-height: 0em;
-      height: 10px;
-      position: absolute;
-      top: 11px;
-      left: 0;
-      transition: all $short ease;
-    }
-
-    &::after { left: 100%; }
+    transition: all $short ease-in-out;
 
     &:hover {
-      a { color: $coral; }
+      background-color: $ink;
     }
-
   }
+
 }
+
+.content-nav-title {
+  font-family: 'Oswald', helvetica, arial, sans-serif;
+  font-weight: 300;
+  border-bottom: solid 1px $coral;
+  line-height: 1em;
+  padding: 3px 0;
+  margin: 7px 0 0 0;
+
+  
+}
+
+// .content-nav {
+//   width: 85%; //for non calc browsers
+//   width: calc( 100% - 90px );
+//   font-family: 'Oswald', helvetica, arial, sans-serif;
+//   font-weight: 300;
+//   text-align: center;
+//   float: left;
+//   border-bottom: solid 1px $grey;
+//   padding-bottom: 10px;
+//   margin: 75px 0 35px 45px;
+  
+//   @media screen and (max-width: 480px) { 
+//     margin: 55px 0 35px 45px;
+//   }
+//   @media screen and (max-width: 350px) { 
+//     margin: 55px 0 20px 20px;
+//     width: 100%;
+//   }
+    
+//   li {
+
+//     width: 50%;
+//     height: 25px;
+//     color: $ink;
+//     float: left;
+//     position: relative;
+
+//     @media screen and (min-width: 450px){ 
+//       width: 33.33%;
+//       height: 30px;
+//     }
+//     @media screen and (min-width: 580px){ width: 25%; }
+//     @media screen and (min-width: 920px){ width: 12.45%; }
+
+//     a {
+//       color: $ink;
+//       text-decoration: none;
+//       transition: all $short ease;
+//     }
+
+//     &::before, &::after {
+//       content: "•";
+//       font-size: 2.5em;
+//       color: $yellow;
+//       line-height: 0em;
+//       height: 10px;
+//       position: absolute;
+//       top: 11px;
+//       left: 0;
+//       transition: all $short ease;
+//     }
+
+//     &::after { left: 100%; }
+
+//     &:hover {
+//       a { color: $coral; }
+//     }
+
+//   }
+// }
 
 .content-prev, .content-next {
   width: 40px;
@@ -356,6 +426,9 @@
   }
 }
 
+.full-width {
+  width: 100%;
+}
 
 
 
