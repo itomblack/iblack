@@ -696,8 +696,8 @@ ul {
 /* line 88, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 [class*="content-img-view"] {
   position: absolute;
-  -webkit-transition: all 0.85s ease;
-  transition: all 0.85s ease; }
+  -webkit-transition: all 1.4s ease;
+  transition: all 1.4s ease; }
 
 /* line 93, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-img {
@@ -737,13 +737,13 @@ ul {
 
 /* line 131, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .content-img-view-tablet {
-  top: 20px;
-  left: 22px;
-  width: 82%;
-  height: 80%; }
+  top: 18px;
+  left: 21px;
+  width: 81%;
+  height: 79%; }
   @media screen and (min-width: 650px) {
     .content-img-view-tablet {
-      top: 25px;
+      top: 24px;
       left: 30px; } }
 
 /* line 142, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */

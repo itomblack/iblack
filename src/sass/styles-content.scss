@@ -87,7 +87,7 @@
 
 [class*="content-img-view"] {
   position: absolute;
-  transition: all $long ease;
+  transition: all $vLong ease;
 }
 
 .content-img {
@@ -129,12 +129,12 @@
 }
 
 .content-img-view-tablet {
-  top: 20px;
-  left: 22px;
-  width: 82%;
-  height: 80%;
+  top: 18px;
+  left: 21px;
+  width: 81%;
+  height: 79%;
   @media screen and (min-width: 650px) {
-    top: 25px;
+    top: 24px;
     left: 30px;
   }
 }
