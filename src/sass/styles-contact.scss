@@ -1,0 +1,52 @@
+//===============================================================================
+// IMPORTS
+//===============================================================================
+// normalize.css v3.0.0 | MIT License | git.io/normalize
+@import "_normalize.scss";
+
+// define mixins & functions
+@import "_mixins.scss";
+
+// define variables
+@import "_variables.scss";
+
+.text-center {
+  text-align: center;
+  width: 100%;
+}
+.contact-email {
+
+  text-decoration: none;
+  color: $ink;
+  transition: $short;
+  &:hover {
+    color: $coral;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 0.6em;
+  }
+}
+
+.colFadeAnim {
+  animation: colFade 20s infinite;
+}
+
+.content-hold {
+ width: 100%;
+ float: left;
+ position: relative;
+}
+
+
+//===============================================================================
+// ANIMATIONS
+//===============================================================================
+
+@keyframes colFade{
+  0% { color: $grey; }
+  25% { color: $coral; }
+  50% { color: $yellow; }
+  75% { color: $coral; }
+  100% { color: $grey; }
+}
