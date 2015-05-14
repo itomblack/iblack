@@ -163,9 +163,30 @@ function moveSection(search, direction) {
 
 
 
+//*********** ILLUSTRATION SHOW ********//
+
+var illustration = $('.ill-thumb');
+
+//clicking an image shows large image
+illustration.click(function(){
+  
+  //get clicked image and load full version
+  var thumbUrl = $(this).attr('src')
+  var fullUrl = thumbUrl.replace("thumbs", "full");
+  $('#ill-full').attr('src', fullUrl);
+
+  //show page
+  var imageBack = $('#full-image-back');
+  imageBack.toggleClass('js-on-page');
+});
 
 
+//clicking x button hides large image
 
+$('#full-image-close').click(function(){
+  var imageBack = $('#full-image-back');
+  imageBack.toggleClass('js-on-page');
+});
 
 
 

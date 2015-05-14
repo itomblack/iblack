@@ -41,11 +41,84 @@
   }
 }
 
+.full-image-back {
+  position: fixed;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 100%;
+  background-color: $ink;
+  z-index: 999;
+
+  transition: all $long ease;
+}
+
+.full-image-holder {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  margin-top: 5%;
+
+  img {
+    margin: auto;
+    max-width: 100%;
+    max-height: 90%;
+    display: block;
+  }
+}
+
+.full-image-close {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  background-color: $coral;
+  border-radius: 50px;
+
+  &::before, &::after {
+    content: " ";
+    background-color: $ink;
+    width: 17px;
+    height: 4px;
+    position: absolute;
+    bottom: 43%;
+    right: 25%;
+    transform: rotate(45deg);
+
+    transition: all $short ease;
+  }
+
+  &::after {
+    transform: rotate(135deg);
+    bottom: 43%;
+    right: 25%;
+  }
+
+  &:hover {
+    &::before {
+      transform: rotate(-135deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.js-on-page {
+  left: 0;
+}
+
+
+
+
 .ill-thumb {
   float: left;
   margin: 0;
   padding: 0;
   width: 50%;
+  cursor: pointer;
 
   @media screen and (min-width: 400px) { width: 33.333%; }
   @media screen and (min-width: 600px) { width: 25%; }
