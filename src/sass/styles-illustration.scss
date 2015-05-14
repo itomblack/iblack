@@ -1,0 +1,74 @@
+//===============================================================================
+// IMPORTS
+//===============================================================================
+// normalize.css v3.0.0 | MIT License | git.io/normalize
+@import "_normalize.scss";
+
+// define mixins & functions
+@import "_mixins.scss";
+
+// define variables
+@import "_variables.scss";
+
+
+
+.content-illustrations {
+  float: left;
+  width: 105%;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  display: block;
+  overflow: scroll;
+
+  @media screen and (min-width: 480px) {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+  }
+
+  @media screen and (min-width: 850px) {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    height: 100%;
+    height: calc(100% - 100px);
+  }
+  @media screen and (min-width: 1100px) {
+    width: 60%;
+  }
+  @media screen and (min-width: 1300px) {
+    width: 70%;
+  }
+}
+
+.ill-thumb {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+
+  @media screen and (min-width: 400px) { width: 33.333%; }
+  @media screen and (min-width: 600px) { width: 25%; }
+  @media screen and (min-width: 850px) { width: 33.333%; }
+  @media screen and (min-width: 1100px) { width: 25%; }
+  @media screen and (min-width: 1300px) { width: 20%; }
+  @media screen and (min-width: 1500px) { width: 14.285%; }
+}
+
+.fade-in-short {
+  animation: fadeInShort 2s;
+}
+
+
+
+
+//===============================================================================
+// ANIMATIONS
+//===============================================================================
+
+
+@keyframes fadeInShort {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
