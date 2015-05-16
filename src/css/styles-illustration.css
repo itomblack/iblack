@@ -327,25 +327,25 @@ ul {
     .ill-thumb {
       width: 14.285%; } }
 
-/* line 131, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 133, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .fade-in-short {
   -webkit-animation: fadeInShort 2s;
   animation: fadeInShort 2s; }
 
 @-webkit-keyframes fadeInShort {
-  /* line 144, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 146, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   0% {
     opacity: 0; }
 
-  /* line 145, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 147, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   100% {
     opacity: 1; } }
 
 @keyframes fadeInShort {
-  /* line 144, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 146, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   0% {
     opacity: 0; }
 
-  /* line 145, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 147, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   100% {
     opacity: 1; } }
