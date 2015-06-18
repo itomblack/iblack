@@ -1,0 +1,444 @@
+/* line 5, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/* line 12, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+body {
+  margin: 0; }
+
+/* line 31, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+/* line 40, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+audio, canvas, progress, video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/* line 47, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 55, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+[hidden], template {
+  display: none; }
+
+/* line 63, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+a {
+  background: transparent; }
+
+/* line 69, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+a:active, a:hover {
+  outline: 0; }
+
+/* line 77, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 83, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+b, strong {
+  font-weight: bold; }
+
+/* line 88, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/* line 93, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* line 99, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 105, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/* line 111, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 118, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 122, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 130, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+img {
+  border: 0; }
+
+/* line 135, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 143, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/* line 148, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/* line 155, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+pre {
+  overflow: auto; }
+
+/* line 163, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* line 182, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+/* line 189, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+button {
+  overflow: visible; }
+
+/* line 198, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+button, select {
+  text-transform: none; }
+
+/* line 208, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/* line 215, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+/* line 221, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 228, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+input {
+  line-height: normal; }
+
+/* line 238, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+input[type="checkbox"], input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0; }
+
+/* line 247, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/* line 253, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/* line 263, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 268, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/* line 276, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0; }
+
+/* line 282, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+textarea {
+  overflow: auto; }
+
+/* line 288, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+optgroup {
+  font-weight: bold; }
+
+/* line 296, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 302, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
+td, th {
+  padding: 0; }
+
+/* line 26, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_variables.scss */
+*, *::before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; }
+
+/* line 32, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_variables.scss */
+ul {
+  padding: 0;
+  list-style: none; }
+
+/* line 13, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+.text-center {
+  text-align: center;
+  width: 100%; }
+
+/* line 18, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+.contact-info {
+  margin-top: 20px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.85s ease;
+  transition: all 0.85s ease; }
+  /* line 23, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  .contact-info:hover {
+    -webkit-transform: scale(1.075);
+    -ms-transform: scale(1.075);
+    transform: scale(1.075); }
+
+/* line 27, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+.contact-email {
+  text-decoration: none;
+  color: #000030;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  @media screen and (max-width: 550px) {
+    .contact-email {
+      font-size: 0.7em; } }
+  @media screen and (max-width: 400px) {
+    .contact-email {
+      font-size: 0.6em; } }
+
+/* line 42, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+.colFadeAnim {
+  -webkit-animation: colFade 20s infinite;
+  animation: colFade 20s infinite; }
+
+/* line 46, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+.moveDown {
+  -webkit-animation: moveDown 1.4s ease;
+  animation: moveDown 1.4s ease; }
+
+/* line 50, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+.content-hold {
+  width: 100%;
+  float: left;
+  position: relative; }
+
+/* line 56, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+.contact-blurb {
+  width: 60%;
+  max-width: 600px;
+  color: #000030;
+  line-height: 1.3em;
+  text-align: center;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (max-width: 600px) {
+    .contact-blurb {
+      width: 80%; } }
+  @media screen and (max-width: 400px) {
+    .contact-blurb {
+      width: 90%;
+      margin-top: 50px; } }
+
+/* line 76, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+.opacityUp {
+  -webkit-animation: opacityUp 1.4s ease-in;
+  animation: opacityUp 1.4s ease-in; }
+
+/* line 81, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+.contact-button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Oswald', helvetica, arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: left;
+  background-color: #000030;
+  color: white;
+  padding: 12px 0 0 8px;
+  width: 141px;
+  height: 43px;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0.5em;
+  float: left;
+  margin-right: 0.5em;
+  border-top: 2px solid #000030;
+  border-bottom: 2px solid #FF5754; }
+  /* line 100, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  .contact-button:nth-child(4) {
+    margin-right: 0; }
+  @media screen and (max-width: 650px) {
+    /* line 105, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+    .contact-button:nth-child(odd) {
+      margin-right: 0.5em; }
+    /* line 108, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+    .contact-button:nth-child(even) {
+      margin-right: 0; } }
+  @media screen and (max-width: 400px) {
+    /* line 114, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+    .contact-button:nth-child(odd) {
+      margin-right: 0; }
+    /* line 117, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+    .contact-button:nth-child(even) {
+      margin-right: 0; } }
+  /* line 125, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  .contact-button img {
+    height: 25px;
+    position: absolute;
+    right: 8px;
+    top: 8px; }
+  /* line 132, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  .contact-button:hover {
+    padding: 14px 0 0 8px;
+    border-bottom: 2px solid #000030;
+    border-top: 2px solid white;
+    color: #FF5754; }
+    /* line 138, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+    .contact-button:hover img {
+      top: 10px; }
+
+/* line 144, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+.contact-buttons {
+  width: 588px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  /* line 8, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_mixins.scss */
+  .contact-buttons:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (max-width: 650px) {
+    .contact-buttons {
+      width: 290px; } }
+  @media screen and (max-width: 400px) {
+    .contact-buttons {
+      width: 141px; } }
+
+@-webkit-keyframes colFade {
+  /* line 160, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    color: #CACCD9; }
+
+  /* line 161, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  25% {
+    color: #FF5754; }
+
+  /* line 162, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  50% {
+    color: #F2DB00; }
+
+  /* line 163, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  75% {
+    color: #FF5754; }
+
+  /* line 164, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    color: #CACCD9; } }
+
+@keyframes colFade {
+  /* line 160, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    color: #CACCD9; }
+
+  /* line 161, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  25% {
+    color: #FF5754; }
+
+  /* line 162, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  50% {
+    color: #F2DB00; }
+
+  /* line 163, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  75% {
+    color: #FF5754; }
+
+  /* line 164, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    color: #CACCD9; } }
+
+@-webkit-keyframes moveDown {
+  /* line 168, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, -50px);
+    transform: translate(0, -50px); }
+
+  /* line 172, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  10% {
+    opacity: 0; }
+
+  /* line 173, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@keyframes moveDown {
+  /* line 168, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, -50px);
+    transform: translate(0, -50px); }
+
+  /* line 172, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  10% {
+    opacity: 0; }
+
+  /* line 173, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@-webkit-keyframes opacityUp {
+  /* line 180, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    opacity: 0; }
+
+  /* line 181, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    opacity: 1; } }
+
+@keyframes opacityUp {
+  /* line 180, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    opacity: 0; }
+
+  /* line 181, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    opacity: 1; } }
