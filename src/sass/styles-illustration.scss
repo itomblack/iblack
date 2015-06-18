@@ -147,3 +147,106 @@
   100% {opacity: 1;}
 }
 
+
+
+
+//===============================================================================
+// FATHTERS DAY
+//==================
+
+.water {
+  width: 100%;
+  height: 100%;
+  background-color: #66FFFF;
+  position: absolute;
+  bottom: -50%;
+  text-align: center;
+  padding-top: 15%;
+  color: #3F59A8;
+
+  h1 {
+    color: #3F59A8;
+    width: 100%;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 42px;
+    margin-bottom: 12px;
+    @media screen and (max-width: 400px) {
+      font-size: 38px;
+    }
+  }
+
+  p {
+    color: #3F59A8;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+svg {
+  overflow: visible !important;
+}
+
+.titleinfo {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #3F59A8;
+}
+
+.boat {
+  width: 225px;
+  height: 300px;
+  position: absolute;
+  bottom: 48%;
+  left: 5%;
+  transition:  all 1s ease;
+  transform: scale(1.2) rotate(0deg);
+
+  animation: sail 15s infinite;
+
+  @media screen and (max-width: 400px) {
+    transform: scale(0.8) rotate(0deg);
+    animation: sailMobile 15s infinite;
+    bottom: 23%;
+  }
+}
+
+.buoy {
+  transform: scale(1.5);
+  width: 26px;
+  height: 166px;
+  position: absolute;
+  bottom: 18%;
+  display:  none;
+}
+
+#all-move {
+ position: relative;
+ top: 38%;
+ height: 100%;
+ width: 100%;
+}
+
+
+@keyframes sail {
+  0% { left: 5%; }
+  10% {transform: scale(1.2) rotate(2deg);}
+  20% {transform: scale(1.2) rotate(-2deg);}
+  50% {left: 40%;}
+  10% {left: 5%; }
+}
+
+@keyframes sailMobile {
+  0% { left: 5%; }
+  10% {transform: scale(0.8) rotate(2deg);}
+  20% {transform: scale(0.8) rotate(-2deg);}
+  50% {left: 40%;}
+  10% {left: 5%; }
+}
+
+
+
+
+
+

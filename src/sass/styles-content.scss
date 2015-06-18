@@ -15,6 +15,7 @@
 
   width: 100%;
   padding: 60px 20px 30px 20px;
+  @include clearfix;
 
   @media screen and (min-width: 350px) {
     padding: 80px 20px 30px 20px;
@@ -54,6 +55,7 @@
   max-height: 90%;
   top: 525px;
   width: 0;
+  @include clearfix;
 
   @media screen and (min-width: 450px) { top: 470px; }
   @media screen and (min-width: 720px) { top: 440px; }
@@ -65,16 +67,38 @@
   }
 }
 
-.content-img-intro {
+.height-450{
+  height: 450px;
+}
+
+.content-img-intro, .content-img-profile-1, .content-img-profile-2 {
   position: absolute;
   left: 0;
   width: 400px;
   margin-left: -45px;
   opacity: 1;
-  // max-height: 600px;
   transition: all $long ease-in-out;
+}
 
+.content-img-intro{
   @media screen and (max-width: 850px) { margin-left: -85px; }
+}
+
+.content-img-profile-1, .content-img-profile-2 {
+   @media screen and (max-width: 850px) { 
+    margin-top: -65px;
+    margin-left: 0;
+  }
+}
+
+.content-img-profile-1 {
+  max-width: 300px;
+  height: 400px;
+}
+
+.content-img-profile-2 {
+  left: 205px;
+  @media screen and (max-width: 500px) { display: none; }
 }
 
 
@@ -303,7 +327,7 @@
 
 .hide-mobile {
   @media screen and (max-width: 650px) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -315,10 +339,15 @@
   background-color: $coral;
   color: white;
   padding: 2px 5px;
-  width: 145px;
-  display: block;
+  // width: 145px;
+  display: inline-block;
 
-  transition: all $short ease;
+  border-right: 2px solid $yellow;
+  border-bottom: 2px solid $orange;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+
+  // transition: all $short ease;
 
   &::after {
     content: "";
@@ -332,26 +361,17 @@
     margin-bottom: -1px;
   }
 
-  &::before {
-    content: "";
-    border-left: 0px solid $coral;
-    border-top: 14px solid transparent;
-    border-bottom: 14px solid transparent;
-    right: 10px;
-    top: 0;
-    position: absolute;
-    transition: all $short ease;
-  }
-
   position: relative;
 
   &:hover {
-    width: 155px;
-    &::before{
-      content: "";
-      border-left: 14px solid $coral;
-      right: -14px;
-    }
+    // width: 143px;
+    margin-top: 2px;
+    margin-left: 2px;
+    border-right: 2px solid $coral;
+    border-bottom: 2px solid $coral;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+
   }
 }
 
@@ -362,48 +382,46 @@
 
 //.content-view-0 is to be ignored!!
 
-
-
-.content-view-2 {
-  &.content-img-view-mobile { background: url(../img/content/bespokea-mobile.png) no-repeat; }
-  &.content-img-view-tablet { background: url(../img/content/bespokea-tablet.png) no-repeat; }
-  &.content-img-view-desktop { background: url(../img/content/bespokea-desktop.png) no-repeat; }
+.content-view-1 {
+  &.content-img-view-mobile { background: url(../img/content/emoti-mobile.png) no-repeat; }
+  &.content-img-view-tablet { background: url(../img/content/emoti-tablet.png) no-repeat; }
+  &.content-img-view-desktop { background: url(../img/content/emoti-desktop.png) no-repeat; }
 }
 
-.content-view-1 {
+.content-view-2 {
   &.content-img-view-mobile { background: url(../img/content/sowgrow-mobile.png) no-repeat; }
   &.content-img-view-tablet { background: url(../img/content/sowgrow-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/sowgrow-desktop.png) no-repeat; }
 }
 
 .content-view-3 {
+  &.content-img-view-mobile { background: url(../img/content/bespokea-mobile.png) no-repeat; }
+  &.content-img-view-tablet { background: url(../img/content/bespokea-tablet.png) no-repeat; }
+  &.content-img-view-desktop { background: url(../img/content/bespokea-desktop.png) no-repeat; }
+}
+
+.content-view-4 {
   &.content-img-view-mobile { background: url(../img/content/whisky-mobile.png) no-repeat; }
   &.content-img-view-tablet { background: url(../img/content/whisky-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/whisky-desktop.png) no-repeat; }
 }
 
-.content-view-4 {
+.content-view-5 {
   &.content-img-view-mobile { background: url(../img/content/allyalex-mobile.png) no-repeat; }
   &.content-img-view-tablet { background: url(../img/content/allyalex-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/allyalex-desktop.png) no-repeat; }
 }
 
-.content-view-5 {
+.content-view-6 {
   &.content-img-view-mobile { background: url(../img/content/ND-mobile.png) no-repeat; }
   &.content-img-view-tablet { background: url(../img/content/ND-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/ND-desktop.png) no-repeat; }
 }
 
-.content-view-6 {
+.content-view-7 {
   &.content-img-view-mobile { background: url(../img/content/worldmap-mobile.png) no-repeat; }
   &.content-img-view-tablet { background: url(../img/content/worldmap-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/worldmap-desktop.png) no-repeat; }
-}
-
-.content-view-7 {
-  &.content-img-view-mobile { background: url(../img/content/ukpe-mobile.png) no-repeat; }
-  &.content-img-view-tablet { background: url(../img/content/ukpe-tablet.png) no-repeat; }
-  &.content-img-view-desktop { background: url(../img/content/ukpe-desktop.png) no-repeat; }
 }
 
 .content-view-8 {
@@ -411,6 +429,12 @@
   &.content-img-view-tablet { background: url(../img/content/attain-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/attain-desktop.png) no-repeat; }
 }
+
+// .content-view-7 {
+//   &.content-img-view-mobile { background: url(../img/content/ukpe-mobile.png) no-repeat; }
+//   &.content-img-view-tablet { background: url(../img/content/ukpe-tablet.png) no-repeat; }
+//   &.content-img-view-desktop { background: url(../img/content/ukpe-desktop.png) no-repeat; }
+// }
 
 [class*="content-view"] {
 
@@ -429,12 +453,22 @@
 }
 
 
+.slideIn {
+  animation: slideIn $vLong;
+}
 
 
-
-
-
-
+@keyframes slideIn{
+  0% { 
+    opacity: 0;
+    transform: translate(-400px, 0);
+   }
+  10% { opacity: 0; }
+   100% { 
+    opacity: 1;
+    transform: translate(0,0);
+   }
+}
 
 
 

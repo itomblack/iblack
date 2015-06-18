@@ -171,7 +171,7 @@ var illustration = $('.ill-thumb');
 illustration.click(function(){
   
   //get clicked image and load full version
-  var thumbUrl = $(this).attr('src')
+  var thumbUrl = $(this).attr('src');
   var fullUrl = thumbUrl.replace("thumbs", "full");
   $('#ill-full').attr('src', fullUrl);
 

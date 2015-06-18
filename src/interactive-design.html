@@ -9,7 +9,19 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
 
+  <script type="text/javascript">
+  //GOOGLE ANALYTICS
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37805029-1']);
+    _gaq.push(['_trackPageview']);
 
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
 
 
   <body id="design-body" class="design-body">
@@ -22,28 +34,29 @@
       <!-- LHS -->
       <div id="content-intro" class="content-intro">
         <!-- Title -->
-         <h2 id="content-sect" class="full-width fade-in-short">Interactive Design</h2>
+         <h2 id="content-sect" class="full-width slideIn">Interactive Design</h2>
 
-         <div class="content-nav">
+         <div class="content-nav fade-in-short">
            <h4 class="content-nav-title"> Select Project</h4>
            <ul id="content-nav">
-             <li id="content-nav-1">Sow &amp; Grow</li>
-             <li id="content-nav-2">Bespokea</li>
-             <li id="content-nav-3">Whisky Map</li>
-             <li id="content-nav-4">Ally &amp; Alex</li>
-             <li id="content-nav-5">Nutrition Data</li>
-             <li id="content-nav-6">World Map</li>
-             <li id="content-nav-7">UKPE</li>
+              <li id="content-nav-1">Emoti</li>
+             <li id="content-nav-2">Sow &amp; Grow</li>
+             <li id="content-nav-3">Bespokea</li>
+             <li id="content-nav-4">Whisky Map</li>
+             <li id="content-nav-5">Ally &amp; Alex</li>
+             <li id="content-nav-6">Nutrition Data</li>
+             <li id="content-nav-7">World Map</li>
              <li id="content-nav-8">Attain</li>
            </ul>
          </div>
 
          <!-- Nav buttons -->
-         <div id="content-prev" class="content-prev"></div>
-        <div id="content-next" class="content-next"></div>
+         <div id="content-prev" class="content-prev fade-in-short"></div>
+        <div id="content-next" class="content-next fade-in-short"></div>
 
         <!-- content to swipe through -->
-        <div class="content-sect-wrap fade-in-short">
+        <div class="content-sect-wrap slideIn">
+
          
           <div id="content-para-0" class="content-para content-visible">
             <p>
@@ -58,6 +71,20 @@
           </div>
 
           <div id="content-para-1" class="content-para">
+            <h3>Emoti</h3><br>
+            <p>
+              A <a href="https://www.youtube.com/watch?v=1RyHZFXdtoo" target="_blank">light and sound installation</a> representing the emotional state of Twitter, created for #ArtHackathon 2015.
+            </p>
+            <p>
+              Data from Twitter widgets alters the colours and music according to each emotional response, in real time, through a Raspberry Pi.
+            </p>
+            <p>
+              The 3D version has been dismantled (for now), but the web experience lives on.
+            </p>
+             <a href="http://iblack.co.uk/emoti/" target="_blank" class="view-button">View In Browser</a>
+          </div>
+
+          <div id="content-para-2" class="content-para">
             <h3>Grow &amp; Sow</h3><br>
             <p>
               Frustrated with the existing web content on growing vegetables at home in the UK, I created this web app to help fulfil my needs.
@@ -68,7 +95,7 @@
             <a href="http://iblack.co.uk/harvest/" target="_blank" class="view-button">View In Browser</a>
           </div>
 
-          <div id="content-para-2" class="content-para">
+          <div id="content-para-3" class="content-para">
             <h3>Bespokea</h3><br>
             <p>
               A responsive site for the newly founded Bespokea furtniture brand, collaborating with design agency <a href="www.thebrandnewstudio.com" >TheBr&amp;newstudio.</a>
@@ -78,7 +105,7 @@
             <a href="http://bespokea.london/" target="_blank" class="view-button">View In Browser</a>
           </div>
 
-          <div id="content-para-3" class="content-para">
+          <div id="content-para-4" class="content-para">
             <h3>Whisky Map</h3><br>
             <p>
               A 1-day project, exploring the connections between Single Malt Whisky flavour profiles and their distillery regions.
@@ -86,10 +113,10 @@
             <p>
               Created in 8 hours, during a hack-day on the theme of data-visualisation. Plans to build a responsive version are sitting in my backlog!
             </p>
-            <a href="http://iblack.co.uk/whisky/" target="_blank" class="view-button">View In Browser</a>
+            <a href="http://iblack.co.uk/whisky/" target="_blank" class="view-button hide-mobile">View In Browser</a>
           </div>
 
-          <div id="content-para-4" class="content-para">
+          <div id="content-para-5" class="content-para">
             <h3>Ally &amp; Alex</h3><br>
             <p>
               No wedding invitation these days is complete without a website full of information about the special day.
@@ -101,7 +128,7 @@
 
           </div>
 
-          <div id="content-para-5" class="content-para">
+          <div id="content-para-6" class="content-para">
             <h3>Nutrition Data</h3><br>
             <p>
               With the world of fitness &amp; health become increasingly fashionable, I felt the world of nutritional informtion was being left behind in its branding.
@@ -112,7 +139,7 @@
 
           </div>
 
-          <div id="content-para-6" class="content-para">
+          <div id="content-para-7" class="content-para">
             <h3>World Map</h3><br>
             <p>
               An experiment in creating svg maps using GeoJSON data.
@@ -121,15 +148,6 @@
               In <i>Info</i> mode, Explore the world as a learning aid for location names. If you want something more creative, flip the switch to <i>Colour</i> mode, where you can paint the countries using a pre defined palette.
             </p>
             <a href="http://iblack.co.uk/colourmap.shtml" target="_blank" class="view-button">View In Browser</a>
-          </div>
-
-          <div id="content-para-7" class="content-para">
-            <h3>UKPE</h3><br>
-            <p>
-              Initial design concepts for a UK medical brand merger.
-            </p>
-            <p>
-              Two groups, each with outdated web presence were looking to unite and create a modern, unified online platform for Psysician Education in the UK.
           </div>
 
           <div id="content-para-8" class="content-para">
@@ -142,6 +160,16 @@
             </p>
             <a href="http://itomblack.github.io/new-breed/" target="_blank" class="view-button hide-mobile">View In Browser</a>
           </div>
+
+          <!--  <div id="content-para-7" class="content-para">
+             <h3>UKPE</h3><br>
+             <p>
+               Initial design concepts for a UK medical brand merger.
+             </p>
+             <p>
+               Two groups, each with outdated web presence were looking to unite and create a modern, unified online platform for Psysician Education in the UK.
+           </div> -->
+
         </div> <!-- Close content section wrap -->
 
       </div>
@@ -166,7 +194,7 @@
           <img id="content-img-desktop" class="content-img" src="img/icons/view-desktop.svg"/>
         </div>
 
-        <img id="content-img-intro" class="content-img-intro" src="img/home-svgs/interactive-design.svg"/>
+        <img id="content-img-intro" class="content-img-intro moveDown" src="img/home-svgs/interactive-design.svg"/>
 
       </div>
 
