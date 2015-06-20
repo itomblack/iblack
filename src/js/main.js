@@ -48,7 +48,6 @@ $( document ).ready(function() {
   // ********** HOMEPAGE DRAWING FUNCTION ******** //
 
   function drawingPaths(){
-    console.log('run');
     var current_frame = 0;
     var total_frames = 90;
     var path = [];
@@ -173,7 +172,15 @@ illustration.click(function(){
   //get clicked image and load full version
   var thumbUrl = $(this).attr('src');
   var fullUrl = thumbUrl.replace("thumbs", "full");
-  $('#ill-full').attr('src', fullUrl);
+
+
+
+  $('#ill-full').fadeOut(200, function(){
+        $(this).attr('src', fullUrl).bind('onreadystatechange load', function(){
+              if (this.complete) $(this).fadeIn(500);
+        });
+  });   
+
 
   //show page
   var imageBack = $('#full-image-back');

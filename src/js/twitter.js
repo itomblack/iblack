@@ -82,9 +82,9 @@ var loopLength = 8000;
             if (tweets[i] != undefined) {
                 var twtContent = tweets[i];
                 //if it contains a photo
-                if (twtContent.includes('class="media">')) { 
+                if (twtContent.search('class="media">') > 0) { 
                   //if it contains hastag
-                  if (twtContent.includes('ibphoto')) {
+                  if (twtContent.search('ibphoto') > 0) {
 
                     var twtText = twtContent.split('class="tweet">')[1];
                     twtText = twtText.split('</p>')[0].split('<a href')[0];
@@ -131,7 +131,7 @@ var loopLength = 8000;
   function changePhotos(allImages, allImagesTweet) {
 
     LoopRepeat = allImages.length * loopLength;
-    
+
     //set photo first
 
     $('#twitter-photo').fadeOut(500, function(){
