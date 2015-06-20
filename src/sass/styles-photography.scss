@@ -24,7 +24,10 @@
   position: fixed;
   top: 60px;
 
-  @media screen and (max-width: 480px) { top: 40px;}
+  @media screen and (max-width: 480px) {
+    top: 40px;
+    height: calc(100% - 80px);
+  }
 }
 
 .photo-column {
@@ -139,6 +142,10 @@
     font-family: 'Oswald', helvetica, sans-serif;
     text-transform: uppercase;
   }
+
+  @media screen and (max-width: 450px) {
+    height: 64%;
+  }
 }
 
 .photo-info-btn {
@@ -147,7 +154,7 @@
     position: absolute;
     bottom: 0;
     left: calc(50% - 1.5em);
-    background-color: $yellow;
+    // background-color: $yellow;
     overflow: visible;
     text-align: center;
     padding: 0.5em;
@@ -160,8 +167,9 @@
       font-weight: bold;
       // border: 2px solid $yellow;
       // color: $yellow;
-      border: 2px solid $ink;
-      color: $ink;
+      border: 2px solid $yellow;
+      background-color: $ink;
+      color: $yellow;
       border-radius: 50px;
       width: 2em;
       height: 2em;
@@ -174,6 +182,10 @@
 .js-info-open {
   max-height: 34%;
   padding: 2em;
+
+  @media screen and (max-width: 450px) {
+    max-height: 64%;
+  }
 }
 
 .js-transform-0 {

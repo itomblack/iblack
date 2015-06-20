@@ -44,8 +44,11 @@
   position: relative;
   clear: left;
 
-  @media screen and (min-width: 350px) { width: 80%;}
-  @media screen and (min-width: 450px) { height: 300px;}
+  @media screen and (min-width: 350px) { width: 90%;}
+  @media screen and (min-width: 450px) { 
+    height: 300px;
+    width: 80%;
+  }
   @media screen and (min-width: 750px) { height: 230px;}
 }
 
@@ -375,6 +378,9 @@
   }
 }
 
+.text-underline {
+  border-bottom: 2px solid $grey;
+}
 
 //===============================================================================
 // DESIGN IMAGES

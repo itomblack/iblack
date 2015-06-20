@@ -36,7 +36,7 @@
   var config1 = {
     "id": '610193103820062720',
     "domId": 'example1',
-    "maxTweets": 5,
+    "maxTweets": 10,
     "enableLinks": true,
     "showUser": true,
     "showTime": true,
@@ -49,7 +49,8 @@
   };
 
   
-
+var loopRepeat = 16000;
+var loopLength = 8000;
 
   //DEFINE VARIABLES ************//
 
@@ -73,6 +74,7 @@
 
       var allImages = [];
       var allImagesTweet = [];
+
 
       for ( i=0; i<tweets.length; i++) {
         
@@ -115,25 +117,33 @@
 
   //****** open and close info panel ****//
   $('#photo-info-btn').click(function(){
-    $('#photo-info').toggleClass('js-info-open');
+      $('#photo-info').toggleClass('js-info-open');
+
+      if ($('#info-btn-letter').text() == "i") {
+          $('#info-btn-letter').text('x');
+      } else {
+          $('#info-btn-letter').text('i');
+      }
+      
   })
 
 
   function changePhotos(allImages, allImagesTweet) {
 
+    LoopRepeat = allImages.length * loopLength;
+    
     //set photo first
 
     $('#twitter-photo').fadeOut(500, function(){
       $(this).attr('src',allImages[0]).bind('onreadystatechange load', function(){
          if (this.complete) $(this).fadeIn(500);
-         console.log( $('#photo-info-tweet').innerHTML);
-
          $('#photo-info-tweet').text(allImagesTweet[0]);
         });
     });    
 
     //loop time is interval divided by image number
-    var loopLength = (15000 / allImages.length);
+    // var loopLength = (loopRepeat / allImages.length);
+    
     var loopTimes = allImages.length;
 
 
@@ -147,7 +157,6 @@
 
                $('#photo-info-tweet').text(allImagesTweet[i]);
                $('#photo-info-tweet').removeClass("js-transform-0");
-               console.log(allImagesTweet[i]);
               });
           });               
           if (--i) photoLoop(i);      //  decrement i and call myLoop again if i > 0
@@ -166,6 +175,6 @@
 
   runTweet();
 
-  window.setInterval(runTweet, 15000);
+  window.setInterval(runTweet, loopLength);
 
 

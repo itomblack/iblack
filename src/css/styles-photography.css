@@ -217,9 +217,11 @@ ul {
   top: 60px; }
   @media screen and (max-width: 480px) {
     .photo-content {
-      top: 40px; } }
+      top: 40px;
+      height: -webkit-calc(100% - 80px);
+      height: calc(100% - 80px); } }
 
-/* line 30, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+/* line 33, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
 .photo-column {
   width: 50%;
   height: 100%;
@@ -231,39 +233,39 @@ ul {
   border-right: 4px solid #000030;
   -webkit-transition: width 0.85s ease;
   transition: width 0.85s ease; }
-  /* line 39, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+  /* line 42, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
   .photo-column:first-child {
     border-left: 4px solid #000030; }
-  /* line 42, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+  /* line 45, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
   .photo-column .photo-column:last-child {
     border-right: 0; }
-  /* line 43, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+  /* line 46, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
   .photo-column .photo-column:first-child {
     border-left: 0; }
   @media screen and (max-width: 1000px) {
     .photo-column {
       width: 100%; }
-      /* line 51, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+      /* line 54, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
       .photo-column .photo-column {
         width: 50%; }
-        /* line 53, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+        /* line 56, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
         .photo-column .photo-column:first-child {
           border-left: 0; } }
   @media screen and (max-width: 500px) {
-    /* line 58, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+    /* line 61, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
     .photo-column .photo-column {
       width: 100%; }
-      /* line 60, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+      /* line 63, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
       .photo-column .photo-column:first-child {
         border-right: 0; }
-      /* line 61, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+      /* line 64, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
       .photo-column .photo-column:last-child {
         border-left: 0; }
-    /* line 64, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+    /* line 67, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
     .photo-column:last-child {
       border-left: 4px solid #000030; } }
 
-/* line 69, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+/* line 72, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
 .photo-thumb {
   width: 100%;
   float: left;
@@ -274,11 +276,11 @@ ul {
     content: "";
     display: table;
     clear: both; }
-  /* line 76, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+  /* line 79, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
   .photo-thumb img {
     width: 100%;
     height: auto; }
-  /* line 81, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+  /* line 84, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
   .photo-thumb .photo-title {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -297,24 +299,24 @@ ul {
     padding: 0.625em;
     -webkit-transition: all 0.85s ease;
     transition: all 0.85s ease; }
-    /* line 96, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+    /* line 99, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
     .photo-thumb .photo-title h2 {
       width: 100%;
       text-align: center; }
-  /* line 103, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+  /* line 106, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
   .photo-thumb:hover .photo-title {
     background-color: #7700FF;
     opacity: 0.8;
     top: 62%; }
 
-/* line 112, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+/* line 115, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
 .photo-twitter {
   max-height: 100%;
   max-width: 100%;
   margin: auto;
   display: inherit; }
 
-/* line 119, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+/* line 122, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
 .photo-info {
   position: absolute;
   bottom: 0;
@@ -327,18 +329,21 @@ ul {
   overflow: hidden;
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
-  /* line 132, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+  /* line 135, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
   .photo-info h3 {
     margin-bottom: 1em;
     width: 100%;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
-  /* line 138, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+  /* line 141, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
   .photo-info p {
     font-family: 'Oswald', helvetica, sans-serif;
     text-transform: uppercase; }
+  @media screen and (max-width: 450px) {
+    .photo-info {
+      height: 64%; } }
 
-/* line 144, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+/* line 151, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
 .photo-info-btn {
   width: 3em;
   height: 3em;
@@ -346,18 +351,18 @@ ul {
   bottom: 0;
   left: -webkit-calc(50% - 1.5em);
   left: calc(50% - 1.5em);
-  background-color: #F2DB00;
   overflow: visible;
   text-align: center;
   padding: 0.5em;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   opacity: 0.8; }
-  /* line 159, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+  /* line 166, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
   .photo-info-btn p {
     font-weight: bold;
-    border: 2px solid #000030;
-    color: #000030;
+    border: 2px solid #F2DB00;
+    background-color: #000030;
+    color: #F2DB00;
     border-radius: 50px;
     width: 2em;
     height: 2em;
@@ -365,12 +370,15 @@ ul {
     display: table-cell;
     vertical-align: middle; }
 
-/* line 174, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+/* line 182, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
 .js-info-open {
   max-height: 34%;
   padding: 2em; }
+  @media screen and (max-width: 450px) {
+    .js-info-open {
+      max-height: 64%; } }
 
-/* line 179, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+/* line 191, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
 .js-transform-0 {
   -webkit-transform: scale(1, 0);
   -ms-transform: scale(1, 0);
