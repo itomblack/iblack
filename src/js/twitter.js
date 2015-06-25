@@ -133,7 +133,6 @@
 
 
   function changePhotos(allImages, allImagesTweet) {
-    console.log('run');
 
     $('#photo-info-tweet').addClass("js-transform-0");
 
