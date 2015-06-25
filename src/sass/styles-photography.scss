@@ -136,11 +136,13 @@
     margin-bottom: 1em;
     width: 100%;
     transition: all $short;
+    opacity: 0;
   }
 
   p {
     font-family: 'Oswald', helvetica, sans-serif;
     text-transform: uppercase;
+    opacity: 0;
   }
 
   @media screen and (max-width: 450px) {
@@ -182,6 +184,10 @@
 .js-info-open {
   max-height: 34%;
   padding: 2em;
+
+  h3 { opacity: 1; }
+
+  p { opacity: 1; }
 
   @media screen and (max-width: 450px) {
     max-height: 64%;

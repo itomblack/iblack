@@ -49,8 +49,8 @@
   };
 
   
-var loopRepeat = 16000;
-var loopLength = 8000;
+// var loopRepeat = 16000;
+// var loopLength = 8000;
 
   //DEFINE VARIABLES ************//
 
@@ -72,8 +72,7 @@ var loopLength = 8000;
        var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]); 
 
 
-      var allImages = [];
-      var allImagesTweet = [];
+      
 
 
       for ( i=0; i<tweets.length; i++) {
@@ -107,11 +106,53 @@ var loopLength = 8000;
             }
 
           } //end for loops
-          changePhotos(allImages, allImagesTweet);
+
+          // changePhotos(allImages, allImagesTweet);
+
+
+          //set photo first
+
+          $('#twitter-photo').fadeOut(500, function(){
+            $(this).attr('src',allImages[0]).bind('onreadystatechange load', function(){
+               if (this.complete) $(this).fadeIn(500);
+               $('#photo-info-tweet').text(allImagesTweet[0]);
+              });
+          });    
+
+          
+
+          startLoop();
+          
 
         
 
   } //*** END HANDLE TWEETS **//
+
+
+
+
+
+  function changePhotos(allImages, allImagesTweet) {
+    console.log('run');
+
+    $('#photo-info-tweet').addClass("js-transform-0");
+
+    $('#twitter-photo').fadeOut(500, function(){
+      $(this).attr('src',allImages[photoCount]).bind('onreadystatechange load', function(){
+          if (this.complete) $(this).fadeIn(500);
+          $('#photo-info-tweet').text(allImagesTweet[photoCount]);
+          $('#photo-info-tweet').removeClass("js-transform-0");
+      });
+    });        
+  
+
+    if(photoCount == allImages.length -1){
+         photoCount = 0;
+    }
+    else{
+        photoCount++;
+    }
+  }   /* end changephotos*/
 
 
 
@@ -128,53 +169,25 @@ var loopLength = 8000;
   })
 
 
-  function changePhotos(allImages, allImagesTweet) {
-
-    LoopRepeat = allImages.length * loopLength;
-
-    //set photo first
-
-    $('#twitter-photo').fadeOut(500, function(){
-      $(this).attr('src',allImages[0]).bind('onreadystatechange load', function(){
-         if (this.complete) $(this).fadeIn(500);
-         $('#photo-info-tweet').text(allImagesTweet[0]);
-        });
-    });    
-
-    //loop time is interval divided by image number
-    // var loopLength = (loopRepeat / allImages.length);
-    
-    var loopTimes = allImages.length;
-
-
-    (function photoLoop (i) {          
-       setTimeout(function () {
-        $('#photo-info-tweet').addClass("js-transform-0")
-
-          $('#twitter-photo').fadeOut(500, function(){
-            $(this).attr('src',allImages[i]).bind('onreadystatechange load', function(){
-               if (this.complete) $(this).fadeIn(500);
-
-               $('#photo-info-tweet').text(allImagesTweet[i]);
-               $('#photo-info-tweet').removeClass("js-transform-0");
-              });
-          });               
-          if (--i) photoLoop(i);      //  decrement i and call myLoop again if i > 0
-       }, loopLength)
-    })(loopTimes);
-
-
-  } 
-
-  /* end changephotos*/
 
 
   function runTweet() {
-  twitterFetcher.fetch(config1);
+    twitterFetcher.fetch(config1);
   }
 
-  runTweet();
+  function startLoop() {
+    window.setInterval( function(){
+      changePhotos(allImages, allImagesTweet, photoCount)
+    }, 7000 );
+   }
 
-  window.setInterval(runTweet, loopLength);
+  var photoCount = 0;
+  var allImages = [];
+  var allImagesTweet = [];
+
+  runTweet();
+ 
+  
+
 
 
