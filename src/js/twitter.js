@@ -49,8 +49,8 @@
   };
 
   
-var loopRepeat = 16000;
-var loopLength = 8000;
+var loopRepeat = 9000;
+var loopLength = 0; //initially zero to load first image
 
   //DEFINE VARIABLES ************//
 
@@ -106,7 +106,24 @@ var loopLength = 8000;
               twtContent = "";
             }
 
+            
           } //end for loops
+
+          //set photo first
+          if ( loopLength === 0 ) {
+            console.log('firstrun-1');
+            $('#twitter-photo').attr('src',allImages[0]).load(function(){
+               if (this.complete) $(this).fadeIn(500);
+               $('#photo-info-tweet').text(allImagesTweet[0]);
+               console.log('firstrun-2');
+            }); 
+          }
+
+          //now set loop to normal length
+          loopLength = 3000;
+               
+
+
           changePhotos(allImages, allImagesTweet);
 
         
@@ -130,16 +147,13 @@ var loopLength = 8000;
 
   function changePhotos(allImages, allImagesTweet) {
 
-    LoopRepeat = allImages.length * loopLength;
 
-    //set photo first
 
-    $('#twitter-photo').fadeOut(500, function(){
-      $(this).attr('src',allImages[0]).bind('onreadystatechange load', function(){
-         if (this.complete) $(this).fadeIn(500);
-         $('#photo-info-tweet').text(allImagesTweet[0]);
-        });
-    });    
+
+    loopRepeat = allImages.length * loopLength;
+    console.log(loopRepeat)
+
+    
 
     //loop time is interval divided by image number
     // var loopLength = (loopRepeat / allImages.length);
@@ -152,9 +166,10 @@ var loopLength = 8000;
         $('#photo-info-tweet').addClass("js-transform-0")
 
           $('#twitter-photo').fadeOut(500, function(){
-            $(this).attr('src',allImages[i]).bind('onreadystatechange load', function(){
-               if (this.complete) $(this).fadeIn(500);
 
+            $(this).attr('src',allImages[i]).load(function(){
+               if (this.complete) $(this).fadeIn(500);
+               console.log('change' + loopLength)
                $('#photo-info-tweet').text(allImagesTweet[i]);
                $('#photo-info-tweet').removeClass("js-transform-0");
               });
@@ -170,11 +185,15 @@ var loopLength = 8000;
 
 
   function runTweet() {
-  twitterFetcher.fetch(config1);
+    twitterFetcher.fetch(config1);
+    console.log('runtweet' + loopRepeat)
+
+    window.clearInterval(runTweet, loopRepeat);
+    window.setInterval(runTweet, loopRepeat);
   }
 
   runTweet();
 
-  window.setInterval(runTweet, loopLength);
+  
 
 

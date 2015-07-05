@@ -101,8 +101,6 @@ loadHomeImages();
 
 
 
-
-
 //*********** SCROLLING BETWEEN PROJECTS ********//
 
 function moveSection(search, direction) {
@@ -153,10 +151,42 @@ function moveSection(search, direction) {
   //if not intro load new images
   $('[id^=content-img-view]').addClass('content-view-' + nextContent);
 
+  placeBox();
+
 
 
 
 } //*************** END MOVESECTION ************//
+
+
+
+//*********** MOVE BOX TO RIGHT POSITION BELOW TEXT ********//
+
+function placeBox() {
+  
+  var mobileBreak = 850;
+
+  // if window less than breakpoint then move box
+  if ( $(window).width() < mobileBreak ) {
+     var introBottom = $('#content-sect-wrap').offset().top + $('.content-visible').height() + 32;
+    // $('#content-images').offset({ top: introBottom });
+    $('#content-images').animate({ top: introBottom }, 500);
+  } else {
+    $('#content-images').animate({ top: 100 }, 500);
+  };  
+
+
+}
+
+placeBox();
+
+window.onresize = function(event) {
+    placeBox();
+};
+
+
+
+//************ END BOX TO RIGHT POSITION BELOW TEXT ********//
 
 
 
@@ -194,6 +224,14 @@ $('#full-image-close').click(function(){
   var imageBack = $('#full-image-back');
   imageBack.toggleClass('js-on-page');
 });
+
+
+
+
+
+
+
+
 
 
 

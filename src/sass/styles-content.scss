@@ -392,18 +392,40 @@
   &.content-img-view-mobile { background: url(../img/content/emoti-mobile.png) no-repeat; }
   &.content-img-view-tablet { background: url(../img/content/emoti-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/emoti-desktop.png) no-repeat; }
+  
+  &.content-img-view-mobile { animation: bg1Mobile 7s infinite; }
+  &.content-img-view-tablet { 
+    animation: bg1Tablet2 7s infinite; 
+    @media screen and (max-width: 650px ){ animation: bg1Tablet 7s infinite;  }
+  }
+  &.content-img-view-desktop { animation: bg1Desktop 7s infinite; }
+
 }
 
 .content-view-2 {
   &.content-img-view-mobile { background: url(../img/content/sowgrow-mobile.png) no-repeat; }
   &.content-img-view-tablet { background: url(../img/content/sowgrow-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/sowgrow-desktop.png) no-repeat; }
+
+  &.content-img-view-mobile { animation: bg2Mobile 7s infinite; }
+  &.content-img-view-tablet { 
+    animation: bg2Tablet2 7s infinite; 
+    @media screen and (max-width: 650px ){ animation: bg2Tablet 7s infinite;  }
+  }
+  &.content-img-view-desktop { animation: bg2Desktop 7s infinite; }
 }
 
 .content-view-3 {
   &.content-img-view-mobile { background: url(../img/content/bespokea-mobile.png) no-repeat; }
   &.content-img-view-tablet { background: url(../img/content/bespokea-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/bespokea-desktop.png) no-repeat; }
+
+  &.content-img-view-mobile { animation: bg3Mobile 7s infinite; }
+  &.content-img-view-tablet { 
+    animation: bg3Tablet2 7s infinite; 
+    @media screen and (max-width: 650px ){ animation: bg3Tablet 7s infinite;  }
+  }
+  &.content-img-view-desktop { animation: bg3Desktop 7s infinite; }
 }
 
 .content-view-4 {
@@ -416,12 +438,26 @@
   &.content-img-view-mobile { background: url(../img/content/allyalex-mobile.png) no-repeat; }
   &.content-img-view-tablet { background: url(../img/content/allyalex-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/allyalex-desktop.png) no-repeat; }
+
+  &.content-img-view-mobile { animation: bg5Mobile 7s infinite; }
+  &.content-img-view-tablet { 
+    animation: bg5Tablet2 7s infinite; 
+    @media screen and (max-width: 650px ){ animation: bg5Tablet 7s infinite;  }
+  }
+  &.content-img-view-desktop { animation: bg5Desktop 7s infinite; }
 }
 
 .content-view-6 {
   &.content-img-view-mobile { background: url(../img/content/ND-mobile.png) no-repeat; }
   &.content-img-view-tablet { background: url(../img/content/ND-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/ND-desktop.png) no-repeat; }
+
+  &.content-img-view-mobile { animation: bg6Mobile 7s infinite; }
+  &.content-img-view-tablet { 
+    animation: bg6Tablet2 7s infinite; 
+    @media screen and (max-width: 650px ){ animation: bg6Tablet 7s infinite;  }
+  }
+  &.content-img-view-desktop { animation: bg6Desktop 7s infinite; }
 }
 
 .content-view-7 {
@@ -434,13 +470,16 @@
   &.content-img-view-mobile { background: url(../img/content/attain-mobile.png) no-repeat; }
   &.content-img-view-tablet { background: url(../img/content/attain-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/attain-desktop.png) no-repeat; }
+
+  //no mobile changing
+  &.content-img-view-tablet { 
+    animation: bg8Tablet2 7s infinite; 
+    @media screen and (max-width: 650px ){ animation: bg8Tablet 7s infinite;  }
+  }
+  &.content-img-view-desktop { animation: bg8Desktop 7s infinite; }
 }
 
-// .content-view-7 {
-//   &.content-img-view-mobile { background: url(../img/content/ukpe-mobile.png) no-repeat; }
-//   &.content-img-view-tablet { background: url(../img/content/ukpe-tablet.png) no-repeat; }
-//   &.content-img-view-desktop { background: url(../img/content/ukpe-desktop.png) no-repeat; }
-// }
+
 
 [class*="content-view"] {
 
@@ -453,6 +492,9 @@
 
   &.content-img-view-desktop { background-size: 567px 319px; }
 }
+
+
+
 
 .full-width {
   width: 100%;
@@ -477,6 +519,200 @@
 }
 
 
+@keyframes bg1Mobile {
+  0% { background: url(../img/content/emoti-mobile.png) no-repeat; background-size: 224px 385px; }
+  30% { background: url(../img/content/emoti-mobile.png) no-repeat; background-size: 224px 385px; }
+  50% { background: url(../img/content/emoti-mobile1.png) no-repeat; background-size: 224px 385px; }
+  80% { background: url(../img/content/emoti-mobile1.png) no-repeat; background-size: 224px 385px; }
+  100% { background: url(../img/content/emoti-mobile.png) no-repeat; background-size: 224px 385px; }
+}
+
+@keyframes bg1Tablet {
+  0% { background: url(../img/content/emoti-tablet.png) no-repeat; background-size: 327px 242px; }
+  30% { background: url(../img/content/emoti-tablet.png) no-repeat; background-size: 327px 242px; }
+  50% { background: url(../img/content/emoti-tablet1.png) no-repeat; background-size: 327px 242px; }
+  80% { background: url(../img/content/emoti-tablet1.png) no-repeat; background-size: 327px 242px;}
+  100% { background: url(../img/content/emoti-tablet.png) no-repeat; background-size: 327px 242px; }
+}
+
+@keyframes bg1Tablet2 {
+  0% { background: url(../img/content/emoti-tablet.png) no-repeat; background-size: 439px 323px; }
+  30% { background: url(../img/content/emoti-tablet.png) no-repeat; background-size: 439px 323px; }
+  50% { background: url(../img/content/emoti-tablet1.png) no-repeat; background-size: 439px 323px; }
+  80% { background: url(../img/content/emoti-tablet1.png) no-repeat; background-size: 439px 323px; }
+  100% { background: url(../img/content/emoti-tablet.png) no-repeat; background-size: 439px 323px; }
+}
+
+@keyframes bg1Desktop {
+  0% { background: url(../img/content/emoti-desktop.png) no-repeat; background-size: 567px 319px; }
+  30% { background: url(../img/content/emoti-desktop.png) no-repeat; background-size: 567px 319px; }
+  50% { background: url(../img/content/emoti-desktop1.png) no-repeat; background-size: 567px 319px; }
+  80% { background: url(../img/content/emoti-desktop1.png) no-repeat; background-size: 567px 319px; }
+  100% { background: url(../img/content/emoti-desktop.png) no-repeat; background-size: 567px 319px; }
+}
+
+//
+
+@keyframes bg2Mobile {
+  0% { background: url(../img/content/sowgrow-mobile.png) no-repeat; background-size: 224px 385px; }
+  30% { background: url(../img/content/sowgrow-mobile.png) no-repeat; background-size: 224px 385px; }
+  50% { background: url(../img/content/sowgrow-mobile1.png) no-repeat; background-size: 224px 385px; }
+  80% { background: url(../img/content/sowgrow-mobile1.png) no-repeat; background-size: 224px 385px; }
+  100% { background: url(../img/content/sowgrow-mobile.png) no-repeat; background-size: 224px 385px; }
+}
+
+@keyframes bg2Tablet {
+  0% { background: url(../img/content/sowgrow-tablet.png) no-repeat; background-size: 327px 242px; }
+  30% { background: url(../img/content/sowgrow-tablet.png) no-repeat; background-size: 327px 242px; }
+  50% { background: url(../img/content/sowgrow-tablet1.png) no-repeat; background-size: 327px 242px; }
+  80% { background: url(../img/content/sowgrow-tablet1.png) no-repeat; background-size: 327px 242px;}
+  100% { background: url(../img/content/sowgrow-tablet.png) no-repeat; background-size: 327px 242px; }
+}
+
+@keyframes bg2Tablet2 {
+  0% { background: url(../img/content/sowgrow-tablet.png) no-repeat; background-size: 439px 323px; }
+  30% { background: url(../img/content/sowgrow-tablet.png) no-repeat; background-size: 439px 323px; }
+  50% { background: url(../img/content/sowgrow-tablet1.png) no-repeat; background-size: 439px 323px; }
+  80% { background: url(../img/content/sowgrow-tablet1.png) no-repeat; background-size: 439px 323px; }
+  100% { background: url(../img/content/sowgrow-tablet.png) no-repeat; background-size: 439px 323px; }
+}
+
+@keyframes bg2Desktop {
+  0% { background: url(../img/content/sowgrow-desktop.png) no-repeat; background-size: 567px 319px; }
+  30% { background: url(../img/content/sowgrow-desktop.png) no-repeat; background-size: 567px 319px; }
+  50% { background: url(../img/content/sowgrow-desktop1.png) no-repeat; background-size: 567px 319px; }
+  80% { background: url(../img/content/sowgrow-desktop1.png) no-repeat; background-size: 567px 319px; }
+  100% { background: url(../img/content/sowgrow-desktop.png) no-repeat; background-size: 567px 319px; }
+}
+
+//
+
+@keyframes bg3Mobile {
+  0% { background: url(../img/content/bespokea-mobile.png) no-repeat; background-size: 224px 385px; }
+  30% { background: url(../img/content/bespokea-mobile.png) no-repeat; background-size: 224px 385px; }
+  50% { background: url(../img/content/bespokea-mobile1.png) no-repeat; background-size: 224px 385px; }
+  80% { background: url(../img/content/bespokea-mobile1.png) no-repeat; background-size: 224px 385px; }
+  100% { background: url(../img/content/bespokea-mobile.png) no-repeat; background-size: 224px 385px; }
+}
+
+@keyframes bg3Tablet {
+  0% { background: url(../img/content/bespokea-tablet.png) no-repeat; background-size: 327px 242px; }
+  30% { background: url(../img/content/bespokea-tablet.png) no-repeat; background-size: 327px 242px; }
+  50% { background: url(../img/content/bespokea-tablet1.png) no-repeat; background-size: 327px 242px; }
+  80% { background: url(../img/content/bespokea-tablet1.png) no-repeat; background-size: 327px 242px;}
+  100% { background: url(../img/content/bespokea-tablet.png) no-repeat; background-size: 327px 242px; }
+}
+
+@keyframes bg3Tablet2 {
+  0% { background: url(../img/content/bespokea-tablet.png) no-repeat; background-size: 439px 323px; }
+  30% { background: url(../img/content/bespokea-tablet.png) no-repeat; background-size: 439px 323px; }
+  50% { background: url(../img/content/bespokea-tablet1.png) no-repeat; background-size: 439px 323px; }
+  80% { background: url(../img/content/bespokea-tablet1.png) no-repeat; background-size: 439px 323px; }
+  100% { background: url(../img/content/bespokea-tablet.png) no-repeat; background-size: 439px 323px; }
+}
+
+@keyframes bg3Desktop {
+  0% { background: url(../img/content/bespokea-desktop.png) no-repeat; background-size: 567px 319px; }
+  30% { background: url(../img/content/bespokea-desktop.png) no-repeat; background-size: 567px 319px; }
+  50% { background: url(../img/content/bespokea-desktop1.png) no-repeat; background-size: 567px 319px; }
+  80% { background: url(../img/content/bespokea-desktop1.png) no-repeat; background-size: 567px 319px; }
+  100% { background: url(../img/content/bespokea-desktop.png) no-repeat; background-size: 567px 319px; }
+}
+
+//
+
+@keyframes bg5Mobile {
+  0% { background: url(../img/content/allyalex-mobile.png) no-repeat; background-size: 224px 385px; }
+  30% { background: url(../img/content/allyalex-mobile.png) no-repeat; background-size: 224px 385px; }
+  50% { background: url(../img/content/allyalex-mobile1.png) no-repeat; background-size: 224px 385px; }
+  80% { background: url(../img/content/allyalex-mobile1.png) no-repeat; background-size: 224px 385px; }
+  100% { background: url(../img/content/allyalex-mobile.png) no-repeat; background-size: 224px 385px; }
+}
+
+@keyframes bg5Tablet {
+  0% { background: url(../img/content/allyalex-tablet.png) no-repeat; background-size: 327px 242px; }
+  30% { background: url(../img/content/allyalex-tablet.png) no-repeat; background-size: 327px 242px; }
+  50% { background: url(../img/content/allyalex-tablet1.png) no-repeat; background-size: 327px 242px; }
+  80% { background: url(../img/content/allyalex-tablet1.png) no-repeat; background-size: 327px 242px;}
+  100% { background: url(../img/content/allyalex-tablet.png) no-repeat; background-size: 327px 242px; }
+}
+
+@keyframes bg5Tablet2 {
+  0% { background: url(../img/content/allyalex-tablet.png) no-repeat; background-size: 439px 323px; }
+  30% { background: url(../img/content/allyalex-tablet.png) no-repeat; background-size: 439px 323px; }
+  50% { background: url(../img/content/allyalex-tablet1.png) no-repeat; background-size: 439px 323px; }
+  80% { background: url(../img/content/allyalex-tablet1.png) no-repeat; background-size: 439px 323px; }
+  100% { background: url(../img/content/allyalex-tablet.png) no-repeat; background-size: 439px 323px; }
+}
+
+@keyframes bg5Desktop {
+  0% { background: url(../img/content/allyalex-desktop.png) no-repeat; background-size: 567px 319px; }
+  30% { background: url(../img/content/allyalex-desktop.png) no-repeat; background-size: 567px 319px; }
+  50% { background: url(../img/content/allyalex-desktop1.png) no-repeat; background-size: 567px 319px; }
+  80% { background: url(../img/content/allyalex-desktop1.png) no-repeat; background-size: 567px 319px; }
+  100% { background: url(../img/content/allyalex-desktop.png) no-repeat; background-size: 567px 319px; }
+}
+
+//
+
+@keyframes bg6Mobile {
+  0% { background: url(../img/content/ND-mobile.png) no-repeat; background-size: 224px 385px; }
+  30% { background: url(../img/content/ND-mobile.png) no-repeat; background-size: 224px 385px; }
+  50% { background: url(../img/content/ND-mobile1.png) no-repeat; background-size: 224px 385px; }
+  80% { background: url(../img/content/ND-mobile1.png) no-repeat; background-size: 224px 385px; }
+  100% { background: url(../img/content/ND-mobile.png) no-repeat; background-size: 224px 385px; }
+}
+
+@keyframes bg6Tablet {
+  0% { background: url(../img/content/ND-tablet.png) no-repeat; background-size: 327px 242px; }
+  30% { background: url(../img/content/ND-tablet.png) no-repeat; background-size: 327px 242px; }
+  50% { background: url(../img/content/ND-tablet1.png) no-repeat; background-size: 327px 242px; }
+  80% { background: url(../img/content/ND-tablet1.png) no-repeat; background-size: 327px 242px;}
+  100% { background: url(../img/content/ND-tablet.png) no-repeat; background-size: 327px 242px; }
+}
+
+@keyframes bg6Tablet2 {
+  0% { background: url(../img/content/ND-tablet.png) no-repeat; background-size: 439px 323px; }
+  30% { background: url(../img/content/ND-tablet.png) no-repeat; background-size: 439px 323px; }
+  50% { background: url(../img/content/ND-tablet1.png) no-repeat; background-size: 439px 323px; }
+  80% { background: url(../img/content/ND-tablet1.png) no-repeat; background-size: 439px 323px; }
+  100% { background: url(../img/content/ND-tablet.png) no-repeat; background-size: 439px 323px; }
+}
+
+@keyframes bg6Desktop {
+  0% { background: url(../img/content/ND-desktop.png) no-repeat; background-size: 567px 319px; }
+  30% { background: url(../img/content/ND-desktop.png) no-repeat; background-size: 567px 319px; }
+  50% { background: url(../img/content/ND-desktop1.png) no-repeat; background-size: 567px 319px; }
+  80% { background: url(../img/content/ND-desktop1.png) no-repeat; background-size: 567px 319px; }
+  100% { background: url(../img/content/ND-desktop.png) no-repeat; background-size: 567px 319px; }
+}
+
+//
+
+
+@keyframes bg8Tablet {
+  0% { background: url(../img/content/attain-tablet.png) no-repeat; background-size: 327px 242px; }
+  30% { background: url(../img/content/attain-tablet.png) no-repeat; background-size: 327px 242px; }
+  50% { background: url(../img/content/attain-tablet1.png) no-repeat; background-size: 327px 242px; }
+  80% { background: url(../img/content/attain-tablet1.png) no-repeat; background-size: 327px 242px;}
+  100% { background: url(../img/content/attain-tablet.png) no-repeat; background-size: 327px 242px; }
+}
+
+@keyframes bg8Tablet2 {
+  0% { background: url(../img/content/attain-tablet.png) no-repeat; background-size: 439px 323px; }
+  30% { background: url(../img/content/attain-tablet.png) no-repeat; background-size: 439px 323px; }
+  50% { background: url(../img/content/attain-tablet1.png) no-repeat; background-size: 439px 323px; }
+  80% { background: url(../img/content/attain-tablet1.png) no-repeat; background-size: 439px 323px; }
+  100% { background: url(../img/content/attain-tablet.png) no-repeat; background-size: 439px 323px; }
+}
+
+@keyframes bg8Desktop {
+  0% { background: url(../img/content/attain-desktop.png) no-repeat; background-size: 567px 319px; }
+  30% { background: url(../img/content/attain-desktop.png) no-repeat; background-size: 567px 319px; }
+  50% { background: url(../img/content/attain-desktop1.png) no-repeat; background-size: 567px 319px; }
+  80% { background: url(../img/content/attain-desktop1.png) no-repeat; background-size: 567px 319px; }
+  100% { background: url(../img/content/attain-desktop.png) no-repeat; background-size: 567px 319px; }
+}
 
 
 
