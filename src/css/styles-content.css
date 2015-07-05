@@ -398,6 +398,7 @@ ul {
   position: absolute;
   top: 55px;
   right: 0;
+  z-index: 1;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }

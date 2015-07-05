@@ -5,7 +5,7 @@ $( document ).ready(function() {
   'illustration',
   'photography',
   'profile',
-  'contact',
+  'tact',
   'blog'
   ];
 
@@ -163,26 +163,30 @@ function moveSection(search, direction) {
 //*********** MOVE BOX TO RIGHT POSITION BELOW TEXT ********//
 
 function placeBox() {
-  
-  var mobileBreak = 850;
 
-  // if window less than breakpoint then move box
-  if ( $(window).width() < mobileBreak ) {
-     var introBottom = $('#content-sect-wrap').offset().top + $('.content-visible').height() + 32;
-    // $('#content-images').offset({ top: introBottom });
-    $('#content-images').animate({ top: introBottom }, 500);
-  } else {
-    $('#content-images').animate({ top: 100 }, 500);
-  };  
+    if ($('body').attr('id') == "design-body") {
+
+          var mobileBreak = 850;
+
+          // if window less than breakpoint then move box
+          if ( $(window).width() < mobileBreak ) {
+             var introBottom = $('#content-sect-wrap').offset().top + $('.content-visible').height() + 32;
+            // $('#content-images').offset({ top: introBottom });
+            $('#content-images').animate({ top: introBottom }, 500);
+          } else {
+            $('#content-images').animate({ top: 100 }, 500);
+          }; 
+    }
+
+  }; 
 
 
-}
+  placeBox();
 
-placeBox();
 
-window.onresize = function(event) {
-    placeBox();
-};
+  window.onresize = function(event) {
+      placeBox();
+  };
 
 
 
@@ -252,11 +256,8 @@ $('[id*=filter]').click( function() {
           };
       }
 
-
-
   }
-  
-})
+});
 
 
 
