@@ -49,13 +49,8 @@
   };
 
   
-<<<<<<< HEAD
-var loopRepeat = 9000;
-var loopLength = 0; //initially zero to load first image
-=======
 // var loopRepeat = 16000;
 // var loopLength = 8000;
->>>>>>> origin/master
 
   //DEFINE VARIABLES ************//
 
@@ -110,27 +105,8 @@ var loopLength = 0; //initially zero to load first image
               twtContent = "";
             }
 
-            
           } //end for loops
 
-<<<<<<< HEAD
-          //set photo first
-          if ( loopLength === 0 ) {
-            console.log('firstrun-1');
-            $('#twitter-photo').attr('src',allImages[0]).load(function(){
-               if (this.complete) $(this).fadeIn(500);
-               $('#photo-info-tweet').text(allImagesTweet[0]);
-               console.log('firstrun-2');
-            }); 
-          }
-
-          //now set loop to normal length
-          loopLength = 3000;
-               
-
-
-          changePhotos(allImages, allImagesTweet);
-=======
           // changePhotos(allImages, allImagesTweet);
 
 
@@ -147,7 +123,6 @@ var loopLength = 0; //initially zero to load first image
 
           startLoop();
           
->>>>>>> origin/master
 
         
 
@@ -159,20 +134,6 @@ var loopLength = 0; //initially zero to load first image
 
   function changePhotos(allImages, allImagesTweet) {
 
-<<<<<<< HEAD
-
-
-
-    loopRepeat = allImages.length * loopLength;
-    console.log(loopRepeat)
-
-    
-
-    //loop time is interval divided by image number
-    // var loopLength = (loopRepeat / allImages.length);
-    
-    var loopTimes = allImages.length;
-=======
     $('#photo-info-tweet').addClass("js-transform-0");
 
     $('#twitter-photo').fadeOut(500, function(){
@@ -183,7 +144,6 @@ var loopLength = 0; //initially zero to load first image
       });
     });        
   
->>>>>>> origin/master
 
     if(photoCount == allImages.length -1){
          photoCount = 0;
@@ -194,25 +154,10 @@ var loopLength = 0; //initially zero to load first image
   }   /* end changephotos*/
 
 
-<<<<<<< HEAD
-          $('#twitter-photo').fadeOut(500, function(){
-
-            $(this).attr('src',allImages[i]).load(function(){
-               if (this.complete) $(this).fadeIn(500);
-               console.log('change' + loopLength)
-               $('#photo-info-tweet').text(allImagesTweet[i]);
-               $('#photo-info-tweet').removeClass("js-transform-0");
-              });
-          });               
-          if (--i) photoLoop(i);      //  decrement i and call myLoop again if i > 0
-       }, loopLength)
-    })(loopTimes);
-=======
 
   //****** open and close info panel ****//
   $('#photo-info-btn').click(function(){
       $('#photo-info').toggleClass('js-info-open');
->>>>>>> origin/master
 
       if ($('#info-btn-letter').text() == "i") {
           $('#info-btn-letter').text('x');
@@ -227,13 +172,6 @@ var loopLength = 0; //initially zero to load first image
 
   function runTweet() {
     twitterFetcher.fetch(config1);
-<<<<<<< HEAD
-    console.log('runtweet' + loopRepeat)
-
-    window.clearInterval(runTweet, loopRepeat);
-    window.setInterval(runTweet, loopRepeat);
-=======
->>>>>>> origin/master
   }
 
   function startLoop() {
@@ -250,9 +188,5 @@ var loopLength = 0; //initially zero to load first image
  
   
 
-<<<<<<< HEAD
-  
-=======
->>>>>>> origin/master
 
 
