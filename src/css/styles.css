@@ -4444,16 +4444,18 @@ ul {
     margin-bottom: 1em;
     width: 100%;
     -webkit-transition: all 0.3s;
-    transition: all 0.3s; }
-  /* line 141, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+    transition: all 0.3s;
+    opacity: 0; }
+  /* line 142, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
   .photo-info p {
     font-family: 'Oswald', helvetica, sans-serif;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    opacity: 0; }
   @media screen and (max-width: 450px) {
     .photo-info {
       height: 64%; } }
 
-/* line 151, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+/* line 153, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
 .photo-info-btn {
   width: 3em;
   height: 3em;
@@ -4467,7 +4469,7 @@ ul {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   opacity: 0.8; }
-  /* line 166, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+  /* line 168, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
   .photo-info-btn p {
     font-weight: bold;
     border: 2px solid #F2DB00;
@@ -4480,15 +4482,21 @@ ul {
     display: table-cell;
     vertical-align: middle; }
 
-/* line 182, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+/* line 184, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
 .js-info-open {
   max-height: 34%;
   padding: 2em; }
+  /* line 188, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+  .js-info-open h3 {
+    opacity: 1; }
+  /* line 190, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+  .js-info-open p {
+    opacity: 1; }
   @media screen and (max-width: 450px) {
     .js-info-open {
       max-height: 64%; } }
 
-/* line 191, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
+/* line 197, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-photography.scss */
 .js-transform-0 {
   -webkit-transform: scale(1, 0);
   -ms-transform: scale(1, 0);
