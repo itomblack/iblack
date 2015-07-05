@@ -226,6 +226,37 @@ $('#full-image-close').click(function(){
 });
 
 
+//FILTER
+
+$('[id*=filter]').click( function() {
+  var filter = this.id.split('-')[1];
+  var allPics = $('.ill-thumb');
+  //if off then remove class and show images
+  if ($(this).hasClass('filter-on')) {
+      $(this).removeClass('filter-on');
+      for (i=0; i<allPics.length; i++) {
+          if ($(allPics[i]).attr('data').indexOf(filter) == 0) {
+            $(allPics[i]).removeClass('hide-illustration');
+          };
+      }
+
+  } else {
+      // else add class and hide images
+      $(this).addClass('filter-on');
+
+      // $('[data=' + filter + ']').addClass('hide-illustration')
+
+      for (i=0; i<allPics.length; i++) {
+          if ($(allPics[i]).attr('data').indexOf(filter) == 0) {
+            $(allPics[i]).addClass('hide-illustration');
+          };
+      }
+
+
+
+  }
+  
+})
 
 
 
