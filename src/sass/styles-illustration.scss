@@ -19,6 +19,7 @@
   margin-left: -20px;
   display: block;
   overflow: scroll;
+  margin-top: 2em;
 
   @media screen and (min-width: 480px) {
     width: calc(100% + 60px);
@@ -30,6 +31,7 @@
     position: absolute;
     right: 0;
     top: 60px;
+    margin-top: 0;
     height: 100%;
     height: calc(100% - 100px);
   }

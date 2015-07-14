@@ -5,7 +5,7 @@ $( document ).ready(function() {
   'illustration',
   'photography',
   'profile',
-  'tact',
+  'contact',
   'blog'
   ];
 
