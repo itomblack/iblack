@@ -121,6 +121,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  margin-bottom: 4em;
 }
 .content-img-wrap-mobile {
   width: 280px;
@@ -432,6 +433,8 @@
   &.content-img-view-mobile { background: url(../img/content/whisky-mobile.png) no-repeat; }
   &.content-img-view-tablet { background: url(../img/content/whisky-tablet.png) no-repeat; }
   &.content-img-view-desktop { background: url(../img/content/whisky-desktop.png) no-repeat; }
+
+  &.content-img-view-desktop { animation: bg4Desktop 7s infinite; }
 }
 
 .content-view-5 {
@@ -617,6 +620,16 @@
   50% { background: url(../img/content/bespokea-desktop1.png) no-repeat; background-size: 567px 319px; }
   80% { background: url(../img/content/bespokea-desktop1.png) no-repeat; background-size: 567px 319px; }
   100% { background: url(../img/content/bespokea-desktop.png) no-repeat; background-size: 567px 319px; }
+}
+
+//
+
+@keyframes bg4Desktop {
+  0% { background: url(../img/content/whisky-desktop.png) no-repeat; background-size: 567px 319px; }
+  30% { background: url(../img/content/whisky-desktop.png) no-repeat; background-size: 567px 319px; }
+  50% { background: url(../img/content/whisky-desktop1.png) no-repeat; background-size: 567px 319px; }
+  80% { background: url(../img/content/whisky-desktop1.png) no-repeat; background-size: 567px 319px; }
+  100% { background: url(../img/content/whisky-desktop.png) no-repeat; background-size: 567px 319px; }
 }
 
 //

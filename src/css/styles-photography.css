@@ -347,20 +347,22 @@ ul {
 
 /* line 153, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
 .photo-info-btn {
-  width: 3em;
-  height: 3em;
   position: absolute;
   bottom: 0;
-  left: -webkit-calc(50% - 1.5em);
-  left: calc(50% - 1.5em);
   overflow: visible;
   text-align: center;
-  padding: 0.5em;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-  opacity: 0.8; }
-  /* line 168, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
+  opacity: 0.8;
+  border: 2px solid #F2DB00;
+  background-color: #000030;
+  width: 2em;
+  height: 2em;
+  left: -webkit-calc(50% - 1em);
+  left: calc(50% - 1em);
+  border-radius: 50px;
+  bottom: 0.5em; }
+  /* line 165, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
   .photo-info-btn p {
+    font-family: 'Oswald', helvetica, sans-serif;
     font-weight: bold;
     border: 2px solid #F2DB00;
     background-color: #000030;
@@ -371,22 +373,59 @@ ul {
     margin: 0;
     display: table-cell;
     vertical-align: middle; }
+  /* line 187, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
+  .photo-info-btn::before {
+    content: "";
+    position: absolute;
+    width: 0.2em;
+    height: 0.2em;
+    background-color: #F2DB00;
+    left: -webkit-calc(50% - 0.1em);
+    left: calc(50% - 0.1em);
+    top: 0.25em;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  /* line 199, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
+  .photo-info-btn::after {
+    content: "";
+    position: absolute;
+    width: 0.2em;
+    height: 0.8em;
+    background-color: #F2DB00;
+    left: -webkit-calc(50% - 0.1em);
+    left: calc(50% - 0.1em);
+    top: 0.65em;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  /* line 213, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
+  .photo-info-btn.js-info-close::before {
+    height: 0.8em;
+    left: -webkit-calc(50% - 0.1em);
+    left: calc(50% - 0.1em);
+    top: 0.25em; }
+  /* line 219, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
+  .photo-info-btn.js-info-close::after {
+    height: 0.8em;
+    background-color: #F2DB00;
+    left: -webkit-calc(50% - 0.1em);
+    left: calc(50% - 0.1em);
+    top: 0.65em; }
 
-/* line 184, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
+/* line 229, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
 .js-info-open {
   max-height: 34%;
   padding: 2em; }
-  /* line 188, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
+  /* line 233, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
   .js-info-open h3 {
     opacity: 1; }
-  /* line 190, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
+  /* line 235, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
   .js-info-open p {
     opacity: 1; }
   @media screen and (max-width: 450px) {
     .js-info-open {
       max-height: 64%; } }
 
-/* line 197, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
+/* line 242, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
 .js-transform-0 {
   -webkit-transform: scale(1, 0);
   -ms-transform: scale(1, 0);

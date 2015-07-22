@@ -20,11 +20,13 @@ html, body {
   font-size: 16px;
   background-color: #FFF;
   height: 100%;
-  overflow: hidden;
-  overflow-y: scroll;
+  min-height: 100%;
+  // overflow: hidden;
+  overflow-y: auto;
   @include box-sizing;
+  @include clearfix;
 
-  @media screen and (min-width: 850px) { overflow-x: scroll; }
+  // @media screen and (min-width: 850px) { overflow-x: scroll; }
 
 }
 
@@ -139,6 +141,8 @@ input[type=checkbox] {
 	top: 0;
 	left: 0;
 
+	z-index: 10;
+
 	.home-body & {
 		opacity: 0.5;
 	}
@@ -163,6 +167,8 @@ input[type=checkbox] {
 	opacity: 1;
 	transition: all $short ease;
 	cursor: pointer;
+
+	z-index: 15;
 
 	@media screen and (max-width: 480px) {
 		top: 10px;
@@ -347,8 +353,10 @@ input[type=checkbox]:checked ~ .menu-panel{
 		&:last-child {
 			float: right;
 		}
+	}
 
-
+	@media screen and (max-width: 400px) {
+		display: none;
 	}
 }
 

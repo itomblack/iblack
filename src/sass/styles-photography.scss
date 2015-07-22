@@ -151,24 +151,20 @@
 }
 
 .photo-info-btn {
-    width: 3em;
-    height: 3em;
+    // width: 3em;
+    // height: 3em;
     position: absolute;
     bottom: 0;
-    left: calc(50% - 1.5em);
-    // background-color: $yellow;
+    // left: calc(50% - 1.5em);
     overflow: visible;
     text-align: center;
-    padding: 0.5em;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    // padding: 0.5em;
 
     opacity: 0.8;
 
     p {
+      font-family: 'Oswald', helvetica, sans-serif;
       font-weight: bold;
-      // border: 2px solid $yellow;
-      // color: $yellow;
       border: 2px solid $yellow;
       background-color: $ink;
       color: $yellow;
@@ -179,6 +175,55 @@
       display: table-cell;
       vertical-align: middle;
     }
+
+    border: 2px solid $yellow;
+    background-color: $ink;
+    width: 2em;
+    height: 2em;
+    left: calc(50% - 1em);
+    border-radius: 50px;
+    bottom: 0.5em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.2em;
+      height: 0.2em;
+      background-color: $yellow;
+      left: calc(50% - 0.1em);
+      top: 0.25em;
+
+      transition: all $short ease;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0.2em;
+      height: 0.8em;
+      background-color: $yellow;
+      left: calc(50% - 0.1em);
+      top: 0.65em;
+
+      transition: all $short ease;
+    }
+    
+
+    &.js-info-close  {
+      &::before {
+        height: 0.8em;
+        left: calc(50% - 0.1em);
+        top: 0.25em;
+      }
+
+      &::after {
+        height: 0.8em;
+        background-color: $yellow;
+        left: calc(50% - 0.1em);
+        top: 0.65em;
+      }
+    }
+
 }
 
 .js-info-open {

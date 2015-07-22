@@ -158,12 +158,14 @@
   //****** open and close info panel ****//
   $('#photo-info-btn').click(function(){
       $('#photo-info').toggleClass('js-info-open');
+      $('#photo-info-btn').toggleClass('js-info-close');
 
-      if ($('#info-btn-letter').text() == "i") {
-          $('#info-btn-letter').text('x');
-      } else {
-          $('#info-btn-letter').text('i');
-      }
+
+      // if ($('#info-btn-letter').text() == "i") {
+      //     $('#info-btn-letter').text('x');
+      // } else {
+      //     $('#info-btn-letter').text('i');
+      // }
       
   })
 
