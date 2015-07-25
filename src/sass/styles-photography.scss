@@ -211,16 +211,19 @@
 
     &.js-info-close  {
       &::before {
-        height: 0.8em;
+        height: 0.9em;
         left: calc(50% - 0.1em);
-        top: 0.25em;
+        top: 0.45em;
+        transform: rotate( 45deg );
+
       }
 
       &::after {
-        height: 0.8em;
+        height: 0.9em;
         background-color: $yellow;
         left: calc(50% - 0.1em);
-        top: 0.65em;
+        top: 0.45em;
+        transform: rotate( -45deg );
       }
     }
 

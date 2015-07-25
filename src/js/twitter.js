@@ -34,7 +34,7 @@
 
   //latest photo
   var config1 = {
-    "id": '610193103820062720',
+    "id": '624905633033269248',
     "domId": 'example1',
     "maxTweets": 10,
     "enableLinks": true,
@@ -56,73 +56,77 @@
 
   function handleTweets(tweets){
 
-    //get number of tweets in last seconds
+
+    if ( tweets.length !== 0 ) {
 
 
 
-    //HERE WE GET THE TIME VALUE OF EACH TWEET
-      var twtTime= tweets[0];
-       twtTime = twtTime.split('class="timePosted">')[1];
-       twtTime = twtTime.split('">')[1];
-       twtTime = twtTime.split(' ')[0];
+        var twtTime= tweets[0];
+         twtTime = twtTime.split('class="timePosted">')[1];
+         twtTime = twtTime.split('">')[1];
+         twtTime = twtTime.split(' ')[0];
 
-       //split in to seconds
-       var a = twtTime.split(':'); // split it at the colons
-       // minutes are worth 60 seconds. Hours are worth 60 minutes.
-       var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]); 
-
-
-      
+         //split in to seconds
+         var a = twtTime.split(':'); // split it at the colons
+         // minutes are worth 60 seconds. Hours are worth 60 minutes.
+         var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]); 
 
 
-      for ( i=0; i<tweets.length; i++) {
         
 
-            if (tweets[i] != undefined) {
-                var twtContent = tweets[i];
-                //if it contains a photo
-                if (twtContent.search('class="media">') > 0) { 
-                  //if it contains hastag
-                  if (twtContent.search('ibphoto') > 0) {
 
-                    var twtText = twtContent.split('class="tweet">')[1];
-                    twtText = twtText.split('</p>')[0].split('<a href')[0];
+        for ( i=0; i<tweets.length; i++) {
+          
 
-                    allImagesTweet.push(twtText);
+              if (tweets[i] != undefined) {
+                  var twtContent = tweets[i];
+                  //if it contains a photo
+                  if (twtContent.search('class="media">') > 0) { 
+                    //if it contains hastag
+                    if (twtContent.search('ibphoto') > 0) {
 
-                    twtContent = twtContent.split('class="media">')[1];
-                    twtContent = twtContent.split('img src="')[1];
-                    twtContent = twtContent.split('.jpg')[0];
-                    twtContent = twtContent += ".jpg";
+                      var twtText = twtContent.split('class="tweet">')[1];
+                      twtText = twtText.split('</p>')[0].split('<a href')[0];
 
-                    allImages.push(twtContent);               
+                      allImagesTweet.push(twtText);
+
+                      twtContent = twtContent.split('class="media">')[1];
+                      twtContent = twtContent.split('img src="')[1];
+                      twtContent = twtContent.split('.jpg')[0];
+                      twtContent = twtContent += ".jpg";
+
+                      allImages.push(twtContent);               
+                    }
+                    
+
                   }
-                  
+              }
+              else {
+                twtContent = "";
+              }
 
-                }
-            }
-            else {
-              twtContent = "";
-            }
+            } //end for loops
 
-          } //end for loops
-
-          // changePhotos(allImages, allImagesTweet);
+            // changePhotos(allImages, allImagesTweet);
 
 
-          //set photo first
+            //set photo first
 
-          $('#twitter-photo').fadeOut(500, function(){
-            $(this).attr('src',allImages[0]).bind('onreadystatechange load', function(){
-               if (this.complete) $(this).fadeIn(500);
-               $('#photo-info-tweet').text(allImagesTweet[0]);
-              });
-          });    
+            $('#twitter-photo').fadeOut(500, function(){
+              $(this).attr('src',allImages[0]).bind('onreadystatechange load', function(){
+                 if (this.complete) $(this).fadeIn(500);
+                 $('#photo-info-tweet').text(allImagesTweet[0]);
+                });
+            });    
 
-          
+            
 
-          startLoop();
-          
+            startLoop();
+            
+
+    }
+
+      
 
         
 
@@ -134,23 +138,32 @@
 
   function changePhotos(allImages, allImagesTweet) {
 
-    $('#photo-info-tweet').addClass("js-transform-0");
 
-    $('#twitter-photo').fadeOut(500, function(){
-      $(this).attr('src',allImages[photoCount]).bind('onreadystatechange load', function(){
-          if (this.complete) $(this).fadeIn(500);
-          $('#photo-info-tweet').text(allImagesTweet[photoCount]);
-          $('#photo-info-tweet').removeClass("js-transform-0");
-      });
-    });        
-  
+    if (allImagesTweet.length !== 0 ) {
 
-    if(photoCount == allImages.length -1){
-         photoCount = 0;
-    }
-    else{
-        photoCount++;
-    }
+          $('#photo-info-tweet').addClass("js-transform-0");
+
+          $('#twitter-photo').fadeOut(500, function(){
+            $(this).attr('src',allImages[photoCount]).bind('onreadystatechange load', function(){
+                if (this.complete) $(this).fadeIn(500);
+                $('#photo-info-tweet').text(allImagesTweet[photoCount]);
+                $('#photo-info-tweet').removeClass("js-transform-0");
+            });
+          });        
+          
+
+          if(photoCount == allImages.length -1){
+               photoCount = 0;
+          }
+          else{
+              photoCount++;
+          }
+
+
+
+    } //end if
+
+    
   }   /* end changephotos*/
 
 

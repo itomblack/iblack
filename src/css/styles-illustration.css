@@ -1,207 +1,207 @@
-/* line 5, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 5, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
-/* line 12, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 12, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 body {
   margin: 0; }
 
-/* line 31, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 31, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
 
-/* line 40, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 40, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 audio, canvas, progress, video {
   display: inline-block;
   /* 1 */
   vertical-align: baseline;
   /* 2 */ }
 
-/* line 47, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 47, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
 
-/* line 55, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 55, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 [hidden], template {
   display: none; }
 
-/* line 63, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 63, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 a {
   background: transparent; }
 
-/* line 69, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 69, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 a:active, a:hover {
   outline: 0; }
 
-/* line 77, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 77, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
-/* line 83, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 83, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 b, strong {
   font-weight: bold; }
 
-/* line 88, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 88, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 dfn {
   font-style: italic; }
 
-/* line 93, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 93, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
-/* line 99, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 99, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 mark {
   background: #ff0;
   color: #000; }
 
-/* line 105, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 105, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 small {
   font-size: 80%; }
 
-/* line 111, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 111, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
 
-/* line 118, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 118, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 sup {
   top: -0.5em; }
 
-/* line 122, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 122, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
-/* line 130, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 130, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 img {
   border: 0; }
 
-/* line 135, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 135, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
-/* line 143, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 143, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 figure {
   margin: 1em 40px; }
 
-/* line 148, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 148, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
-/* line 155, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 155, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 pre {
   overflow: auto; }
 
-/* line 163, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 163, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 code, kbd, pre, samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
-/* line 182, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 182, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 button, input, optgroup, select, textarea {
   color: inherit;
   font: inherit;
   margin: 0; }
 
-/* line 189, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 189, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 button {
   overflow: visible; }
 
-/* line 198, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 198, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 button, select {
   text-transform: none; }
 
-/* line 208, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 208, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
   /* 3 */ }
 
-/* line 215, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 215, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 button[disabled], html input[disabled] {
   cursor: default; }
 
-/* line 221, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 221, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-/* line 228, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 228, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 input {
   line-height: normal; }
 
-/* line 238, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 238, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 input[type="checkbox"], input[type="radio"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0; }
 
-/* line 247, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 247, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
-/* line 253, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 253, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
-/* line 263, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 263, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-/* line 268, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 268, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
-/* line 276, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 276, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 legend {
   border: 0;
   padding: 0; }
 
-/* line 282, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 282, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 textarea {
   overflow: auto; }
 
-/* line 288, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 288, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 optgroup {
   font-weight: bold; }
 
-/* line 296, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 296, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 302, /Users/itomblack/Repos/iblack/src/sass/_normalize.scss */
+/* line 302, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_normalize.scss */
 td, th {
   padding: 0; }
 
-/* line 26, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+/* line 26, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_variables.scss */
 *, *::before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
 
-/* line 32, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+/* line 32, /Users/BIT/Documents/Design/Repos/iblack/src/sass/_variables.scss */
 ul {
   padding: 0;
   list-style: none; }
 
-/* line 15, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 15, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .content-illustrations {
   float: left;
   width: 105%;
@@ -233,7 +233,7 @@ ul {
     .content-illustrations {
       width: 70%; } }
 
-/* line 46, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 46, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .full-image-back {
   position: fixed;
   top: 0;
@@ -245,20 +245,20 @@ ul {
   -webkit-transition: all 0.85s ease;
   transition: all 0.85s ease; }
 
-/* line 58, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 58, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .full-image-holder {
   width: 90%;
   height: 90%;
   margin: auto;
   margin-top: 5%; }
-  /* line 64, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 64, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   .full-image-holder img {
     margin: auto;
     max-width: 100%;
     max-height: 90%;
     display: block; }
 
-/* line 72, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 72, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .full-image-close {
   width: 35px;
   height: 35px;
@@ -267,7 +267,7 @@ ul {
   right: 5%;
   background-color: #FF5754;
   border-radius: 50px; }
-  /* line 81, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 81, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   .full-image-close::before, .full-image-close::after {
     content: " ";
     background-color: #000030;
@@ -281,29 +281,29 @@ ul {
     transform: rotate(45deg);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-  /* line 94, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 94, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   .full-image-close::after {
     -webkit-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
     transform: rotate(135deg);
     bottom: 43%;
     right: 25%; }
-  /* line 101, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 101, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   .full-image-close:hover::before {
     -webkit-transform: rotate(-135deg);
     -ms-transform: rotate(-135deg);
     transform: rotate(-135deg); }
-  /* line 105, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 105, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   .full-image-close:hover::after {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
-/* line 111, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 111, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .js-on-page {
   left: 0; }
 
-/* line 118, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 118, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .ill-thumb {
   float: left;
   margin: 0;
@@ -334,18 +334,18 @@ ul {
     .ill-thumb {
       width: 14.285%; } }
 
-/* line 139, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 139, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .hide-illustration {
   opacity: 0;
   max-width: 0;
   max-height: 0; }
 
-/* line 146, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 146, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .fade-in-short {
   -webkit-animation: fadeInShort 2s;
   animation: fadeInShort 2s; }
 
-/* line 150, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 150, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .filter-button {
   font-family: 'Oswald', helvetica, arial, sans-serif;
   font-weight: 300;
@@ -359,39 +359,39 @@ ul {
   border-bottom: 2px solid #000030;
   float: left;
   margin-right: 0.5em; }
-  /* line 165, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 165, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   .filter-button:hover {
     border-top: 2px solid white;
     border-bottom: none; }
-  /* line 170, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 170, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   .filter-button.filter-on {
     background-color: #000030;
     border-top: 2px solid white;
     border-bottom: none; }
-    /* line 175, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+    /* line 175, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
     .filter-button.filter-on:hover {
       border-top: none;
       border-bottom: 2px solid #FF5754; }
 
 @-webkit-keyframes fadeInShort {
-  /* line 192, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 192, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   0% {
     opacity: 0; }
 
-  /* line 193, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 193, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   100% {
     opacity: 1; } }
 
 @keyframes fadeInShort {
-  /* line 192, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 192, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   0% {
     opacity: 0; }
 
-  /* line 193, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 193, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   100% {
     opacity: 1; } }
 
-/* line 203, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 203, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .water {
   width: 100%;
   height: 100%;
@@ -401,7 +401,7 @@ ul {
   text-align: center;
   padding-top: 15%;
   color: #3F59A8; }
-  /* line 213, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 213, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   .water h1 {
     color: #3F59A8;
     width: 100%;
@@ -412,24 +412,24 @@ ul {
     @media screen and (max-width: 400px) {
       .water h1 {
         font-size: 38px; } }
-  /* line 225, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 225, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   .water p {
     color: #3F59A8;
     text-transform: uppercase;
     font-weight: bold; }
 
-/* line 232, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 232, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 svg {
   overflow: visible !important; }
 
-/* line 236, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 236, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .titleinfo {
   position: absolute;
   width: 100%;
   text-align: center;
   color: #3F59A8; }
 
-/* line 243, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 243, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .boat {
   width: 225px;
   height: 300px;
@@ -452,7 +452,7 @@ svg {
       animation: sailMobile 15s infinite;
       bottom: 23%; } }
 
-/* line 261, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 261, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 .buoy {
   -webkit-transform: scale(1.5);
   -ms-transform: scale(1.5);
@@ -463,7 +463,7 @@ svg {
   bottom: 18%;
   display: none; }
 
-/* line 270, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+/* line 270, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
 #all-move {
   position: relative;
   top: 38%;
@@ -471,93 +471,93 @@ svg {
   width: 100%; }
 
 @-webkit-keyframes sail {
-  /* line 279, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 279, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   0% {
     left: 5%; }
 
-  /* line 280, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 280, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   10% {
     -webkit-transform: scale(1.2) rotate(2deg);
     transform: scale(1.2) rotate(2deg); }
 
-  /* line 281, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 281, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   20% {
     -webkit-transform: scale(1.2) rotate(-2deg);
     transform: scale(1.2) rotate(-2deg); }
 
-  /* line 282, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 282, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   50% {
     left: 40%; }
 
-  /* line 283, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 283, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   10% {
     left: 5%; } }
 
 @keyframes sail {
-  /* line 279, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 279, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   0% {
     left: 5%; }
 
-  /* line 280, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 280, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   10% {
     -webkit-transform: scale(1.2) rotate(2deg);
     transform: scale(1.2) rotate(2deg); }
 
-  /* line 281, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 281, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   20% {
     -webkit-transform: scale(1.2) rotate(-2deg);
     transform: scale(1.2) rotate(-2deg); }
 
-  /* line 282, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 282, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   50% {
     left: 40%; }
 
-  /* line 283, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 283, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   10% {
     left: 5%; } }
 
 @-webkit-keyframes sailMobile {
-  /* line 287, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 287, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   0% {
     left: 5%; }
 
-  /* line 288, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 288, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   10% {
     -webkit-transform: scale(0.8) rotate(2deg);
     transform: scale(0.8) rotate(2deg); }
 
-  /* line 289, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 289, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   20% {
     -webkit-transform: scale(0.8) rotate(-2deg);
     transform: scale(0.8) rotate(-2deg); }
 
-  /* line 290, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 290, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   50% {
     left: 40%; }
 
-  /* line 291, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 291, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   10% {
     left: 5%; } }
 
 @keyframes sailMobile {
-  /* line 287, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 287, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   0% {
     left: 5%; }
 
-  /* line 288, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 288, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   10% {
     -webkit-transform: scale(0.8) rotate(2deg);
     transform: scale(0.8) rotate(2deg); }
 
-  /* line 289, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 289, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   20% {
     -webkit-transform: scale(0.8) rotate(-2deg);
     transform: scale(0.8) rotate(-2deg); }
 
-  /* line 290, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 290, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   50% {
     left: 40%; }
 
-  /* line 291, /Users/itomblack/Repos/iblack/src/sass/styles-illustration.scss */
+  /* line 291, /Users/BIT/Documents/Design/Repos/iblack/src/sass/styles-illustration.scss */
   10% {
     left: 5%; } }
