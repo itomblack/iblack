@@ -150,6 +150,10 @@
   }
 }
 
+.photo-border {
+  border: 20px solid white;
+}
+
 .photo-info-btn {
     // width: 3em;
     // height: 3em;
@@ -228,6 +232,59 @@
     }
 
 }
+
+
+[class*="photo-swap-"] {
+  width: 20px;
+  height: 70px;
+  position: fixed;
+  bottom: 40px;
+  background-color: $grey;
+  transition: all $short ease;
+  opacity: .4;
+
+  &:hover {
+    background-color: $coral;
+    opacity: 1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid $ink;
+    border-top: 2px solid $ink;
+    position: absolute;
+    top: 30px;
+  }
+}
+
+.photo-swap-left {
+  left: 0;
+
+  &::after {
+    left: 6px;
+    transform: rotate(-45deg);
+  }
+}
+
+.photo-swap-right {
+  right: 0;
+
+  &::after {
+    left: 4px;
+    transform: rotate(135deg);
+  }
+}
+
+.opacity-bar > .header-band { opacity: .3; }
+
+
+
+
+/*********************** js additions ***********************/
+
 
 .js-info-open {
   max-height: 34%;

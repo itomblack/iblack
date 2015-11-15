@@ -196,7 +196,8 @@ function placeBox() {
 
 
 
-//*********** ILLUSTRATION SHOW ********//
+//***************** ILLUSTRATION SHOW ***************//
+//***************************************************//
 
 var illustration = $('.ill-thumb');
 
@@ -260,6 +261,74 @@ $('[id*=filter]').click( function() {
 });
 
 
+
+//**************** PHOTOGRAHY SHOW ******************//
+//***************************************************//
+
+
+
+// define max num of images
+var imgTotal = 21;
+
+
+
+
+// if you hit button then get direction and call function
+$('[id*=photo-swap-]').click( function(event) {
+  if ($(this).attr('id').indexOf('left') > -1 ) {
+    movePhoto(-1);  
+  }
+  else if ($(this).attr('id').indexOf('right') > -1 ) {
+    movePhoto(1);  
+  }
+});
+
+// if arrows clicked get direction and call function
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+
+        case 37: //left
+          if ($('body').attr('id') == 'photog-body') {
+            movePhoto(-1);
+          };  
+          break;
+
+        case 39: //right
+          if ($('body').attr('id') == 'photog-body') {
+            movePhoto(1);
+          };  
+          break;
+    }
+};
+
+
+
+// move to next image based on direction
+var movePhoto = function(direction) {
+
+  //get existing image number
+  var currentNum = parseInt($('#main-photo').attr('src')
+  .replace('img/rome-web/rome-', '')
+  .replace('.jpg', '')
+  );
+
+  //get next image number
+  var nextNum = currentNum + direction;
+
+  //loop at start and end of number of images
+  if (nextNum < 1) {
+    nextNum = imgTotal;
+  } else if (nextNum > imgTotal) {
+    nextNum = 1;
+  }
+
+  // select image and swap out for next one
+  $('#main-photo').fadeOut(500, function(){
+      $(this).attr('src', 'img/rome-web/rome-' + nextNum + '.jpg' ).bind('onreadystatechange load', function(){
+         if (this.complete) $(this).fadeIn(500);
+      });
+  });   
+};
 
 
 
