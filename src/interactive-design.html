@@ -1,28 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>iBlack - Design</title>
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/styles.css">
+    @@include('./inc/head.html')
   </head>
-
-  <script type="text/javascript">
-  //GOOGLE ANALYTICS
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-37805029-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-  </script>
-
 
   <body id="design-body" class="design-body">
     
@@ -32,24 +12,109 @@
     <!-- MAIN CONTENT -->
     <div id="content-block" class="design-content-block">
       
-      <div class="project-wrap">
+      <div id="p-1" class="project-title">
+        <img src="../img/interactive/harp-1.png" alt="Image of interactive harmonica"/>
         <h2>Blues Harp</h2>
+        <a href="" class="full-image-close close-design"></a>
       </div>
-      <div class="project-wrap">
-        <h2>Whisky Map</h2>
+      <div id="p-2" class="project-content">
+        <p>
+          Inspired by the Blues bars of london, I had decided to take up the Harmonica. On Christmas morning I unwrapped a beautiful metal instrument, and blew my first note.
+        </p>
+        <p>
+          Sadly, I quickly realised it was far too cumbersome to carry. My pockets were already full of my phone, wallet and keys. I searched for a more portable solution. The <a href="http://pebblecode.com/" target="_blank">pebble {code}</a> music hack day provided me with the inspiration I neededto create a new musical object I could access anywhere. The digital Blues Harp was born.
+        </p>
+        <p>
+          In one day, I designed, coded and performed on this new instrument, powered by the <a href="https://github.com/rserota/wad" target="_blank">Wad.JS</a> library and a dash of JQuery
+        </p>
+        <a class="filter-button single-button-lrg" href="http://iblack.co.uk/harp/" target="_blank" alt="Link to interactive harmonica">Play the harp</a>
+        <a href="https://github.com/itomblack/harp" class="design-link" target="_blank" alt="Emoti Git Repo">GitHub Repo</a>
       </div>
-      <div class="project-wrap">
-        <h2>Emoti</h2>
-      </div>
-      <div class="project-wrap">
+
+      <div class="project-title">
+        <img src="../img/interactive/harvest-1.png" alt="Image of veg growing app"/>
         <h2>Sow &amp; Grow</h2>
+        <a href="" class="full-image-close close-design"></a>
       </div>
-      <div class="project-wrap">
+      <div class="project-content">
+        <p>
+          In 2015 I had two aims. Firstly, I wanted to improve my JavaScript knowledge. Secondly, I wanted to sample the delights of home grow vegetables in my dinner.
+        </p>
+        <p>
+          When I found the existing resources on growing vegetables to be lacklustre, I decided to create this app to help fulfil my needs. I gathered data from various resources, and got to work. As the codebase grew larger, so did my crops. You can watch my presentation on the whole experience below:
+        </p>
+
+        <a class="filter-button single-button-lrg" href="http://iblack.co.uk/harvest/#" target="_blank" alt="Link to Sow &amp; Grow app">Let's grow!</a>
+        <a href="https://github.com/itomblack/harp" class="design-link" target="_blank" alt="Emoti Git Repo">GitHub Repo</a>
+
+        <div class="video-container">
+          <iframe width="853" height="480" src="https://www.youtube.com/embed/1lfU5EQIFMs" frameborder="0" allowfullscreen></iframe>
+        </div>
+  
+         
+      </div>
+
+      <div class="project-title">
+        <img src="../img/interactive/emoti-1.png" alt="" class=""/>
+        <h2>Emoti</h2>
+        <a href="" class="full-image-close close-design"></a>
+      </div>
+      <div class="project-content">
+        <p>
+          How would you visualise the Emotional state of the world? At #ArtHackathon2015, our team of artists and designers created a possible solution, in the form of a light and sound installation, powered by tweets.
+        </p>
+        <p>
+          Using the <a href="https://github.com/jasonmayes/Twitter-Post-Fetcher" target="_blank" alt="Twitter post fetched Git repo">Twitter post fetcher</a>, I altered the colours and music of a webpage according to each emotional response of tweets, in real time. This was then visualised on the browser of a Raspberry Pi. Using lazer-cut acryclic mounted on to an LED screen, a glowing, morphing sculpture was created. The <a href="https://www.youtube.com/watch?v=1RyHZFXdtoo" target="_blank" alt="link to video of Emoti">3D version</a> has been dismantled (for now), but feel free to <a href="https://github.com/itomblack/emotion-twitter" target="_blank" alt="Emoti Github Repo">check out the code behind it.</a>
+        </p>
+        <a class="filter-button single-button-lrg" href="http://iblack.co.uk/harp/" target="_blank">Let me see it</a>
+        <a href="https://github.com/itomblack/emotion-twitter" class="design-link" target="_blank" alt="Emoti Git Repo">GitHub Repo</a>
+      </div>
+
+      <div class="project-title">
+        <img src="../img/interactive/whisky-1.png" alt="Image of interactive whisky map"/>
+        <h2>Whisky Map</h2>
+        <a href="" class="full-image-close close-design"></a>
+      </div>
+      <div class="project-content">
+        <p>
+          As I say sipping the golden spirit in my glass, my mind wandered to the landscapes of Scotland...land of my forefathers.
+        </p>
+        <p>
+          Unfortunately, I had no clue where this particular drink originated from, so the image in my mind was left incomplete. Nothing but a blurred scene of peaty waters and drizzle.
+        </p>
+        <p>
+          Lucky for me, the <a href="http://pebblecode.com/" target="_blank">pebble {code}</a> data visualisation hack day encouraged me explore a solution. In 8 hours I gathered a data set of Single Malt flavours, the <a href="https://d3js.org/" target="_blank">D3</a> Javas4cript library and mixed it up with a dash of <a href="http://leafletjs.com/" target="_blank">Leaflet</a>, an open-source mapping library. Take a look at the results for yourself...
+        </p>
+        <a class="filter-button single-button-lrg" href="http://iblack.co.uk/whisky/whiskymap.html" target="_blank" alt="Link to interactive whisky map">Explore Scotland</a>
+      </div>
+
+      
+
+      <div class="project-title">
+        <img src="../img/interactive/attain-1.png" alt="Image of Attain interface"/>
         <h2>Attain</h2>
+        <a href="" class="full-image-close close-design"></a>
       </div>
-      <div class="project-wrap">
+      <div class="project-content">
+        <p>
+          It was the weekend of the Sci Fi London 2015 24h film competition. We had the beginnings of a story of a dystopian existence in which companies could access the minds of willing people. The company - Attain - needed a brand and an interface for it's users.
+        </p>
+        <p>
+          While the team finalised the scripts I fleshed out a design for the Attain UI that could be used captured on camera that same afternoon.
+        </p>
+        <p class="project-note">
+          (Only designed for desktop - for faster prototyping, some elements were dropped in as SVG's)
+        </p>
+      
+        <a class="filter-button single-button-lrg" href="http://itomblack.github.io/new-breed/" target="_blank" alt="Link to interactive whisky map">Access Attain</a>
+        <a href="https://github.com/itomblack/new-breed" class="design-link" target="_blank" alt="Attain Git Repo">GitHub Repo</a>
+        
+      </div>
+
+
+      <!-- <div class="project-title">
         <h2>Bespokea</h2>
-      </div>
+      </div> -->
 
 
     </div> <!-- content block end -->

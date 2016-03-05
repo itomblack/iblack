@@ -13,21 +13,19 @@ $( document ).ready(function() {
   $('header').load('menu.html');
   $('footer').load('footer.html');
 
-  //************** EVENT LISTENERS ***************//
 
-  $('#content-prev').click(function(){
-    moveSection(999, -1); //999 means not a direct project link
-  });
 
-  $('#content-next').click(function(){
-    moveSection(999, 1); //999 means not a direct project link
-  });
+  //************** DESIGN SECTION ***************//
 
-  $('#content-nav').click(function(){
-    var projectId = event.target.id.slice(-1);
-    moveSection(projectId, 0);
+  $(".project-title").click(function () {
+    // $(".js-project-open").removeClass('js-project-open');
+    $(this).toggleClass('js-project-open');
+    $(this).next().toggleClass('js-project-open');
 
-  });
+  })
+
+
+
 
 
   // ********** IE test ******** //

@@ -62,3 +62,11 @@
 @mixin changeCol {
   animation: changeCol 60s infinite;
 }
+
+
+// allow css filters 
+// @include filter(grayscale(100%));
+@mixin filter($properties) {
+  // Your vendor prefixing stuff here, I am using Bourbon:
+  @include prefixer(filter, $properties, webkit moz spec);
+}
