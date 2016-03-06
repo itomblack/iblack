@@ -30,11 +30,28 @@
 
 
   <body id="home-body" class="home-body">
+
     <header>
       <!-- Menu -->
-      <p class="fade-in">Please enable Javascript</p> 
-    </header>
-
+      <div id="header-band" class="header-band"></div>
+<label for="menu-checkbox" onclick>
+  <input type="checkbox" id="menu-checkbox">
+  <div id="menu-panel" class="menu-panel">
+    <ul>
+      <a href="/index.html"><li>Home</li></a>
+      <a href="/interactive-design.html"><li>Interactive Design</li></a>
+      <a href="/illustration.html"><li>Illustration</li></a>
+      <a href="/photography.html"><li>Photography</li></a>
+      <a href="/profile.html"><li>Profile</li></a>
+      <a href="/contact.html"><li>Contact</li></a>
+      <a href="http://www.iantblack.co.uk/" target="_blank"><li>Blog</li></a>
+      <a href="https://twitter.com/itomblack" target="_blank"><li>Twitter</li></a>
+    </ul>
+  </div>
+  <img class="menu-button-text" src="img/home-svgs/menu.svg"/>
+  <div class="menu-button-pseudos"></div>
+</label>
+    </header> 
 
     <!-- Home page images -->
     <a id="home-ill-interactive-design" class="home-ill-1" href="/interactive-design.html" title="Interactive Design"></a>
@@ -46,8 +63,14 @@
 
 
 
-  <!-- Footer --> 
-  <footer></footer>
+    <!-- Footer --> 
+    <footer>
+      <div id="footer-bar" class="footer-bar">
+  <a href="/index.html" title="Home page"><h6>&#169; iblack 2015</h6></a>
+  <a href="/contact.html"><h6>contact</h6></a>
+</div>
+    </footer>
+
     <script src="js/vendor/jquery-2.1.1.min.js"></script> 
     <script src="js/main.js"></script>
   </body>

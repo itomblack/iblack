@@ -8,11 +8,11 @@
 .design-content-block {
 	  width: 100%;
 	  height: calc( 100% - 30px) ;
-	  padding: 40px 0 0 0;
+	  padding: 60px 0 0 0;
 	  overflow-y: scroll;
 	  @include clearfix;
 
-	  @media screen and (max-width: 400px) {
+	  @media screen and (max-width: 480px) {
 	    padding: 40px 0 0 0;
 	    height: 100%;
 	  }
@@ -28,7 +28,7 @@
 	max-height: 18%;
 	background-color: $purple;
 	position: relative;
-  transition: all $short ease;
+  transition: all $short ease-in-out;
   cursor: pointer;
 
   overflow: hidden;
@@ -100,13 +100,13 @@
 		}
 	}
 
-	img { width: 100%; }
+	// img { width: 100%; }
 
 	&.js-project-open {
-		max-height: 1000px;
+		max-height: 3000px;
 		padding-bottom: 12px;
 
-		img { margin-bottom: 24px;}
+		// img { margin-bottom: 24px;}
 	}
 
 	@media screen and (max-width: 400px) {
@@ -115,6 +115,13 @@
 	 		line-height: 25px;
 	  }
 	}
+}
+
+.project-circles {
+	width: 100%;
+	max-width: 850px;
+	margin: 24px auto 0 auto;
+	display: block;
 }
 
 
@@ -142,7 +149,20 @@
   }
 }
 
-.close-design { bottom: 10%; }
+.close-design { bottom: 8%; }
+@media screen and (max-width: 700px) { .close-design { bottom: 10%; } }
+@media screen and (max-width: 550px) { .close-design { bottom: 12%; } }
+
+
+// Animations
+.opacity-in-1 { @include opacity-in(0.4s) }
+.opacity-in-2 { @include opacity-in(0.8s) }
+.opacity-in-3 { @include opacity-in(1.2s) }
+.opacity-in-4 { @include opacity-in(1.6s) }
+.opacity-in-5 { @include opacity-in(2.0s) }
+.opacity-in-6 { @include opacity-in(2.4s) }
+
+
 
 // YOUTUBE VIDEO WRAP
 

@@ -6,11 +6,11 @@
 
 
   <body id="home-body" class="home-body">
+
     <header>
       <!-- Menu -->
-      <p class="fade-in">Please enable Javascript</p> 
-    </header>
-
+      @@include('./menu.html')
+    </header> 
 
     <!-- Home page images -->
     <a id="home-ill-interactive-design" class="home-ill-1" href="/interactive-design.html" title="Interactive Design"></a>
@@ -22,8 +22,11 @@
 
 
 
-  <!-- Footer --> 
-  <footer></footer>
+    <!-- Footer --> 
+    <footer>
+      @@include('./footer.html')
+    </footer>
+
     <script src="js/vendor/jquery-2.1.1.min.js"></script> 
     <script src="js/main.js"></script>
   </body>

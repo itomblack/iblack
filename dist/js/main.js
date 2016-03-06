@@ -10,8 +10,8 @@ $( document ).ready(function() {
   ];
 
   //LOAD MENU AND FOOTER
-  $('header').load('menu.html');
-  $('footer').load('footer.html');
+  // $('header').load('menu.html');
+  // $('footer').load('footer.html');
 
 
 

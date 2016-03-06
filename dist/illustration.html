@@ -1,30 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>iBlack - Illustration</title>
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/styles.css">
+    <!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+
+<meta charset="utf-8">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>iBlack</title>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/styles.css">
+
+<script type="text/javascript">
+//GOOGLE ANALYTICS
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37805029-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
   </head>
 
-  <script type="text/javascript">
-  //GOOGLE ANALYTICS
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-37805029-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-  </script>
-
-
   <body id="illustration-body">
+
+    <header>
+      <!-- Menu -->
+      <div id="header-band" class="header-band"></div>
+<label for="menu-checkbox" onclick>
+  <input type="checkbox" id="menu-checkbox">
+  <div id="menu-panel" class="menu-panel">
+    <ul>
+      <a href="/index.html"><li>Home</li></a>
+      <a href="/interactive-design.html"><li>Interactive Design</li></a>
+      <a href="/illustration.html"><li>Illustration</li></a>
+      <a href="/photography.html"><li>Photography</li></a>
+      <a href="/profile.html"><li>Profile</li></a>
+      <a href="/contact.html"><li>Contact</li></a>
+      <a href="http://www.iantblack.co.uk/" target="_blank"><li>Blog</li></a>
+      <a href="https://twitter.com/itomblack" target="_blank"><li>Twitter</li></a>
+    </ul>
+  </div>
+  <img class="menu-button-text" src="img/home-svgs/menu.svg"/>
+  <div class="menu-button-pseudos"></div>
+</label>
+    </header> 
     
     <!-- IMAGE OVERLAY -->
     <div id="full-image-back" class="full-image-back">
@@ -36,37 +62,23 @@
 
 
     <!-- MAIN CONTENT -->
-    <div id="content-block" class="content-block">
-      <!-- LHS -->
-      <div id="content-intro" class="content-intro">
+    <div class="content-block central moveDown">
         <!-- Title -->
-         <h2 id="content-sect" class="full-width slideIn">Illustration</h2>
-        
+        <h2 class="full-width">Illustration</h2>
 
-
-        <!-- content to swipe through -->
-        <div class="content-sect-wrap slideIn">
-         
-          <div id="content-para-0" class="content-para content-visible">
-            <p>
-             Analogue may not be the future, but every once in a while I delight in reaching for good old fashioned pen, pencil and paper.
-            </p>
-            <p>
-              Why? Because, to quote another, <span class="text-underline">drawing makes you see things clearer, and clearer and clearer still, until your eyes ache</span>.
-            </p>
-            <p>
-              I have drawn for pleasure, for retail, for books and for weddings, and would <a href="/contact.html">love to do more!</a> 
-            </p>
-
-            <div id="filter-life" class="filter-button">Life</div>
-            <div id="filter-objects" class="filter-button">Objects</div>
-            <div id="filter-places" class="filter-button">Places</div>
-
-          </div>
-        
-        </div> <!-- Close content section wrap -->
-
-      </div>
+        <div class="content-visible">
+            <div class="filter-text-wrap">
+                <p class="text-underline">
+                "Drawing makes you see things clearer, and clearer and clearer still, until your eyes ache."
+                </p>
+            </div>
+            <div class="filter-wrap">
+                <div id="filter-life" class="filter-button">Life</div>
+                <div id="filter-objects" class="filter-button">Objects</div>
+                <div id="filter-places" class="filter-button">Places</div>
+            </div>
+        </div>
+    </div> <!-- Close content section wrap -->
 
       <!-- RHS -->
       <div id="content-illustrations" class="content-illustrations">
@@ -213,16 +225,13 @@
     </div> <!-- content block end -->
 
 
-
-
-
- 
-    <header> <!-- Menu -->
-      <p class="fade-in">Please enable Javascript</p>  
-    </header> 
-
     <!-- Footer --> 
-    <footer></footer>
+    <footer>
+      <div id="footer-bar" class="footer-bar">
+  <a href="/index.html" title="Home page"><h6>&#169; iblack 2015</h6></a>
+  <a href="/contact.html"><h6>contact</h6></a>
+</div>
+    </footer>
 
     <script src="/js/vendor/jquery-2.1.1.min.js"></script> 
     <script src="/js/main.js"></script>
