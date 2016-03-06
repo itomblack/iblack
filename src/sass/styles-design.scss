@@ -41,6 +41,12 @@
 		position: absolute;
 		max-height: 40px;
 		bottom: calc(50% - 20px);
+
+		@media screen and (max-width: 400px) {
+			font-size: 32px;
+			max-height: 32px;
+			bottom: calc(50% - 16px);
+		}
 	}
 
 	img {
