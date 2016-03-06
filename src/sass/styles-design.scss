@@ -28,7 +28,7 @@
 	max-height: 18%;
 	background-color: $purple;
 	position: relative;
-  transition: all $short ease-in-out;
+  transition: all $med ease-in-out;
   cursor: pointer;
 
   overflow: hidden;
@@ -47,7 +47,6 @@
 		width: 100%;
 		opacity: 0;
 		top: -100%;
-    // transition: all $short ease;
     // filter: #{"grayscale(1)"}
 	}
 
