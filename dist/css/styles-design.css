@@ -198,7 +198,12 @@ ul {
   -webkit-animation: opacityUp 2.4s ease;
   animation: opacityUp 2.4s ease; }
 
-/* line 175, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 170, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+.opacity-in-7 {
+  -webkit-animation: opacityUp 2.6s ease;
+  animation: opacityUp 2.6s ease; }
+
+/* line 176, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -215,7 +220,7 @@ ul {
       padding-top: 0;
       padding-bottom: 480px; } }
 
-/* line 195, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 196, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .video-container iframe, .video-container object, .video-container embed {
   position: absolute;
   top: 0;
