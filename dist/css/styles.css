@@ -2387,3 +2387,7 @@ ul {
   height: 100%;
   max-width: 853px;
   max-height: 480px; }
+
+/* line 207, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+.hide-project {
+  display: none; }
