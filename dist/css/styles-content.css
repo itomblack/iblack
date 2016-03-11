@@ -1,11 +1,11 @@
-/* line 27, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+/* line 36, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
 *, *::before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
 
-/* line 33, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+/* line 42, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
 ul {
   padding: 0;
   list-style: none; }

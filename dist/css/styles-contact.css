@@ -1,11 +1,11 @@
-/* line 27, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+/* line 36, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
 *, *::before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
 
-/* line 33, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+/* line 42, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
 ul {
   padding: 0;
   list-style: none; }
@@ -188,7 +188,7 @@ ul {
 
   /* line 166, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   50% {
-    color: #F2DB00; }
+    color: #3f88e8; }
 
   /* line 167, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   75% {
@@ -209,7 +209,7 @@ ul {
 
   /* line 166, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   50% {
-    color: #F2DB00; }
+    color: #3f88e8; }
 
   /* line 167, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   75% {

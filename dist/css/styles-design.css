@@ -1,11 +1,11 @@
-/* line 27, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+/* line 36, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
 *, *::before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
 
-/* line 33, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+/* line 42, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
 ul {
   padding: 0;
   list-style: none; }
@@ -32,7 +32,7 @@ ul {
   width: 100%;
   min-height: 18%;
   max-height: 18%;
-  background-color: #7700FF;
+  background-color: #3f88e8;
   position: relative;
   -webkit-transition: all 0.55s ease-in-out;
   transition: all 0.55s ease-in-out;
@@ -70,7 +70,7 @@ ul {
     background-color: #000030; }
     /* line 64, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .project-title:hover h2 {
-      color: #7700FF; }
+      color: #3f88e8; }
     /* line 66, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .project-title:hover img {
       opacity: 0.25; }
