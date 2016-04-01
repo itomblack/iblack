@@ -131,6 +131,46 @@
 }
 
 
+.project-circles-wrap {
+  width: 100%;
+  max-width: 850px;
+  margin: 36px auto 36px auto;
+  display: block;
+}
+
+.circle-image {
+  width: 260px;
+  height: 260px;
+  border-radius: 260px;
+  display: inline-block;
+  margin: 0 10px;
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: cover;
+  box-shadow: 0 2px 5px rgba(0,0,10,.5);
+}
+
+.img-hex-1 { background-image: url(/img/interactive/hex-circle-1.png); }
+.img-hex-2 { background-image: url(/img/interactive/hex-circle-2.png); }
+.img-hex-3 { background-image: url(/img/interactive/hex-circle-3.png); }
+
+@media screen and (max-width: 860px) {
+  .project-circles-wrap { max-width: 450px; }
+  .circle-image {
+    width: 127px;
+    height: 127px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .circle-image {
+    width: 260px;
+    height: 260px;
+    margin: 28px auto;
+    display: block;
+  }
+}
+
 .single-button-lrg {
 	display: block;
   margin: 24px auto;
