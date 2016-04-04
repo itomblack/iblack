@@ -156,6 +156,13 @@
 .moveUp4 { animation: moveUp 1.3s ease; }
 
 
+.center-button {
+  display: inline-block;
+  float: none !important;
+  margin: auto;
+  text-align: center;
+}
+
 //===============================================================================
 // ANIMATIONS
 //===============================================================================

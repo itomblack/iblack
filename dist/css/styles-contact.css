@@ -177,130 +177,137 @@ ul {
   -webkit-animation: moveUp 1.3s ease;
   animation: moveUp 1.3s ease; }
 
+/* line 159, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.center-button {
+  display: inline-block;
+  float: none !important;
+  margin: auto;
+  text-align: center; }
+
 @-webkit-keyframes colFade {
-  /* line 164, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 171, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   0% {
     color: #CACCD9; }
 
-  /* line 165, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 172, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   25% {
     color: #FF5754; }
 
-  /* line 166, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 173, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   50% {
     color: #3f88e8; }
 
-  /* line 167, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 174, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   75% {
     color: #FF5754; }
 
-  /* line 168, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 175, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   100% {
     color: #CACCD9; } }
 
 @keyframes colFade {
-  /* line 164, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 171, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   0% {
     color: #CACCD9; }
 
-  /* line 165, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 172, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   25% {
     color: #FF5754; }
 
-  /* line 166, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 173, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   50% {
     color: #3f88e8; }
 
-  /* line 167, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 174, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   75% {
     color: #FF5754; }
 
-  /* line 168, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 175, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   100% {
     color: #CACCD9; } }
 
 @-webkit-keyframes moveDown {
-  /* line 172, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 179, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   0% {
     opacity: 0;
     -webkit-transform: translate(0, -50px);
     transform: translate(0, -50px); }
 
-  /* line 176, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 183, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   10% {
     opacity: 0; }
 
-  /* line 177, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 184, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   100% {
     opacity: 1;
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
 
 @keyframes moveDown {
-  /* line 172, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 179, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   0% {
     opacity: 0;
     -webkit-transform: translate(0, -50px);
     transform: translate(0, -50px); }
 
-  /* line 176, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 183, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   10% {
     opacity: 0; }
 
-  /* line 177, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 184, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   100% {
     opacity: 1;
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
 
 @-webkit-keyframes moveUp {
-  /* line 184, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 191, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   0% {
     opacity: 0;
     -webkit-transform: translate(0, 100px);
     transform: translate(0, 100px); }
 
-  /* line 188, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 195, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   10% {
     opacity: 0; }
 
-  /* line 189, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 196, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   100% {
     opacity: 1;
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
 
 @keyframes moveUp {
-  /* line 184, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 191, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   0% {
     opacity: 0;
     -webkit-transform: translate(0, 100px);
     transform: translate(0, 100px); }
 
-  /* line 188, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 195, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   10% {
     opacity: 0; }
 
-  /* line 189, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 196, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   100% {
     opacity: 1;
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
 
 @-webkit-keyframes opacityUp {
-  /* line 196, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 203, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   0% {
     opacity: 0; }
 
-  /* line 197, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 204, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   100% {
     opacity: 1; } }
 
 @keyframes opacityUp {
-  /* line 196, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 203, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   0% {
     opacity: 0; }
 
-  /* line 197, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  /* line 204, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
   100% {
     opacity: 1; } }

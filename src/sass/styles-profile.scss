@@ -1,0 +1,33 @@
+// define variables
+@import "_variables.scss";
+
+.cv-wrap {
+	border: 1px dotted $dblue;
+	padding: 24px;
+	margin-top: 24px;
+	text-align: left;
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	
+
+	h3, h4, p, a, span  { font-family: 'Open Sans', helvetica, arial, sans-serif; }	
+	
+	h3 {
+		text-transform: none;
+		font-size: 26px;
+		line-height: 39px;
+		font-weight: 700;
+		color: $ink;
+	}
+
+	h4 {
+		font-size: 18px;
+		line-height: 27px;
+		color: $dblue;
+		margin: 0;
+	}
+}
+
+.cv-section {
+	border-bottom: 1px dotted $dblue;
+	padding: 12px 0;
+}
