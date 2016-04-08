@@ -1,5 +1,24 @@
 $( document ).ready(function() {
 
+//************** PAGE TRANSITIONS ***************//
+
+    // $("body").css("display", "none");
+    // $("body").css("opacity", "1");
+
+    // $("body").fadeIn(150);
+      
+    $(".page-transition").click(function(event){
+      event.preventDefault();
+      linkLocation = this.href;
+      $("body").fadeOut(300, redirectPage);    
+    });
+
+    function redirectPage() {
+      window.location = linkLocation;
+    }
+
+//************** MENU ITEMS ***************//
+
   var menuItems = [
   'interactive-design',
   'illustration',

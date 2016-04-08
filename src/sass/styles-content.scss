@@ -83,3 +83,22 @@
   margin: auto;
 }
 
+.transition-in-page { animation: pageEnter $long; }
+.transition-in-page-2 { animation: pageEnterTwo $long; }
+
+@keyframes pageEnter {
+  0% { 
+    opacity: 0;
+    transform: scale(0.9);
+   }
+  100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pageEnterTwo {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
