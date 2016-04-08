@@ -36,6 +36,21 @@ $( document ).ready(function() {
     $(this).next().toggleClass('js-project-open');
   })
 
+  // Show hidden project //
+  $(document).keypress((function(e) {
+      var pass = "showme";
+      var typed = "";
+
+      return function(e) {
+          typed += String.fromCharCode(e.which);
+          // console.log(typed);
+          if (typed === pass) {
+            console.log
+              // $('#secret-sauce').append(projectHTML)
+              $('.hide-project').fadeIn(500);
+          }
+      };
+  })());
 
 
 

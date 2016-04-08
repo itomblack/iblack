@@ -64,11 +64,15 @@ ul {
 .top-32 {
   margin-top: 3.2em; }
 
-/* line 49, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 47, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+.bottom-32 {
+  margin-bottom: 3.2em; }
+
+/* line 50, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .full-width {
   width: 100%; }
 
-/* line 51, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 52, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .section-colour {
   width: -webkit-calc(100% + 60px);
   width: calc(100% + 60px);
@@ -84,100 +88,100 @@ ul {
       width: calc(100% + 40px);
       margin-left: -20px; } }
 
-/* line 66, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 67, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .slideIn {
   -webkit-animation: slideIn 1.4s;
   animation: slideIn 1.4s; }
 
 @-webkit-keyframes slideIn {
-  /* line 70, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 71, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   0% {
     opacity: 0;
     -webkit-transform: translate(-400px, 0);
     transform: translate(-400px, 0); }
 
-  /* line 74, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 75, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   10% {
     opacity: 0; }
 
-  /* line 75, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 76, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   100% {
     opacity: 1;
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
 
 @keyframes slideIn {
-  /* line 70, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 71, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   0% {
     opacity: 0;
     -webkit-transform: translate(-400px, 0);
     transform: translate(-400px, 0); }
 
-  /* line 74, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 75, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   10% {
     opacity: 0; }
 
-  /* line 75, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 76, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   100% {
     opacity: 1;
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
 
-/* line 81, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 82, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .central-para {
   max-width: 450px;
   margin: auto; }
 
-/* line 86, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 87, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .transition-in-page {
   -webkit-animation: pageEnter 0.85s;
   animation: pageEnter 0.85s; }
 
-/* line 87, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+/* line 88, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
 .transition-in-page-2 {
   -webkit-animation: pageEnterTwo 0.85s;
   animation: pageEnterTwo 0.85s; }
 
 @-webkit-keyframes pageEnter {
-  /* line 90, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 91, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   0% {
     opacity: 0;
     -webkit-transform: scale(0.9);
     transform: scale(0.9); }
 
-  /* line 94, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 95, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   100% {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1); } }
 
 @keyframes pageEnter {
-  /* line 90, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 91, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   0% {
     opacity: 0;
     -webkit-transform: scale(0.9);
     transform: scale(0.9); }
 
-  /* line 94, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 95, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   100% {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1); } }
 
 @-webkit-keyframes pageEnterTwo {
-  /* line 101, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 102, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   0% {
     opacity: 0; }
 
-  /* line 102, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 103, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   100% {
     opacity: 1; } }
 
 @keyframes pageEnterTwo {
-  /* line 101, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 102, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   0% {
     opacity: 0; }
 
-  /* line 102, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
+  /* line 103, /Users/itomblack/Repos/iblack/src/sass/styles-content.scss */
   100% {
     opacity: 1; } }
