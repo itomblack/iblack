@@ -150,9 +150,11 @@ input[type=checkbox] {
 
 .home-body {
 	background-color: $yellow;
-	@include changeCol;
+	@include clearfix;
 	padding-top: 60px;
 	padding-bottom: 50px;
+
+	@include changeCol;
 }
 
 .menu-button-text {
