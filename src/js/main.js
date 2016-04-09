@@ -1,12 +1,7 @@
 $( document ).ready(function() {
 
 //************** PAGE TRANSITIONS ***************//
-
-    // $("body").css("display", "none");
-    // $("body").css("opacity", "1");
-
-    // $("body").fadeIn(150);
-      
+ 
     $(".page-transition").click(function(event){
       event.preventDefault();
       linkLocation = this.href;

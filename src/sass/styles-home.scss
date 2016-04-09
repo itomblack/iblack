@@ -306,10 +306,6 @@ input[type=checkbox]:checked ~ .menu-panel{
 
   &:hover {
 
-  // 	path {
-		// 	animation: heartBeat 3s infinite;
-		// }
-
 		& #shadow, #face {
 			transform: translate(6px, 6px);
 		}
@@ -370,12 +366,6 @@ input[type=checkbox]:checked ~ .menu-panel{
 	0% { background-color: $dblue; }
 	50% { background-color: $bluegreen; }
 	100% { background-color: $dblue; }
-}
-
-@keyframes heartBeat {
-  0% { stroke: $ink;}
-  50% { stroke: $coral; }
-  100% { stroke: $ink;}
 }
 
 @keyframes fadeIn {
