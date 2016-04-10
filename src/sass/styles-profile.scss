@@ -38,31 +38,18 @@
 
 	p, ul {
 		font-size: 14px;
-    margin: 0 0 0 0;
     line-height: 21px;
     display: block;
 	}
 
-	ul {
-		li {
-			margin-left: 15px;
-			position: relative;
-
-			&::before {
-				content: "•";
-				position: absolute;
-				left: -15px;
-				top: 0;
-				color: $dblue;
-				font-size: 18px; 
-			}
-		}
-	}
+	p { margin: 0 0 0 0; }
 }
 
 .cv-section {
 	border-bottom: 1px dotted $dblue;
 	padding: 12px 0;
+
+	&:last-of-type { border-bottom: none; }
 }
 
 .cv-work-block {
@@ -74,21 +61,93 @@
     top: 0;
     left: -80px;
   }
+
+  @media screen and (max-width: $sml-screen) {
+    
+    margin: 32px 0 42px 0;
+		
+    .cv-w-b-date { 
+    	top: -24px;
+    	left: 0;
+
+    	p {
+    		display: inline;
+    	}
+    }
+   }
 }
 
+.label-list {
+	margin: 11px 0 12px 0;
 
+	li {
+		display: inline-block;
+		border: 1px solid $midblue;
+		padding: 4px 5px;
+		margin: 0 3px 7px 0;
+	}
+}
 
+.bullet-list {
+	margin: 0 0 0 0;
+
+	li {
+		margin-left: 15px;
+		position: relative;
+
+		&::before {
+			content: "•";
+			position: absolute;
+			left: -15px;
+			top: 0;
+			color: $dblue;
+			font-size: 18px; 
+		}
+	}
+}
 
 .bold { font-weight: 600; }
+.text-grey, .text-grey p { color: darken($grey, 20); }
+
 
 [class*="col-"] {
 	display: inline-block;
 	vertical-align: top;
 }
-.col-33 {	width: 33%; }
 
+.table { display: table; }
+.table-cell { display: table-cell; }
+
+.col-33 {	width: 33%; }
 .col-66 {	width: 66%; }
 .col-100 { width: 100%; }
+
+@media screen and (max-width: $mid-screen) {
+	.col-md-100 { 
+		width: 100%;
+		border-bottom: 1px dotted $dblue;
+
+		.col-md-100 { border-bottom: none; }
+
+		&.col-border-right { border-right: none; }
+		&.colpad-left { padding: 12px 0 0 0; }
+		&.table { display: inline-block; }
+		&.table-cell { display: inline-block; }
+	}
+
+	.col-md-33 {
+		width: 33%;
+	}
+}
+
+@media screen and (max-width: $sml-screen) {
+	.col-sml-100 { 
+		width: 100%;
+
+		&.colpad-left { padding: 12px 0 0 0; }
+	}
+}
+
 
 .colpad-left { padding: 0 0 0 10px; }
 .colpad-right { padding: 0 10px 0 0; }

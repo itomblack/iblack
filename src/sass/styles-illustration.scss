@@ -52,8 +52,8 @@
 }
 
 .full-image-close {
-  width: 35px;
-  height: 35px;
+  width: 36px;
+  height: 36px;
   position: absolute;
   bottom: 5%;
   right: 5%;
@@ -62,22 +62,18 @@
 
   &::before, &::after {
     content: " ";
-    background-color: $ink;
+    background-color: white;
     width: 17px;
     height: 4px;
     position: absolute;
-    bottom: 43%;
-    right: 25%;
+    bottom: 15px;
+    right: 9px;
     transform: rotate(45deg);
 
     transition: all $short ease;
   }
 
-  &::after {
-    transform: rotate(135deg);
-    bottom: 43%;
-    right: 25%;
-  }
+  &::after { transform: rotate(135deg); }
 
   &:hover {
     &::before {
