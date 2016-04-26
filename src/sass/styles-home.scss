@@ -148,6 +148,7 @@ input[type=checkbox] {
 	@include clearfix;
 	padding-top: 60px;
 	padding-bottom: 50px;
+	height: 100%;
 
 	@include changeCol;
 }

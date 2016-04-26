@@ -26,9 +26,9 @@
 	width: 100%;
 	min-height: 18%;
 	max-height: 18%;
-	background-color: $purple;
+	background-color: $midblue;
 	position: relative;
-  transition: all $med ease-in-out;
+  transition: all $short ease-in-out;
   cursor: pointer;
 
   overflow: hidden;
@@ -61,7 +61,7 @@
 
 	&:hover {
 		background-color: $ink;
-		h2{ color: $purple; }
+		h2{ color: $midblue; }
 
 		img { opacity: 0.25;	}
 	}

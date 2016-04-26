@@ -189,14 +189,14 @@ table {
 td, th {
   padding: 0; }
 
-/* line 39, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+/* line 40, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
 *, *::before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
 
-/* line 45, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+/* line 46, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
 ul {
   padding: 0;
   list-style: none; }
@@ -330,7 +330,7 @@ ul {
     transition: all 0.3s ease; }
   /* line 131, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
   [class*="photo-swap-"]:hover {
-    background-color: #FF5754;
+    background-color: #3f88e8;
     opacity: 1; }
 
 /* line 137, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
