@@ -105,7 +105,7 @@
     font-size: 18px;
     justify-content: center;
     line-height: 28px;
-    margin: 12px auto;
+    margin: 16px auto;
 
     &.project-note {
 			font-style: italic;
@@ -188,8 +188,9 @@
 @media screen and (max-width: 860px) {
   .project-circles-wrap { max-width: 450px; }
   .circle-image {
-    width: 127px;
-    height: 127px;
+    // width: 127px;
+    // height: 127px;
+    margin-bottom: 12px;
   }
 }
 
@@ -225,6 +226,33 @@
   	color: $orange;
   }
 }
+
+// .design-img {
+// 	max-width: 100%;
+// 	margin: 24px auto;
+// 	display: block;
+// }
+
+.scroll-side-wrap {
+	display: block;
+  width: 100%;
+  height: 400px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  margin: 24px auto;
+	padding: 0 24px;
+
+	img {
+		height: 100%;
+		display: inline;
+	}
+
+	@media screen and (max-width: 450px) { height: 300px; }
+}
+
+
+
+
 
 .close-design { bottom: 8%; }
 @media screen and (max-width: 700px) { .close-design { bottom: 10%; } }
