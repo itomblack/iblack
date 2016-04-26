@@ -90,20 +90,40 @@
 	max-height: 0;
 	overflow-y: hidden;
 	border-bottom: 1px solid $ink;
+	
 
-	p {
+	p, h3, h4, h5, ul, li {
+		width: 600px;
+		max-width: 86%;
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+
+	p, li {
 		text-align: justify;
     font-size: 18px;
-    width: 600px;
-    max-width: 86%; 
     justify-content: center;
-    margin: 12px auto;
     line-height: 28px;
+    margin: 12px auto;
 
     &.project-note {
 			font-style: italic;
 			font-size: 14px;
 		}
+	}
+
+	h3 {
+		font-size: 26px;
+		color: $ink;
+		margin-top: 28px;
+	}
+	
+	.bullet-list {
+		margin-top: 21px;
+		margin-bottom: 21px;
+
+		li { line-height: 18px; }
 	}
 
 	// img { width: 100%; }
@@ -136,6 +156,7 @@
   max-width: 850px;
   margin: 36px auto 36px auto;
   display: block;
+  text-align: center;
 }
 
 .circle-image {
@@ -158,9 +179,11 @@
 .img-harvest-2 { background-image: url(/img/interactive/harvest-circle-2.png); }
 .img-harvest-3 { background-image: url(/img/interactive/harvest-circle-3.png); }
 
+.img-metrics-0 { background-image: url(/img/interactive/metrics-circle-0.png); }
 .img-metrics-1 { background-image: url(/img/interactive/metrics-circle-1.png); }
 .img-metrics-2 { background-image: url(/img/interactive/metrics-circle-2.png); }
 .img-metrics-3 { background-image: url(/img/interactive/metrics-circle-3.png); }
+.img-metrics-4 { background-image: url(/img/interactive/metrics-circle-4.png); }
 
 @media screen and (max-width: 860px) {
   .project-circles-wrap { max-width: 450px; }
