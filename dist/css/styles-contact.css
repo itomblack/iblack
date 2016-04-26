@@ -1,0 +1,313 @@
+/* line 39, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+*, *::before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; }
+
+/* line 45, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
+ul {
+  padding: 0;
+  list-style: none; }
+
+/* line 11, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.text-center {
+  text-align: center;
+  width: 100%; }
+
+/* line 16, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.contact-info {
+  margin-top: 20px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.85s ease;
+  transition: all 0.85s ease; }
+  /* line 21, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  .contact-info:hover {
+    -webkit-transform: scale(1.075);
+    -ms-transform: scale(1.075);
+    transform: scale(1.075); }
+
+/* line 25, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.contact-email {
+  text-decoration: none;
+  color: #000030;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  @media screen and (max-width: 550px) {
+    .contact-email {
+      font-size: 0.7em; } }
+  @media screen and (max-width: 400px) {
+    .contact-email {
+      font-size: 0.6em; } }
+
+/* line 40, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.colFadeAnim {
+  -webkit-animation: colFade 20s infinite;
+  animation: colFade 20s infinite; }
+
+/* line 44, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.moveDown {
+  -webkit-animation: moveDown 1.4s ease;
+  animation: moveDown 1.4s ease; }
+
+/* line 48, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.content-hold {
+  width: 100%;
+  float: left;
+  position: relative; }
+
+/* line 54, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.contact-blurb {
+  width: 60%;
+  max-width: 600px;
+  color: #000030;
+  text-align: center;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (max-width: 600px) {
+    .contact-blurb {
+      width: 80%; } }
+  @media screen and (max-width: 400px) {
+    .contact-blurb {
+      width: 90%;
+      margin-top: 50px; } }
+
+/* line 73, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.opacityUp {
+  -webkit-animation: opacityUp 1.4s ease-in;
+  animation: opacityUp 1.4s ease-in; }
+
+/* line 78, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.contact-button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Oswald', helvetica, arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: left;
+  background-color: #000030;
+  color: white;
+  padding: 12px 0 0 8px;
+  width: 141px;
+  height: 43px;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0.5em;
+  float: left;
+  margin-right: 0.5em;
+  border-top: 2px solid #000030;
+  border-bottom: 2px solid #FF5754; }
+  /* line 97, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  .contact-button:nth-child(4) {
+    margin-right: 0; }
+  @media screen and (max-width: 650px) {
+    /* line 102, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+    .contact-button:nth-child(odd) {
+      margin-right: 0.5em; }
+    /* line 105, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+    .contact-button:nth-child(even) {
+      margin-right: 0; } }
+  @media screen and (max-width: 400px) {
+    /* line 111, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+    .contact-button:nth-child(odd) {
+      margin-right: 0; }
+    /* line 114, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+    .contact-button:nth-child(even) {
+      margin-right: 0; } }
+  /* line 122, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  .contact-button img {
+    height: 25px;
+    position: absolute;
+    right: 8px;
+    top: 8px; }
+  /* line 129, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  .contact-button:hover {
+    padding: 14px 0 0 8px;
+    border-bottom: 2px solid #000030;
+    border-top: 2px solid white;
+    color: #FF5754; }
+    /* line 135, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+    .contact-button:hover img {
+      top: 10px; }
+
+/* line 141, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.contact-buttons {
+  width: 588px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  /* line 8, /Users/itomblack/Repos/iblack/src/sass/_mixins.scss */
+  .contact-buttons:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (max-width: 650px) {
+    .contact-buttons {
+      width: 290px; } }
+  @media screen and (max-width: 400px) {
+    .contact-buttons {
+      width: 141px; } }
+
+/* line 153, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.moveUp1 {
+  -webkit-animation: moveUp 0.7s ease;
+  animation: moveUp 0.7s ease; }
+
+/* line 154, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.moveUp2 {
+  -webkit-animation: moveUp 0.9s ease;
+  animation: moveUp 0.9s ease; }
+
+/* line 155, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.moveUp3 {
+  -webkit-animation: moveUp 1.1s ease;
+  animation: moveUp 1.1s ease; }
+
+/* line 156, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.moveUp4 {
+  -webkit-animation: moveUp 1.3s ease;
+  animation: moveUp 1.3s ease; }
+
+/* line 159, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+.center-button {
+  display: inline-block;
+  float: none !important;
+  margin: auto;
+  text-align: center; }
+
+@-webkit-keyframes colFade {
+  /* line 171, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    color: #CACCD9; }
+
+  /* line 172, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  25% {
+    color: #FF5754; }
+
+  /* line 173, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  50% {
+    color: #3f88e8; }
+
+  /* line 174, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  75% {
+    color: #FF5754; }
+
+  /* line 175, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    color: #CACCD9; } }
+
+@keyframes colFade {
+  /* line 171, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    color: #CACCD9; }
+
+  /* line 172, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  25% {
+    color: #FF5754; }
+
+  /* line 173, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  50% {
+    color: #3f88e8; }
+
+  /* line 174, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  75% {
+    color: #FF5754; }
+
+  /* line 175, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    color: #CACCD9; } }
+
+@-webkit-keyframes moveDown {
+  /* line 179, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, -50px);
+    transform: translate(0, -50px); }
+
+  /* line 183, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  10% {
+    opacity: 0; }
+
+  /* line 184, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@keyframes moveDown {
+  /* line 179, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, -50px);
+    transform: translate(0, -50px); }
+
+  /* line 183, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  10% {
+    opacity: 0; }
+
+  /* line 184, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@-webkit-keyframes moveUp {
+  /* line 191, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 100px);
+    transform: translate(0, 100px); }
+
+  /* line 195, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  10% {
+    opacity: 0; }
+
+  /* line 196, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@keyframes moveUp {
+  /* line 191, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 100px);
+    transform: translate(0, 100px); }
+
+  /* line 195, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  10% {
+    opacity: 0; }
+
+  /* line 196, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@-webkit-keyframes opacityUp {
+  /* line 203, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    opacity: 0; }
+
+  /* line 204, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    opacity: 1; } }
+
+@keyframes opacityUp {
+  /* line 203, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  0% {
+    opacity: 0; }
+
+  /* line 204, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
+  100% {
+    opacity: 1; } }

@@ -1,193 +1,196 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>iBlack - Design</title>
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/styles.css">
+    @@include('./inc/head.html')
   </head>
+  
 
-  <script type="text/javascript">
-  //GOOGLE ANALYTICS
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-37805029-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-  </script>
-
-
-  <body id="design-body" class="design-body">
-    
-
+  <body id="design-body" class="design-body transition-in-page">
+    <header>
+      <!-- Menu -->
+      @@include('./menu.html')
+    </header> 
 
 
     <!-- MAIN CONTENT -->
-    <div id="content-block" class="content-block">
-      <!-- LHS -->
-      <div id="content-intro" class="content-intro">
-        <!-- Title -->
-         <h2 id="content-sect" class="full-width slideIn">Interactive Design</h2>
-
-         <!-- Nav buttons -->
-         <div id="content-prev" class="content-prev fade-in-short"></div>
-        <div id="content-next" class="content-next fade-in-short"></div>
-
-        <!-- content to swipe through -->
-        <div id="content-sect-wrap" class="content-sect-wrap slideIn">
-
-         
-          <div id="content-para-0" class="content-para content-visible">
-            <p>
-              When I’m not sliding down mountains or scrambling up rocks, I spend most of my time <span class="text-underline">designing &amp; building web content</span>. I work with all sorts, from FTSE 100 industries, to small businesses and film directors.
-            </p>
-            <p>
-              Here you can browse a sample of some of my personal projects and experiments.
-            </p>
-            <p>
-              If you would like to discuss a new project with me do <a href="/contact.html">get in touch.</a>
-            </p>
-          </div>
-
-          <div id="content-para-1" class="content-para">
-            <h3>Emoti</h3><br>
-            <p>
-              A <a href="https://www.youtube.com/watch?v=1RyHZFXdtoo" target="_blank">light and sound installation</a> representing the emotional state of Twitter, created for #ArtHackathon 2015.
-            </p>
-            <p>
-              Twitter widget Data alters the colours and music according to each emotional response, in real time, through a Raspberry Pi. The 3D version has been dismantled (for now), but the web experience lives on.
-            </p>
-             <a href="http://iblack.co.uk/emoti/" target="_blank" class="view-button">View In Browser</a>
-          </div>
-
-          <div id="content-para-2" class="content-para">
-            <h3>Sow &amp; Grow</h3><br>
-            <p>
-              Frustrated with the existing web content on growing vegetables at home in the UK, I created this web app to help fulfil my needs.
-            </p>
-            <p>
-            The app holds data for indoor, outdoor and harvesting seasons, allowing you to discover what fruits or vegetables you should be planting at any given time of year.
-            </p>
-            <a href="http://iblack.co.uk/harvest/" target="_blank" class="view-button">View In Browser</a>
-          </div>
-
-          <div id="content-para-3" class="content-para">
-            <h3>Bespokea</h3><br>
-            <p>
-              A responsive site for the newly founded Bespokea furtniture brand, collaborating with design agency <a href="www.thebrandnewstudio.com" >TheBr&amp;newstudio.</a>
-            </p>
-              Using Wordpress as a CMS, I built a custom theme to the Bespokea brand guidelines, allowing the client to manage their content through the Wordpress Interface.
-            </p>
-            <a href="http://bespokea.london/" target="_blank" class="view-button">View In Browser</a>
-          </div>
-
-          <div id="content-para-4" class="content-para">
-            <h3>Whisky Map</h3><br>
-            <p>
-              A 1-day project, exploring the connections between Single Malt Whisky flavour profiles and their distillery regions.
-            </p>
-            <p>
-              Created during a hack-day on the theme of data-visualisation.
-            </p>
-            <a href="http://iblack.co.uk/whisky/" target="_blank" class="view-button hide-mobile">View In Browser</a>
-          </div>
-
-          <div id="content-para-5" class="content-para">
-            <h3>Ally &amp; Alex</h3><br>
-            <p>
-              No wedding invitation these days is complete without a website full of information about the special day.
-            </p>
-            <p>
-              Having created the print graphics, I knew it was up to me to build a site that could match the retro design aesthetic. Features include an interactive map of local activities.
-            </p>
-            <a href="http://allyalexwedding.co.uk/" target="_blank" class="view-button">View In Browser</a>
-
-          </div>
-
-          <div id="content-para-6" class="content-para">
-            <h3>Nutrition Data</h3><br>
-            <p>
-              With the world of fitness &amp; health become increasingly fashionable, I felt the world of nutritional informtion was being left behind in its branding.
-            </p>
-            <p>
-              With this in mind I set out to explore a possible future of Nutrition Data as a portal of health and fitness knowledge.
-            </p>
-
-          </div>
-
-          <div id="content-para-7" class="content-para">
-            <h3>World Map</h3><br>
-            <p>
-              An experiment in creating svg maps using GeoJSON data.
-            </p>
-            <p>
-              In <i>Info</i> mode, Explore the world as a learning aid for location names. If you want something more creative, flip the switch to <i>Colour</i> mode, where you can paint the countries using a pre defined palette.
-            </p>
-            <a href="http://iblack.co.uk/colourmap.html" target="_blank" class="view-button">View In Browser</a>
-          </div>
-
-          <div id="content-para-8" class="content-para">
-            <h3>Attain</h3><br>
-            <p>
-              Brand identity and interactive software mockups for the Sci Fi London 2015 24h film competition.
-            </p>
-            <p>
-              While the team finalised the scripts I fleshed out a design for the ATTAIN UI that could be used captured on camera that same afternoon.
-            </p>
-            <a href="http://itomblack.github.io/new-breed/" target="_blank" class="view-button hide-mobile">View In Browser</a>
-          </div>
-
-
-
-        </div> <!-- Close content section wrap -->
-
-        <!-- NAV NEEDS TO GO LAST TO BE ABOVE THINGS -->
-
-        <div class="content-nav fade-in-short">
-          <h4 class="content-nav-title"> Select Project</h4>
-          <ul id="content-nav">
-             <li id="content-nav-1">Emoti</li>
-            <li id="content-nav-2">Sow &amp; Grow</li>
-            <li id="content-nav-3">Bespokea</li>
-            <li id="content-nav-4">Whisky Map</li>
-            <li id="content-nav-5">Ally &amp; Alex</li>
-            <li id="content-nav-6">Nutrition Data</li>
-            <li id="content-nav-7">World Map</li>
-            <li id="content-nav-8">Attain</li>
-          </ul>
+    <div id="content-block" class="design-content-block">
+       
+      <!-- Project --> 
+      <div class="project-title opacity-in-1">
+        <img srcset="../img/interactive/harp-1-mob.png 600w, 
+                     ../img/interactive/harp-1.png 1565w" 
+             sizes="100vw" 
+             src="../img/interactive/harp-1.png.png">
+        <h2>Blues Harp</h2>
+         <a href="#" class="full-image-close close-design" alt="Close project button"></a>
+      </div>
+      <div class="project-content">
+        <p>
+          Inspired by the Blues bars of london, I had decided to take up the Harmonica. On Christmas morning I unwrapped a beautiful metal instrument, and blew my first note.
+        </p>
+        <p>
+          Sadly, I quickly realised it was far too cumbersome to carry. My pockets were already full of my phone, wallet and keys. I searched for a more portable solution. The <a href="http://pebblecode.com/" target="_blank">pebble {code}</a> music hack day provided me with the inspiration I needed to create a new musical object I could access anywhere. The digital Blues Harp was born.
+        </p>
+        <p>
+          In one day, I designed, coded and performed on this new instrument, powered by the <a href="https://github.com/rserota/wad" target="_blank">Wad.JS</a> library and a dash of JQuery. Amazingly, the performance won me the hack day!
+        </p>
+        <p class="project-note">Move your mouse or touch device screen to play.</p>
+        <a class="filter-button single-button-lrg" href="http://iblack.co.uk/harp/" target="_blank" alt="Link to interactive harmonica">Play the harp</a>
+        <a href="https://github.com/itomblack/harp" class="design-link" target="_blank" alt="Emoti Git Repo">GitHub Repo</a>
+      </div>
+      
+      <!-- Project -->
+      <div class="project-title opacity-in-2">
+        <img srcset="../img/interactive/harvest-1-mob.png 600w, 
+                     ../img/interactive/harvest-1.png 1565w" 
+             sizes="100vw"
+             src="../img/interactive/harvest-1.png">
+        <h2>Sow &amp; Grow</h2>
+         <a href="#" class="full-image-close close-design" alt="Close project button"></a>
+      </div>
+      <div class="project-content">
+        <p>
+          In 2015 I had two aims. Firstly, I wanted to improve my JavaScript knowledge. Secondly, I wanted to sample the delights of home grow vegetables in my dinner.
+        </p>
+        <p>
+          When I found the existing resources on growing vegetables to be lacklustre, I decided to create this app to help fulfil my needs. I gathered data from various resources, and got to work. As the codebase grew larger, so did my crops. You can watch my presentation on the whole experience below.
+        </p>
+        <div class="project-circles-wrap">
+          <div class="circle-image img-harvest-1"></div>
+          <div class="circle-image img-harvest-2"></div>
+          <div class="circle-image img-harvest-3"></div>
         </div>
 
+        <a class="filter-button single-button-lrg" href="http://iblack.co.uk/harvest/#" target="_blank" alt="Link to Sow &amp; Grow app">Let's grow!</a>
+        <a href="https://github.com/itomblack/harvest-sow" class="design-link" target="_blank" alt="Emoti Git Repo">GitHub Repo</a>
+
+        <div class="video-container">
+          <iframe width="853" height="480" src="https://www.youtube.com/embed/1lfU5EQIFMs" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
 
-      <!-- RHS -->
+      <!-- Project -->
+      <div class="project-title opacity-in-3">
+        <img srcset="../img/interactive/emoti-1-mob.png 600w, 
+                     ../img/interactive/emoti-1.png 1565w" 
+             sizes="100vw" 
+             src="../img/interactive/emoti-1.png">
+        <h2>Emoti</h2>
+         <a href="#" class="full-image-close close-design" alt="Close project button"></a>
+      </div>
+      <div class="project-content">
+        <p>
+          How would you visualise the Emotional state of the world? At #ArtHackathon2015, our team of artists and designers created a possible solution, in the form of a light and sound installation, powered by tweets.
+        </p>
+        <p>
+          Using the <a href="https://github.com/jasonmayes/Twitter-Post-Fetcher" target="_blank" alt="Twitter post fetched Git repo">Twitter post fetcher</a>, I altered the colours and music of a webpage according to each emotional response of tweets, in real time. This was then visualised on the browser of a Raspberry Pi. Using lazer-cut acryclic mounted on to an LED screen, a glowing, morphing sculpture was created. The <a href="https://www.youtube.com/watch?v=1RyHZFXdtoo" target="_blank" alt="link to video of Emoti">3D version</a> has been dismantled (for now), but feel free to <a href="https://github.com/itomblack/emotion-twitter" target="_blank" alt="Emoti Github Repo">check out the code behind it.</a>
+        </p>
+        <a href="https://github.com/itomblack/emotion-twitter" class="design-link" target="_blank" alt="Emoti Git Repo">GitHub Repo</a>
+      </div>
 
-      <div id="content-images" class="content-images">
+      <!-- Project -->
+      <div class="project-title opacity-in-4">
+        <img srcset="../img/interactive/whisky-1-mob.png 600w, 
+                             ../img/interactive/whisky-1.png 1565w" 
+                     sizes="100vw" 
+                     src="../img/interactive/whisky-1.png.png">
+        <h2>Whisky Map</h2>
+         <a href="#" class="full-image-close close-design" alt="Close project button"></a>
+      </div>
+      <div class="project-content">
+        <p>
+          As I say sipping the golden spirit in my glass, my mind wandered to the landscapes of Scotland...land of my forefathers.
+        </p>
+        <p>
+          Unfortunately, I had no clue where this particular drink originated from, so the image in my mind was left incomplete. Nothing but a blurred scene of peaty waters and drizzle.
+        </p>
+        <p>
+          Lucky for me, the <a href="http://pebblecode.com/" target="_blank">pebble {code}</a> data visualisation hack day encouraged me explore a solution. In 8 hours I gathered a data set of Single Malt flavours, the <a href="https://d3js.org/" target="_blank">D3</a> Javas4cript library and mixed it up with a dash of <a href="http://leafletjs.com/" target="_blank">Leaflet</a>, an open-source mapping library. Take a look at the results for yourself...
+        </p>
+        <a class="filter-button single-button-lrg" href="http://iblack.co.uk/whisky/whiskymap.html" target="_blank" alt="Link to interactive whisky map">Explore Scotland</a>
+      </div>
 
+      <!-- Project -->
+      <div class="project-title opacity-in-5">
+        <img srcset="../img/interactive/hex-1-mob.png 600w, 
+                     ../img/interactive/hex-1.png 1565w" 
+             sizes="100vw"  
+             src="../img/interactive/hex-1.png">
+        <h2>Guess Hex</h2>
+        <a href="#" class="full-image-close close-design" alt="Close project button"></a>
+      </div>
+      <div class="project-content">
+        <p>
+          Another day, another <a href="http://pebblecode.com/" target="_blank">pebble {code}</a> hack day. This time, the theme was gaming. I chose to build a mobile friendly colour matching game, using <a href="https://jquerymobile.com/" target="_blank">JQuery Mobile</a>.
+        </p>
+        <p>
+          To win, you have to try and convert Hex to HSL in your head, and move the sliders to the right combination. The closer the match, the higher the score.
+        </p>
 
-        <div id="content-img-wrap-mobile" class="content-img-wrap-mobile wrap-hide">
-          <div id="content-img-view-mobile" class="content-img-view-mobile"></div>
-          <img id="content-img-mobile" class="content-img" src="img/icons/view-mobile.svg"/>
+        <div class="project-circles-wrap">
+          <div class="circle-image img-hex-1"></div>
+          <div class="circle-image img-hex-2"></div>
+          <div class="circle-image img-hex-3"></div>
         </div>
+      
+        <a class="filter-button single-button-lrg" href="http://www.iblack.co.uk/hex/" target="_blank" alt="Link to interactive color game">Test my hex skills</a>
+        <a href="https://github.com/itomblack/what-the-hex" class="design-link" target="_blank" alt="Guess Hex Git Repo">GitHub Repo</a>
+      </div>
+       
+  
+      <!-- Project -->
+      <div class="project-title opacity-in-6">
+        <img srcset="../img/interactive/attain-1-mob.png 600w, 
+                     ../img/interactive/attain-1.png 1565w" 
+             sizes="100vw"
+             src="../img/interactive/attain-1.png">
+        <h2>Attain</h2>
+        <a href="#" class="full-image-close close-design" alt="Close project button"></a>
+      </div>
+      <div class="project-content">
+        <p>
+          It was the weekend of the Sci Fi London 2015 24h film competition. We had the beginnings of a story of a dystopian existence in which companies could access the minds of willing people. The company - Attain - needed a brand and an interface for it's users.
+        </p>
+        <p>
+          While the team finalised the scripts I fleshed out a design for the Attain UI that could be used captured on camera that same afternoon.
+        </p>
+        <p class="project-note">
+          (Only designed for desktop - for faster prototyping, some elements were dropped in as SVG's)
+        </p>
+      
+        <a class="filter-button single-button-lrg" href="http://itomblack.github.io/new-breed/" target="_blank" alt="Link to interactive whisky map">Access Attain</a>
+        <a href="https://github.com/itomblack/new-breed" class="design-link" target="_blank" alt="Attain Git Repo">GitHub Repo</a>
 
-        <div id="content-img-wrap-tablet" class="content-img-wrap-tablet wrap-hide">
-          <div id="content-img-view-tablet" class="content-img-view-tablet"></div>
-          <img id="content-img-tablet" class="content-img" src="img/icons/view-tablet.svg"/>
+        <div class="video-container">
+          <iframe width="853" height="480" src="https://www.youtube.com/embed/50IUSa-J9Jc" frameborder="0" allowfullscreen></iframe>
         </div>
+      </div>
 
-        <div id="content-img-wrap-desktop" class="content-img-wrap-desktop wrap-hide">
-          <div id="content-img-view-desktop" class="content-img-view-desktop"></div>
-          <img id="content-img-desktop" class="content-img" src="img/icons/view-desktop.svg"/>
+      <!-- Project -->
+      <div class="project-title opacity-in-6 hide-project">
+        <img srcset="../img/interactive/metrics-1-mob.png 600w, 
+                     ../img/interactive/metrics-1.png 1565w" 
+             sizes="100vw"
+             src="../img/interactive/metrics-1.png">
+        <h2>Agile Metrics App</h2>
+         <a href="#" class="full-image-close close-design" alt="Close project button"></a>
+      </div>
+      <div class="project-content hide-project">
+        <p>
+          A <a href="http://pebblecode.com/" target="_blank">pebble {code}</a> client project. As the client continued it's <a href="http://www.agilemanifesto.org/" alt="Link to Agile Manifesto">Agile</a> transformation, managers wanted a tool for monitoring indivisual team progress at working agile. 
+        </p>
+        <p>
+          We hosted a workshop to define the requirements of this system, from the user's perspective. We defined an MVP and set to work with production.
+        </p>
+        <div class="project-circles-wrap">
+          <div class="circle-image img-metrics-1"></div>
+          <div class="circle-image img-metrics-2"></div>
+          <div class="circle-image img-metrics-3"></div>
         </div>
-
-        <img id="content-img-intro" class="content-img-intro opacityUp" src="img/home-svgs/interactive-design.svg"/>
-
+        <p>
+          Using <a href="https://nodejs.org/en/" target="_blank" alt="Link to Node JS site">node</a> &amp;  <a href="https://facebook.github.io/react/" target="_blank" alt="Link to React JS site">ReactJS</a>, the developers &amp; I built a mobile first, interactive assessment tool. Teams could view their quaterly progress through <a href="https://d3js.org/" target="_blank" alt="Link to D3 JS site">D3 charts</a>, and store key notes with their report. An admin section allowed addition and organisation of teams on the system, as well as controlling user access.
+        </p>
+        <p class="project-note">App currently being trialled with teams.</p>
       </div>
 
 
@@ -195,15 +198,10 @@
 
 
 
-
-
- 
-    <header> <!-- Menu -->
-      <p class="fade-in">Please enable Javascript</p>  
-    </header> 
-
     <!-- Footer --> 
-    <footer></footer>
+    <footer>
+      @@include('./footer.html')
+    </footer>
 
     <script src="js/vendor/jquery-2.1.1.min.js"></script> 
     <script src="js/main.js"></script>

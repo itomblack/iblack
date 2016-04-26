@@ -62,3 +62,8 @@
 @mixin changeCol {
   animation: changeCol 60s infinite;
 }
+
+// @include anim-in(0.3s);
+@mixin opacity-in( $time: none ) {
+  animation: opacityUp $time ease;
+}

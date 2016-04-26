@@ -1,8 +1,6 @@
 //===============================================================================
 // IMPORTS
 //===============================================================================
-// normalize.css v3.0.0 | MIT License | git.io/normalize
-@import "_normalize.scss";
 
 // define mixins & functions
 @import "_mixins.scss";
@@ -157,6 +155,13 @@
 .moveUp3 { animation: moveUp 1.1s ease; }
 .moveUp4 { animation: moveUp 1.3s ease; }
 
+
+.center-button {
+  display: inline-block;
+  float: none !important;
+  margin: auto;
+  text-align: center;
+}
 
 //===============================================================================
 // ANIMATIONS

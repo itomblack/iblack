@@ -1,0 +1,257 @@
+// define mixins & functions
+@import "_mixins.scss";
+
+// define variables
+@import "_variables.scss";
+
+
+.design-content-block {
+	  width: 100%;
+	  height: calc( 100% - 30px) ;
+	  padding: 60px 0 0 0;
+	  overflow-y: scroll;
+	  @include clearfix;
+
+	  @media screen and (max-width: 480px) {
+	    padding: 40px 0 0 0;
+	    height: 100%;
+	  }
+
+	  // @media screen and (min-width: 480px) {
+	  //   padding: 60px 0 30px 0;
+	  // }
+}
+
+.project-title {
+	width: 100%;
+	min-height: 18%;
+	max-height: 18%;
+	background-color: $purple;
+	position: relative;
+  transition: all $med ease-in-out;
+  cursor: pointer;
+
+  overflow: hidden;
+
+	h2 {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 0;
+		transition: all $short ease;
+		position: absolute;
+		max-height: 40px;
+		bottom: calc(50% - 20px);
+
+		@media screen and (max-width: 400px) {
+			font-size: 32px;
+			max-height: 32px;
+			bottom: calc(50% - 16px);
+		}
+	}
+
+	img {
+		width: 100%;
+		opacity: 0;
+		top: -100%;
+		transition: all $short ease;
+    // filter: #{"grayscale(1)"}
+	}
+
+	.full-image-close { display: none; }
+
+	&:hover {
+		background-color: $ink;
+		h2{ color: $purple; }
+
+		img { opacity: 0.25;	}
+	}
+
+	&.js-project-open {
+		max-height: 600px;
+		background-color: white;
+
+		img {
+			opacity: 1;
+			max-height: 100%;
+			box-shadow: 0 2px 5px grey;
+		}
+
+		h2 {
+			padding: 32px 0 24px 0;
+			position: static;
+			max-height: 150px;
+		}
+
+		.full-image-close { display: block; }
+	}
+}
+
+.project-content {
+	max-height: 0;
+	overflow-y: hidden;
+	border-bottom: 1px solid $ink;
+
+	p {
+		text-align: justify;
+    font-size: 18px;
+    width: 600px;
+    max-width: 86%; 
+    justify-content: center;
+    margin: 12px auto;
+    line-height: 28px;
+
+    &.project-note {
+			font-style: italic;
+			font-size: 14px;
+		}
+	}
+
+	// img { width: 100%; }
+
+	&.js-project-open {
+		max-height: 3000px;
+		padding-bottom: 12px;
+
+		// img { margin-bottom: 24px;}
+	}
+
+	@media screen and (max-width: 400px) {
+	  p {
+	 		font-size: 16px;
+	 		line-height: 25px;
+	  }
+	}
+}
+
+.project-circles {
+	width: 100%;
+	max-width: 850px;
+	margin: 24px auto 0 auto;
+	display: block;
+}
+
+
+.project-circles-wrap {
+  width: 100%;
+  max-width: 850px;
+  margin: 36px auto 36px auto;
+  display: block;
+}
+
+.circle-image {
+  width: 260px;
+  height: 260px;
+  border-radius: 260px;
+  display: inline-block;
+  margin: 0 10px;
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: cover;
+  box-shadow: 0 2px 5px rgba(0,0,10,.5);
+}
+
+.img-hex-1 { background-image: url(/img/interactive/hex-circle-1.png); }
+.img-hex-2 { background-image: url(/img/interactive/hex-circle-2.png); }
+.img-hex-3 { background-image: url(/img/interactive/hex-circle-3.png); }
+
+.img-harvest-1 { background-image: url(/img/interactive/harvest-circle-1.png); }
+.img-harvest-2 { background-image: url(/img/interactive/harvest-circle-2.png); }
+.img-harvest-3 { background-image: url(/img/interactive/harvest-circle-3.png); }
+
+.img-metrics-1 { background-image: url(/img/interactive/metrics-circle-1.png); }
+.img-metrics-2 { background-image: url(/img/interactive/metrics-circle-2.png); }
+.img-metrics-3 { background-image: url(/img/interactive/metrics-circle-3.png); }
+
+@media screen and (max-width: 860px) {
+  .project-circles-wrap { max-width: 450px; }
+  .circle-image {
+    width: 127px;
+    height: 127px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .circle-image {
+    width: 260px;
+    height: 260px;
+    margin: 28px auto;
+    display: block;
+  }
+}
+
+.single-button-lrg {
+	display: block;
+  margin: 24px auto;
+  float: none;
+  padding: 4px 10px;
+  font-size: 18px;
+   width: 150px;
+  text-align: center;
+}
+
+.design-link {
+	margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 12px;
+  margin-top: -12px;
+  color: $coral;
+
+  &:hover {
+  	color: $orange;
+  }
+}
+
+.close-design { bottom: 8%; }
+@media screen and (max-width: 700px) { .close-design { bottom: 10%; } }
+@media screen and (max-width: 550px) { .close-design { bottom: 12%; } }
+
+
+// Animations
+.opacity-in-1 { @include opacity-in(0.4s) }
+.opacity-in-2 { @include opacity-in(0.8s) }
+.opacity-in-3 { @include opacity-in(1.2s) }
+.opacity-in-4 { @include opacity-in(1.6s) }
+.opacity-in-5 { @include opacity-in(2.0s) }
+.opacity-in-6 { @include opacity-in(2.4s) }
+.opacity-in-7 { @include opacity-in(2.6s) }
+
+
+
+// YOUTUBE VIDEO WRAP
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	max-width: 853px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media screen and (min-width: 853px) {
+		padding-top: 0;
+		padding-bottom: 480px;
+	}
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 853px;
+    max-height: 480px;
+}
+
+
+.hide-project { display: none; }
+
+
