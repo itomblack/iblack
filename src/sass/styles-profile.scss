@@ -79,14 +79,19 @@
 
 .label-list {
 	margin: 11px 0 12px 0;
+  display: block;
 
 	li {
 		display: inline-block;
 		border: 1px solid $midblue;
 		padding: 4px 5px;
 		margin: 0 3px 7px 0;
+		font-size: 14px;
+		line-height: 21px;
+		width: auto;
 	}
 }
+
 
 .bullet-list {
 	margin: 0 0 0 0;
