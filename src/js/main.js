@@ -48,11 +48,20 @@ $( document ).ready(function() {
       };
   })());
 
+  // also do if click menu button - for mobile //
+  $('#show-hidden-work').click(function() {
+    if ($('#secret-sauce')) {
+      loadWork();
+    } else {
+      console.log('wrong page');
+    }
+  })
+
   var loadWork = function() {
     if (isLoaded == false) {
       $('#secret-sauce').load("work-projects.html", function() {
           $('#secret-sauce .project-title').click(function() {
-              $(this).toggleClass('js-project-open');
+            $(this).toggleClass('js-project-open');
             $(this).next().toggleClass('js-project-open');
           })
           isLoaded = true;

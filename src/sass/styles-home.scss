@@ -285,6 +285,14 @@ input[type=checkbox]:checked ~ .menu-panel{
 		transform: translate(-150%, 0);	
 }
 
+.hidden-work-btn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 36px;
+}
+
 [class*="home-ill"] {
   width: 100%;
   height: 300px;

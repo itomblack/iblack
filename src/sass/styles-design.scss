@@ -116,8 +116,6 @@
 	.bullet-list {
 		margin-top: 21px;
 		margin-bottom: 21px;
-
-		li { line-height: 18px; }
 	}
 
 	&.js-project-open {
@@ -231,7 +229,7 @@
 .close-design { 
 	bottom: 8%; 
 	@media screen and (max-width: 700px) { bottom: 10%; }
-	@media screen and (max-width: 550px) { bottom: 12%;}
+	@media screen and (max-width: 550px) { bottom: 15%;}
 }
 
 .hidden-box {
