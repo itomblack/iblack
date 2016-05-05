@@ -52,8 +52,6 @@ $( document ).ready(function() {
   $('#show-hidden-work').click(function() {
     if ($('#secret-sauce')) {
       loadWork();
-    } else {
-      console.log('wrong page');
     }
   })
 
@@ -312,6 +310,8 @@ if ( $('#photog-body').length ) {
 }
 
 
+// funky console message
+ console.log('%cWelcome, code inspector!','font-family: "Open sans",Helvetica,Arial,sans-serif;font-weight: 400;font-size:32px;color:#3f88e8;');
 
 
 });   //close document.ready

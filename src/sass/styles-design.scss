@@ -95,9 +95,7 @@
 	}
 
 	p, li {
-		text-align: justify;
     font-size: 18px;
-    justify-content: center;
     line-height: 28px;
     margin: 8px auto 16px auto;
 
@@ -106,6 +104,10 @@
 			font-size: 14px;
 		}
 	}
+
+	p { text-align: justify;}
+
+	li { text-align: left;}
 
 	h3 {
 		font-size: 26px;
@@ -124,7 +126,7 @@
 	}
 
 	@media screen and (max-width: 400px) {
-	  p {
+	  p, ul, li {
 	 		font-size: 16px;
 	 		line-height: 25px;
 	  }

@@ -341,7 +341,7 @@ input[type=checkbox] {
   background-color: #3f88e8;
   padding-top: 60px;
   padding-bottom: 50px;
-  height: 100%;
+  height: auto;
   -webkit-animation: changeCol 60s infinite;
   animation: changeCol 60s infinite; }
   /* line 8, /Users/itomblack/Repos/iblack/src/sass/_mixins.scss */
