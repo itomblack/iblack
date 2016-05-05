@@ -67,10 +67,6 @@ $( document ).ready(function() {
     }  
   };
 
-
-
-
-
   // End hidden project //
 
 
@@ -168,13 +164,11 @@ var illustrationFeatures  = function () {
       var fullUrl = thumbUrl.replace("thumbs", "full");
 
 
-
       $('#ill-full').fadeOut(200, function(){
             $(this).attr('src', fullUrl).bind('onreadystatechange load', function(){
                   if (this.complete) $(this).fadeIn(500);
             });
       });   
-
 
       //show page
       var imageBack = $('#full-image-back');
@@ -210,7 +204,7 @@ var illustrationFeatures  = function () {
 
           // $('[data=' + filter + ']').addClass('hide-illustration')
 
-          for (i=0; i<allPics.length; i++) {
+          for ( i=0; i<allPics.length; i++ ) {
               if ($(allPics[i]).attr('data').indexOf(filter) == 0) {
                 $(allPics[i]).addClass('hide-illustration');
               };
@@ -232,82 +226,91 @@ if ( $('#illustration-body').length ) {
 
 var photographyFeatures  = function () {
 
-    // define max num of images
-    var imgTotal;
-
-    if ( $('#main-photo').attr('class').indexOf('rome-21') >=0 ) {
-      imgTotal = 21;
-    } else if ( $('#main-photo').attr('class').indexOf('nz-32') >=0 ) {
-      imgTotal = 32;
-    }
-
-
-
-    // if you hit button then get direction and call function
-    $('[id*=photo-swap-]').click( function(event) {
-      if ($(this).attr('id').indexOf('left') > -1 ) {
-        movePhoto(-1);  
-      }
-      else if ($(this).attr('id').indexOf('right') > -1 ) {
-        movePhoto(1);  
-      }
-    });
-
-    // if arrows clicked get direction and call function
-    document.onkeydown = function(e) {
-        switch (e.keyCode) {
-
-            case 37: //left
-              if ($('body').attr('id') == 'photog-body') {
-                movePhoto(-1);
-              };  
-              break;
-
-            case 39: //right
-              if ($('body').attr('id') == 'photog-body') {
-                movePhoto(1);
-              };  
-              break;
-        }
+  var photoUrls = [];
+  
+  var loadPhotoFolder = function (folder, folderLength, prefix) {
+    for ( i=1; i < (folderLength+1); i++ ) {
+      var currentUrl = '../img/photography/' + folder + '/' + prefix + i + '.jpg';
+      photoUrls.push(currentUrl);
     };
+  }
+
+  //load photos urls in to array
+  loadPhotoFolder('nz-web', 32, 'nz-');
+  loadPhotoFolder('rome-web', 21, 'rome-');
+
+  //add some photos to page
+  var totalPhotos = photoUrls.length;
+  var photosLeft = photoUrls.length;
+  var initPhotoLoad = 4;
+  
+
+  var loadPhotoBatch = function (startAt, numToLoad) {
+      //so you can't try and load non existant photos
+      if (numToLoad >= photosLeft) { numToLoad = photosLeft; };
+      
+      if (photosLeft > 0) {
+          for ( i=startAt; i < (startAt + numToLoad); i++ ) {
+            $('<img src="' + photoUrls[i] + '" alt="Just another photo">').load(function() {
+                $(this).appendTo('#photo-grid-wrap');
+                // click to see large version
+                var photoItem = $('#photo-grid-wrap img');
+                //clicking an image shows large image
+                photoItem.click(function(){
+                  showPhotos();
+                });
+            });
+            // $('#photo-grid-wrap').append('<img src="' + photoUrls[i] + '" alt="Just another photo">');
+          };
+          photosLeft = photosLeft - initPhotoLoad;
+          
+      }      
+  };
+
+  //choose intitial load based on screen size
+  if (window.innerWidth >= 450) { var initPhotoLoad = 8; };
+  if (window.innerWidth >= 800) { var initPhotoLoad = 16; };
+  if (window.innerWidth >= 1000) { var initPhotoLoad = 20; };
+  if (window.innerWidth >= 1200) { var initPhotoLoad = 24; };
+
+  loadPhotoBatch(0,initPhotoLoad);
+
+  // load more if scrolling near bottom of page
+  window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+      loadPhotoBatch((totalPhotos - photosLeft), initPhotoLoad);
+    };
+  };
 
 
+ 
 
-    // move to next image based on direction
-    var movePhoto = function(direction) {
+  var showPhotos = function() {
+    //get clicked image and load full version
+    var photoUrl = $(this).attr('src');
 
-      //get existing image number
-      var currentNum = parseInt($('#main-photo').attr('src')
-      .replace('img/rome-web/rome-', '')
-      .replace('img/nz-web/nz-', '')
-      .replace('.jpg', '')
-      );
-
-      //get next image number
-      var nextNum = currentNum + direction;
-
-      //loop at start and end of number of images
-      if (nextNum < 1) {
-        nextNum = imgTotal;
-      } else if (nextNum > imgTotal) {
-        nextNum = 1;
-      }
-
-      // select image and swap out for next one
-      $('#main-photo').fadeOut(500, function(){
-          nextSrc = $(this).attr('src').replace( currentNum, nextNum);
-          $(this).attr('src', nextSrc ).bind('onreadystatechange load', function(){
-             if (this.complete) $(this).fadeIn(500);
+    $('#photo-full').fadeOut(200, function(){
+          $(this).attr('src', photoUrl).bind('onreadystatechange load', function(){
+                if (this.complete) $(this).fadeIn(500);
           });
-      });   
-    };
+    });   
+    //show page
+    var imageBack = $('#full-image-photo');
+    imageBack.toggleClass('js-on-page');
+  }
 
-} /* END PHOTOGRAPHYFEATURES*/
+  //clicking x button hides large image
+  $('#full-image-close').click(function(){
+    var imageBack = $('#full-image-photo');
+    imageBack.toggleClass('js-on-page');
+  });
+
+} /**************** END PHOTOGRAPHYFEATURES ****************/
 
 // run if on photo page
 if ( $('#photog-body').length ) { 
     photographyFeatures();
-}
+};
 
 
 // funky console message

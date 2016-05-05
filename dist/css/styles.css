@@ -1900,164 +1900,48 @@ ul {
   list-style: none; }
 
 /* line 13, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-.photo-select {
-  width: 50%;
-  height: 100%;
-  background-color: white;
-  text-align: center;
-  margin: 0;
-  float: left;
-  position: relative; }
-  /* line 22, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-  .photo-select h2 {
-    width: 90%;
-    margin: 0 5%;
-    position: absolute;
-    top: 45%;
-    top: -webkit-calc(50% - 30px);
-    top: calc(50% - 30px);
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-    @media screen and (max-width: 450px) {
-      .photo-select h2 {
-        font-size: 32px; } }
-  /* line 37, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-  .photo-select:hover h2 {
-    color: white; }
-  /* line 39, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-  .photo-select:hover .photo-rome, .photo-select:hover .photo-nz {
-    opacity: 1; }
-
-/* line 43, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-.photo-rome, .photo-nz {
-  width: 100%;
-  height: 100%;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-
-/* line 53, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-.photo-rome {
-  background-image: url(../img/rome-web/rome-21.jpg); }
-
-/* line 54, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-.photo-nz {
-  background-image: url(../img/nz-web/nz-24.jpg); }
-
-/* line 56, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-.background-dark {
-  background-color: #000030 !important; }
-
-/* line 58, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-.full-block {
-  width: 100%;
-  height: 100%;
-  height: -webkit-calc(100% - 100px);
-  height: calc(100% - 100px);
-  position: fixed;
-  top: 60px; }
-  @media screen and (max-width: 480px) {
-    .full-block {
-      top: 40px;
-      height: -webkit-calc(100% - 40px);
-      height: calc(100% - 40px); } }
-
-/* line 72, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-.photo-content {
-  width: 100%;
-  height: 100%;
-  height: -webkit-calc(100% - 120px);
-  height: calc(100% - 120px);
-  position: fixed;
-  top: 60px; }
-  @media screen and (max-width: 480px) {
-    .photo-content {
-      top: 40px;
-      height: -webkit-calc(100% - 100px);
-      height: calc(100% - 100px); } }
-  @media screen and (max-width: 400px) {
-    .photo-content {
-      top: 40px;
-      height: -webkit-calc(100% - 60px);
-      height: calc(100% - 60px); } }
-
-/* line 89, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-.photo-twitter {
-  max-height: 100%;
-  max-width: 100%;
-  margin: auto;
-  display: inherit; }
-
-/* line 96, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-.photo-border {
-  border: 20px solid white; }
+.photo-grid-wrap {
+  /* Prevent vertical gaps */
+  line-height: 0;
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  column-count: 5;
+  -webkit-column-gap: 12px;
+  -moz-column-gap: 12px;
+  column-gap: 12px;
+  margin: 12px; }
+  /* line 20, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
+  .photo-grid-wrap img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 12px; }
+  @media screen and (max-width: 1200px) {
+    .photo-grid-wrap {
+      -webkit-column-count: 4;
+      -moz-column-count: 4;
+      column-count: 4; } }
+  @media screen and (max-width: 1000px) {
+    .photo-grid-wrap {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3; } }
+  @media screen and (max-width: 800px) {
+    .photo-grid-wrap {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2; } }
   @media screen and (max-width: 450px) {
-    .photo-border {
-      border: 10px solid white; } }
+    .photo-grid-wrap {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1; } }
 
-/* line 105, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-[class*="photo-swap-"] {
-  font-family: 'Oswald', helvetica, arial, sans-serif;
-  width: 150px;
-  height: 20px;
-  position: absolute;
-  bottom: -20px;
-  background-color: #CACCD9;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  font-size: 14px;
-  border-top: 1px solid #000030;
-  padding: 0 20px;
-  letter-spacing: 0.5px;
-  opacity: 0.4; }
-  /* line 119, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-  [class*="photo-swap-"]::after {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-left: 2px solid #000030;
-    border-top: 2px solid #000030;
-    position: absolute;
-    top: 5px;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-  /* line 131, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-  [class*="photo-swap-"]:hover {
-    background-color: #3f88e8;
-    opacity: 1; }
-
-/* line 137, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-.photo-swap-left {
-  left: 0;
-  text-align: right; }
-  /* line 141, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-  .photo-swap-left::after {
-    left: 80px;
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-  /* line 147, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-  .photo-swap-left:hover::after {
-    left: 40px; }
-
-/* line 153, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-.photo-swap-right {
-  right: 0;
-  text-align: left; }
-  /* line 157, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-  .photo-swap-right::after {
-    right: 80px;
-    -webkit-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    transform: rotate(135deg); }
-  /* line 163, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
-  .photo-swap-right:hover::after {
-    right: 40px; }
+/* line 32, /Users/itomblack/Repos/iblack/src/sass/styles-photography.scss */
+.photo-bottom {
+  width: 100%;
+  height: 50px;
+  background-color: #52f4ff;
+  display: block; }
 
 /* line 40, /Users/itomblack/Repos/iblack/src/sass/_variables.scss */
 *, *::before, *:after {
