@@ -26,26 +26,44 @@ $( document ).ready(function() {
 
   //************** DESIGN SECTION ***************//
 
+  //make project titles clickable
   $(".project-title").click(function () {
-    $(this).toggleClass('js-project-open');
-    $(this).next().toggleClass('js-project-open');
-  })
+      $(this).toggleClass('js-project-open');
+      $(this).next().toggleClass('js-project-open');
+  });
 
   // Show hidden project //
+  var isLoaded = false;
+  
   $(document).keypress((function(e) {
       var pass = "showme";
       var typed = "";
 
       return function(e) {
           typed += String.fromCharCode(e.which);
-          // console.log(typed);
-          if (typed === pass) {
-            console.log
-              // $('#secret-sauce').append(projectHTML)
-              $('.hide-project').fadeIn(500);
+          
+          if (typed.indexOf(pass) >= 0) {
+            loadWork();
           }
       };
   })());
+
+  var loadWork = function() {
+    if (isLoaded == false) {
+      $('#secret-sauce').load("work-projects.html", function() {
+          $('#secret-sauce .project-title').click(function() {
+              $(this).toggleClass('js-project-open');
+            $(this).next().toggleClass('js-project-open');
+          })
+          isLoaded = true;
+      });
+    }  
+  };
+
+
+
+
+
   // End hidden project //
 
 

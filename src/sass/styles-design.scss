@@ -228,9 +228,18 @@
 }
 
 
-.close-design { bottom: 8%; }
-@media screen and (max-width: 700px) { .close-design { bottom: 10%; } }
-@media screen and (max-width: 550px) { .close-design { bottom: 12%; } }
+.close-design { 
+	bottom: 8%; 
+	@media screen and (max-width: 700px) { bottom: 10%; }
+	@media screen and (max-width: 550px) { bottom: 12%;}
+}
+
+.hidden-box {
+	height: 100%;
+	display: inline;
+}
+
+
 
 
 // Animations
