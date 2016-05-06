@@ -255,9 +255,10 @@ var photographyFeatures  = function () {
                 $(this).appendTo('#photo-grid-wrap');
                 // click to see large version
                 var photoItem = $('#photo-grid-wrap img');
+                photoItem.unbind();
                 //clicking an image shows large image
                 photoItem.click(function(){
-                  showPhotos();
+                  showPhotos(this);
                 });
             });
             // $('#photo-grid-wrap').append('<img src="' + photoUrls[i] + '" alt="Just another photo">');
@@ -285,9 +286,9 @@ var photographyFeatures  = function () {
 
  
 
-  var showPhotos = function() {
+  var showPhotos = function(clickedItem) {
     //get clicked image and load full version
-    var photoUrl = $(this).attr('src');
+    var photoUrl = $(clickedItem).attr('src');
 
     $('#photo-full').fadeOut(200, function(){
           $(this).attr('src', photoUrl).bind('onreadystatechange load', function(){
@@ -314,7 +315,7 @@ if ( $('#photog-body').length ) {
 
 
 // funky console message
- console.log('%cWelcome, code inspector!','font-family: "Open sans",Helvetica,Arial,sans-serif;font-weight: 400;font-size:32px;color:#3f88e8;');
+ // console.log('%cWelcome, code inspector!','font-family: "Open sans",Helvetica,Arial,sans-serif;font-weight: 400;font-size:32px;color:#3f88e8;');
 
 
 });   //close document.ready
