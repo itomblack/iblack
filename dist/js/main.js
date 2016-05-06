@@ -226,6 +226,8 @@ if ( $('#illustration-body').length ) {
 var photographyFeatures  = function () {
 
   var photoUrls = [];
+  var photoUrl;
+  var photoShownArrayPos = "";
   
   var loadPhotoFolder = function (folder, folderLength, prefix) {
     for ( i=1; i < (folderLength+1); i++ ) {
@@ -287,7 +289,7 @@ var photographyFeatures  = function () {
 
   var showPhotos = function(clickedItem) {
     //get clicked image and load full version
-    var photoUrl = $(clickedItem).attr('src');
+    photoUrl = $(clickedItem).attr('src');
 
     $('#photo-full').fadeOut(200, function(){
           $(this).attr('src', photoUrl).bind('onreadystatechange load', function(){
@@ -298,10 +300,18 @@ var photographyFeatures  = function () {
     $('#full-image-photo').toggleClass('js-on-page');
   }
 
+
+
+
+
   //clicking x button hides large image
   $('#full-image-close').click(function(){
     $('#full-image-photo').toggleClass('js-on-page');
   });
+
+
+
+
 
 
   // Scrolling with arrows
@@ -317,7 +327,28 @@ var photographyFeatures  = function () {
   });
 
   var moveDirection = function(direction) {
-    console.log(direction);
+    //work out which one this is from the array of images
+    photoShownArrayPos = photoUrls.indexOf( photoUrl );
+
+    nextPhotoArrayPos = photoShownArrayPos + direction;
+    
+    currentlyShowingNum = totalPhotos - photosLeft - 1;
+
+    if (nextPhotoArrayPos < 0) {
+      nextPhotoArrayPos = currentlyShowingNum;
+    } else if (nextPhotoArrayPos > currentlyShowingNum ) {
+      nextPhotoArrayPos = 0;
+    }
+    // select image and swap out for next one
+    $('#photo-full').fadeOut(500, function(){
+        nextPhotoSrc = photoUrls[nextPhotoArrayPos];
+        $(this).attr('src', nextPhotoSrc ).bind('onreadystatechange load', function(){
+           if (this.complete) $(this).fadeIn(500);
+        });
+    });   
+
+    //update photoUrl to match
+    photoUrl = photoUrls[nextPhotoArrayPos];
   };
 
 } /**************** END PHOTOGRAPHYFEATURES ****************/
