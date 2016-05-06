@@ -220,7 +220,6 @@ if ( $('#illustration-body').length ) {
 }
 
 
-
 //**************** PHOTOGRAHY SHOW ******************//
 //***************************************************//
 
@@ -238,6 +237,7 @@ var photographyFeatures  = function () {
   //load photos urls in to array
   loadPhotoFolder('nz-web', 32, 'nz-');
   loadPhotoFolder('rome-web', 21, 'rome-');
+  loadPhotoFolder('canada-web', 30, 'canada-');
 
   //add some photos to page
   var totalPhotos = photoUrls.length;
@@ -264,7 +264,6 @@ var photographyFeatures  = function () {
             // $('#photo-grid-wrap').append('<img src="' + photoUrls[i] + '" alt="Just another photo">');
           };
           photosLeft = photosLeft - initPhotoLoad;
-          
       }      
   };
 
@@ -296,15 +295,30 @@ var photographyFeatures  = function () {
           });
     });   
     //show page
-    var imageBack = $('#full-image-photo');
-    imageBack.toggleClass('js-on-page');
+    $('#full-image-photo').toggleClass('js-on-page');
   }
 
   //clicking x button hides large image
   $('#full-image-close').click(function(){
-    var imageBack = $('#full-image-photo');
-    imageBack.toggleClass('js-on-page');
+    $('#full-image-photo').toggleClass('js-on-page');
   });
+
+
+  // Scrolling with arrows
+  $("body").keydown(function(e){
+      // left arrow
+      if ((e.keyCode || e.which) == 37) {  
+        moveDirection(-1);
+      }
+      // right arrow
+      if ((e.keyCode || e.which) == 39) {
+         moveDirection(1);
+      }   
+  });
+
+  var moveDirection = function(direction) {
+    console.log(direction);
+  };
 
 } /**************** END PHOTOGRAPHYFEATURES ****************/
 
