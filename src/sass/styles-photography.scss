@@ -10,159 +10,191 @@
 // define variables
 @import "_variables.scss";
 
-.photo-select {
-  width: 50%;
-  height: 100%;
-  background-color: white;
-  text-align: center;
-  margin: 0;
-  float: left;
-  position: relative;
+.photo-grid-wrap {
+  /* Prevent vertical gaps */
+  line-height: 0;
+  column-count: 5;
+  column-gap: 12px;
+  margin: 12px;
 
-  h2 {
-    width: 90%;
-    margin: 0 5%;
-    position: absolute;
-    top: 45%;
-    top: calc(50% - 30px);
-    transition: all $short ease;
+  img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 12px;
+  } 
 
-    @media screen and (max-width: 450px) {
-      font-size: 32px;
-    }
-
-  }
-  
-  &:hover {
-    h2 { color: white; }
-
-    .photo-rome, .photo-nz { opacity: 1; }
-  }
+  @media screen and (max-width: 1200px) { column-count: 4; }
+  @media screen and (max-width: 1000px) { column-count: 3; }
+  @media screen and (max-width: 800px) { column-count: 2; }
+  @media screen and (max-width: 450px) { column-count: 1; }  
 }
 
-.photo-rome, .photo-nz {
+.photo-bottom {
   width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: .5;
-  transition: all $short ease;
+  height: 50px;
+  background-color: $lblue;
+  display: block;
 }
 
-.photo-rome { background-image:url(../img/rome-web/rome-21.jpg); }
-.photo-nz { background-image:url(../img/nz-web/nz-24.jpg); }
 
-.background-dark { background-color: $ink !important; }
 
-.full-block {
-  width: 100%;
-  height: 100%;
-  height: calc(100% - 100px);
-  position: fixed;
-  top: 60px;
+
+
+
+
+// .photo-select {
+//   width: 50%;
+//   height: 100%;
+//   background-color: white;
+//   text-align: center;
+//   margin: 0;
+//   float: left;
+//   position: relative;
+
+//   h2 {
+//     width: 90%;
+//     margin: 0 5%;
+//     position: absolute;
+//     top: 45%;
+//     top: calc(50% - 30px);
+//     transition: all $short ease;
+
+//     @media screen and (max-width: 450px) {
+//       font-size: 32px;
+//     }
+
+//   }
   
-  @media screen and (max-width: 480px) {
-    top: 40px;
-    height: calc(100% - 40px);
-  }
+//   &:hover {
+//     h2 { color: white; }
+
+//     .photo-rome, .photo-nz { opacity: 1; }
+//   }
+// }
+
+// .photo-rome, .photo-nz {
+//   width: 100%;
+//   height: 100%;
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   opacity: .5;
+//   transition: all $short ease;
+// }
+
+// .photo-rome { background-image:url(../img/rome-web/rome-21.jpg); }
+// .photo-nz { background-image:url(../img/nz-web/nz-24.jpg); }
+
+// .background-dark { background-color: $ink !important; }
+
+// .full-block {
+//   width: 100%;
+//   height: 100%;
+//   height: calc(100% - 100px);
+//   position: fixed;
+//   top: 60px;
   
-}
+//   @media screen and (max-width: 480px) {
+//     top: 40px;
+//     height: calc(100% - 40px);
+//   }
+  
+// }
 
-.photo-content {
-  width: 100%;
-  height: 100%;
-  height: calc(100% - 120px);
-  position: fixed;
-  top: 60px;
+// .photo-content {
+//   width: 100%;
+//   height: 100%;
+//   height: calc(100% - 120px);
+//   position: fixed;
+//   top: 60px;
 
-  @media screen and (max-width: 480px) {
-    top: 40px;
-    height: calc(100% - 100px);
-  }
-  @media screen and (max-width: 400px) {
-    top: 40px;
-    height: calc(100% - 60px);
-  }
-}
+//   @media screen and (max-width: 480px) {
+//     top: 40px;
+//     height: calc(100% - 100px);
+//   }
+//   @media screen and (max-width: 400px) {
+//     top: 40px;
+//     height: calc(100% - 60px);
+//   }
+// }
 
-.photo-twitter {
-  max-height: 100%;
-  max-width: 100%;
-  margin: auto;
-  display: inherit;
-}
+// .photo-twitter {
+//   max-height: 100%;
+//   max-width: 100%;
+//   margin: auto;
+//   display: inherit;
+// }
 
-.photo-border { 
-  border: 20px solid white; 
+// .photo-border { 
+//   border: 20px solid white; 
 
-  @media screen and (max-width: 450px) {
-    border: 10px solid white; 
-  }
-}
+//   @media screen and (max-width: 450px) {
+//     border: 10px solid white; 
+//   }
+// }
 
 
-[class*="photo-swap-"] {
-  font-family: 'Oswald', helvetica, arial, sans-serif;
-  width: 150px;
-  height: 20px;
-  position: absolute;
-  bottom: -20px;
-  background-color: $grey;
-  transition: all $short ease;
-  font-size: 14px;
-  border-top: 1px solid $ink;
-  padding: 0 20px;
-  letter-spacing: 0.5px;
-  opacity: 0.4;
+// [class*="photo-swap-"] {
+//   font-family: 'Oswald', helvetica, arial, sans-serif;
+//   width: 150px;
+//   height: 20px;
+//   position: absolute;
+//   bottom: -20px;
+//   background-color: $grey;
+//   transition: all $short ease;
+//   font-size: 14px;
+//   border-top: 1px solid $ink;
+//   padding: 0 20px;
+//   letter-spacing: 0.5px;
+//   opacity: 0.4;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-left: 2px solid $ink;
-    border-top: 2px solid $ink;
-    position: absolute;
-    top: 5px;
-    transition: all $short ease;
-  }
+//   &::after {
+//     content: "";
+//     display: block;
+//     width: 10px;
+//     height: 10px;
+//     border-left: 2px solid $ink;
+//     border-top: 2px solid $ink;
+//     position: absolute;
+//     top: 5px;
+//     transition: all $short ease;
+//   }
 
-  &:hover {
-    background-color: $coral;
-    opacity: 1;
-  }
-}
+//   &:hover {
+//     background-color: $coral;
+//     opacity: 1;
+//   }
+// }
 
-.photo-swap-left {
-  left: 0;
-  text-align: right;
+// .photo-swap-left {
+//   left: 0;
+//   text-align: right;
 
-  &::after {
-    left: 80px;
-    transform: rotate(-45deg);
-  }
+//   &::after {
+//     left: 80px;
+//     transform: rotate(-45deg);
+//   }
 
-  &:hover {
-    &::after {
-      left: 40px;
-    }
-  }
-}
+//   &:hover {
+//     &::after {
+//       left: 40px;
+//     }
+//   }
+// }
 
-.photo-swap-right {
-  right: 0;
-  text-align: left;
+// .photo-swap-right {
+//   right: 0;
+//   text-align: left;
 
-  &::after {
-    right: 80px;
-    transform: rotate(135deg);
-  }
+//   &::after {
+//     right: 80px;
+//     transform: rotate(135deg);
+//   }
 
-  &:hover {
-    &::after {
-      right: 40px;
-    }
-  }
-}
+//   &:hover {
+//     &::after {
+//       right: 40px;
+//     }
+//   }
+// }
 
