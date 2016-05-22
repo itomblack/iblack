@@ -148,6 +148,7 @@ input[type=checkbox] {
 	padding-top: 60px;
 	padding-bottom: 50px;
 	height: auto;
+	min-height: 100%;
 
 	@include changeCol;
 }
