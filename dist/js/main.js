@@ -49,23 +49,23 @@ $( document ).ready(function() {
   })());
 
   // also do if click menu button - for mobile //
-  $('#show-hidden-work').click(function() {
-    if ($('#secret-sauce')) {
-      loadWork();
-    }
-  })
+  // $('#show-hidden-work').click(function() {
+  //   if ($('#secret-sauce')) {
+  //     loadWork();
+  //   }
+  // })
 
   var loadWork = function() {
     if (isLoaded == false) {
-      // alert("Thanks for reading my cover letter, but I just updated my site to include all the projects instead.\n\nEnjoy!");
+      alert("Thanks for reading my cover letter, but I just updated my site to include all the projects instead.\n\nEnjoy!");
       isLoaded = true;
-      $('#secret-sauce').load("work-projects.html", function() {
-          $('#secret-sauce .project-title').click(function() {
-            $(this).toggleClass('js-project-open');
-            $(this).next().toggleClass('js-project-open');
-          })
-          isLoaded = true;
-      });
+      // $('#secret-sauce').load("work-projects.html", function() {
+      //     $('#secret-sauce .project-title').click(function() {
+      //       $(this).toggleClass('js-project-open');
+      //       $(this).next().toggleClass('js-project-open');
+      //     })
+      //     isLoaded = true;
+      // });
     }  
 
   };
