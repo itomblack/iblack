@@ -20,11 +20,10 @@
 	width: 100%;
 	min-height: 18%;
 	max-height: 18%;
-	background-color: $midblue;
+	background-color: $purple;
 	position: relative;
   transition: all $short ease-in-out;
   cursor: pointer;
-
   overflow: hidden;
 
 	h2 {
@@ -54,10 +53,10 @@
 	.full-image-close { display: none; }
 
 	&:hover {
-		background-color: $ink;
-		h2{ color: $midblue; }
+		background-color: $midblue;
+		// h2{ color: $midblue; }
 
-		img { opacity: 0.25;	}
+		img { opacity: 0.3;	}
 	}
 
 	&.js-project-open {
@@ -74,6 +73,7 @@
 			padding: 32px 0 24px 0;
 			position: static;
 			max-height: 150px;
+			color: $ink;
 		}
 
 		.full-image-close { display: block; }
@@ -83,7 +83,7 @@
 .project-content {
 	max-height: 0;
 	overflow-y: hidden;
-	border-bottom: 1px solid darken($midblue,10) ;
+	// border-bottom: 1px solid $dblue;
 	
 
 	p, h3, h4, h5, ul, li {
@@ -223,7 +223,7 @@
   color: $coral;
 
   &:hover {
-  	color: $orange;
+  	color: $dblue;
   }
 }
 

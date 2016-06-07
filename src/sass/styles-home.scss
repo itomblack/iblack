@@ -92,7 +92,7 @@ p {
 		
 		transition: all $short ease;
 		&:hover {
-			color: $orange;
+			color: $dblue;
 		}
 	}
 }
@@ -111,7 +111,6 @@ input[type=checkbox] {
 //===============================================================================
 
 .text-ink{ color: $ink; }
-.text-yellow{ color: $yellow; }
 .text-grey{ color: $grey; }
 .text-coral{ color: $coral; }
 
@@ -220,12 +219,12 @@ input[type=checkbox] {
 	height: 100%;
 	top: 0;
 	background: $ink;
-	opacity: 0.9;
+	opacity: 0.95;
 	left: 150%;
 	padding-top: 3em;
 	z-index: 10;
 
-	transition: all $long ease;
+	transition: all $med ease;
 
 	ul li {
 		width: 100%;
@@ -233,6 +232,7 @@ input[type=checkbox] {
 		height: 3em;
 		padding-top: 1em;
 		transition: all $short ease;
+		font-size: 21px;
 
 		&:hover {
 			background-color: $coral;
@@ -241,6 +241,7 @@ input[type=checkbox] {
 		@media screen and (max-width: 480px) {
 			height: 2.3em;
 			padding-top: 0.4em;
+			font-size: 18px;
 		}
 	}
 
@@ -249,7 +250,6 @@ input[type=checkbox] {
 		text-decoration: none;
 		text-transform: uppercase;
 		color: white;
-
 	}
 }
 
@@ -367,9 +367,9 @@ input[type=checkbox]:checked ~ .menu-panel{
 
 
 @keyframes changeCol{
-	0% { background-color: $dblue; }
-	50% { background-color: $bluegreen; }
-	100% { background-color: $dblue; }
+	0% { background-color: $midblue; }
+	50% { background-color: $purple; }
+	100% { background-color: $midblue; }
 }
 
 @keyframes fadeIn {
