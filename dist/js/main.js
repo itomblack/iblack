@@ -30,6 +30,12 @@ $( document ).ready(function() {
   $(".project-title").click(function () {
       $(this).toggleClass('js-project-open');
       $(this).next().toggleClass('js-project-open');
+
+      // scroll to top      
+      var topPos = $(this).offset();
+      var menuAdjustment = $('#header-band').height();
+      $('body').animate({ scrollTop: topPos.top - menuAdjustment });
+
   });
 
   // Show hidden project //
