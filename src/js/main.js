@@ -49,27 +49,26 @@ $( document ).ready(function() {
   })());
 
   // also do if click menu button - for mobile //
-  $('#show-hidden-work').click(function() {
-    if ($('#secret-sauce')) {
-      loadWork();
-    }
-  })
+  // $('#show-hidden-work').click(function() {
+  //   if ($('#secret-sauce')) {
+  //     loadWork();
+  //   }
+  // })
 
   var loadWork = function() {
     if (isLoaded == false) {
-      $('#secret-sauce').load("work-projects.html", function() {
-          $('#secret-sauce .project-title').click(function() {
-            $(this).toggleClass('js-project-open');
-            $(this).next().toggleClass('js-project-open');
-          })
-          isLoaded = true;
-      });
+      alert("Thanks for reading my cover letter, but I just updated my site to include all the projects instead.\n\nEnjoy!");
+      isLoaded = true;
+      // $('#secret-sauce').load("work-projects.html", function() {
+      //     $('#secret-sauce .project-title').click(function() {
+      //       $(this).toggleClass('js-project-open');
+      //       $(this).next().toggleClass('js-project-open');
+      //     })
+      //     isLoaded = true;
+      // });
     }  
+
   };
-
-
-
-
 
   // End hidden project //
 
@@ -168,13 +167,11 @@ var illustrationFeatures  = function () {
       var fullUrl = thumbUrl.replace("thumbs", "full");
 
 
-
       $('#ill-full').fadeOut(200, function(){
             $(this).attr('src', fullUrl).bind('onreadystatechange load', function(){
                   if (this.complete) $(this).fadeIn(500);
             });
       });   
-
 
       //show page
       var imageBack = $('#full-image-back');
@@ -210,7 +207,7 @@ var illustrationFeatures  = function () {
 
           // $('[data=' + filter + ']').addClass('hide-illustration')
 
-          for (i=0; i<allPics.length; i++) {
+          for ( i=0; i<allPics.length; i++ ) {
               if ($(allPics[i]).attr('data').indexOf(filter) == 0) {
                 $(allPics[i]).addClass('hide-illustration');
               };
@@ -226,92 +223,147 @@ if ( $('#illustration-body').length ) {
 }
 
 
-
 //**************** PHOTOGRAHY SHOW ******************//
 //***************************************************//
 
 var photographyFeatures  = function () {
 
-    // define max num of images
-    var imgTotal;
-
-    if ( $('#main-photo').attr('class').indexOf('rome-21') >=0 ) {
-      imgTotal = 21;
-    } else if ( $('#main-photo').attr('class').indexOf('nz-32') >=0 ) {
-      imgTotal = 32;
-    }
-
-
-
-    // if you hit button then get direction and call function
-    $('[id*=photo-swap-]').click( function(event) {
-      if ($(this).attr('id').indexOf('left') > -1 ) {
-        movePhoto(-1);  
-      }
-      else if ($(this).attr('id').indexOf('right') > -1 ) {
-        movePhoto(1);  
-      }
-    });
-
-    // if arrows clicked get direction and call function
-    document.onkeydown = function(e) {
-        switch (e.keyCode) {
-
-            case 37: //left
-              if ($('body').attr('id') == 'photog-body') {
-                movePhoto(-1);
-              };  
-              break;
-
-            case 39: //right
-              if ($('body').attr('id') == 'photog-body') {
-                movePhoto(1);
-              };  
-              break;
-        }
+  var photoUrls = [];
+  var photoUrl;
+  var photoShownArrayPos = "";
+  
+  var loadPhotoFolder = function (folder, folderLength, prefix) {
+    for ( i=1; i < (folderLength+1); i++ ) {
+      var currentUrl = '../img/photography/' + folder + '/' + prefix + i + '.jpg';
+      photoUrls.push(currentUrl);
     };
+  }
+
+  //load photos urls in to array
+  loadPhotoFolder('nz-web', 32, 'nz-');
+  loadPhotoFolder('rome-web', 21, 'rome-');
+  loadPhotoFolder('canada-web', 30, 'canada-');
+
+  //add some photos to page
+  var totalPhotos = photoUrls.length;
+  var photosLeft = photoUrls.length;
+  var initPhotoLoad = 4;
+  
+
+  var loadPhotoBatch = function (startAt, numToLoad) {
+      //so you can't try and load non existant photos
+      if (numToLoad >= photosLeft) { numToLoad = photosLeft; };
+      
+      if (photosLeft > 0) {
+          for ( i=startAt; i < (startAt + numToLoad); i++ ) {
+            $('<img src="' + photoUrls[i] + '" alt="Just another photo">').load(function() {
+                $(this).appendTo('#photo-grid-wrap');
+                // click to see large version
+                var photoItem = $('#photo-grid-wrap img');
+                photoItem.unbind();
+                //clicking an image shows large image
+                photoItem.click(function(){
+                  showPhotos(this);
+                });
+            });
+            // $('#photo-grid-wrap').append('<img src="' + photoUrls[i] + '" alt="Just another photo">');
+          };
+          photosLeft = photosLeft - initPhotoLoad;
+      }      
+  };
+
+  //choose intitial load based on screen size
+  if (window.innerWidth >= 450) { var initPhotoLoad = 8; };
+  if (window.innerWidth >= 800) { var initPhotoLoad = 16; };
+  if (window.innerWidth >= 1000) { var initPhotoLoad = 20; };
+  if (window.innerWidth >= 1200) { var initPhotoLoad = 24; };
+
+  loadPhotoBatch(0,initPhotoLoad);
+
+  // load more if scrolling near bottom of page
+  window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+      loadPhotoBatch((totalPhotos - photosLeft), initPhotoLoad);
+    };
+  };
 
 
+ 
 
-    // move to next image based on direction
-    var movePhoto = function(direction) {
+  var showPhotos = function(clickedItem) {
+    //get clicked image and load full version
+    photoUrl = $(clickedItem).attr('src');
 
-      //get existing image number
-      var currentNum = parseInt($('#main-photo').attr('src')
-      .replace('img/rome-web/rome-', '')
-      .replace('img/nz-web/nz-', '')
-      .replace('.jpg', '')
-      );
-
-      //get next image number
-      var nextNum = currentNum + direction;
-
-      //loop at start and end of number of images
-      if (nextNum < 1) {
-        nextNum = imgTotal;
-      } else if (nextNum > imgTotal) {
-        nextNum = 1;
-      }
-
-      // select image and swap out for next one
-      $('#main-photo').fadeOut(500, function(){
-          nextSrc = $(this).attr('src').replace( currentNum, nextNum);
-          $(this).attr('src', nextSrc ).bind('onreadystatechange load', function(){
-             if (this.complete) $(this).fadeIn(500);
+    $('#photo-full').fadeOut(200, function(){
+          $(this).attr('src', photoUrl).bind('onreadystatechange load', function(){
+                if (this.complete) $(this).fadeIn(500);
           });
-      });   
-    };
+    });   
+    //show page
+    $('#full-image-photo').toggleClass('js-on-page');
+  }
 
-} /* END PHOTOGRAPHYFEATURES*/
+
+
+
+
+  //clicking x button hides large image
+  $('#full-image-close').click(function(){
+    $('#full-image-photo').toggleClass('js-on-page');
+  });
+
+
+
+
+
+
+  // Scrolling with arrows
+  $("body").keydown(function(e){
+      // left arrow
+      if ((e.keyCode || e.which) == 37) {  
+        moveDirection(-1);
+      }
+      // right arrow
+      if ((e.keyCode || e.which) == 39) {
+         moveDirection(1);
+      }   
+  });
+
+  var moveDirection = function(direction) {
+    //work out which one this is from the array of images
+    photoShownArrayPos = photoUrls.indexOf( photoUrl );
+
+    nextPhotoArrayPos = photoShownArrayPos + direction;
+    
+    currentlyShowingNum = totalPhotos - photosLeft - 1;
+
+    if (nextPhotoArrayPos < 0) {
+      nextPhotoArrayPos = currentlyShowingNum;
+    } else if (nextPhotoArrayPos > currentlyShowingNum ) {
+      nextPhotoArrayPos = 0;
+    }
+    // select image and swap out for next one
+    $('#photo-full').fadeOut(500, function(){
+        nextPhotoSrc = photoUrls[nextPhotoArrayPos];
+        $(this).attr('src', nextPhotoSrc ).bind('onreadystatechange load', function(){
+           if (this.complete) $(this).fadeIn(500);
+        });
+    });   
+
+    //update photoUrl to match
+    photoUrl = photoUrls[nextPhotoArrayPos];
+  };
+
+} /**************** END PHOTOGRAPHYFEATURES ****************/
 
 // run if on photo page
 if ( $('#photog-body').length ) { 
     photographyFeatures();
-}
+};
 
 
 // funky console message
- console.log('%cWelcome, code inspector!','font-family: "Open sans",Helvetica,Arial,sans-serif;font-weight: 400;font-size:32px;color:#3f88e8;');
+console.log('%cThanks for inspecting my site!','font-family: "Open sans",Helvetica,Arial,sans-serif;font-weight: 400;font-size:21px;color:#3f88e8;');
 
 
 });   //close document.ready
