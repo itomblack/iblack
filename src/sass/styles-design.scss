@@ -32,9 +32,7 @@
 	}
 
 	&:hover {
-		background-color: $purple;
-		.project-title .title-img-wrap .tile-img { opacity: .7;}
-		.label-list { opacity: 1;	}
+		transform: scale(0.96);
 	}
 }
 
@@ -101,7 +99,7 @@
 
 		.label-list {
 			margin: 12px 0 0 0;
-			opacity: .7;
+			opacity: 1;
 		}
 	}
 
@@ -128,7 +126,7 @@
 		z-index: 5;
 		overflow-y: scroll;
 
-		&:hover {	background-color: white; }
+		&:hover {	transform: scale(1); }
 
 		@media screen and (max-width: 480px) {
 			min-height: calc(100% - 40px);
