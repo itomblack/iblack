@@ -5,63 +5,156 @@
 @import "_variables.scss";
 
 
-.design-content-block {
-	  width: 100%;
-	  height: 100%;
-	  padding: 60px 0 0 0;
-	  @include clearfix;
+.project-wrap {
+  width: 100%;
+  width: calc(100% - 16px);
+  min-height: 40%;
+  padding-bottom: 16px;
+  float: left;
+  position: relative;
+  background-color: white;
+  margin: 8px;
+  transition: all $short ease;
+  // border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0,0,0,.4);
 
-	  @media screen and (max-width: 480px) {
-	    padding: 40px 0 0 0;
-	  }
+	@media screen and (min-width: 600px) {
+		width: 50%;
+		width: calc(50% - 16px);
+		margin: 8px;
+	}
+
+	@media screen and (min-width: 1150px) {
+		width: 25%;
+		width: calc(25% - 16px);
+		min-height: 50%;
+		min-height: calc(50% - 16px);
+	}
+
+	&:hover {
+		background-color: $purple;
+		.project-title .title-img-wrap .tile-img { opacity: .7;}
+		.label-list { opacity: 1;	}
+	}
 }
 
 .project-title {
 	width: 100%;
-	min-height: 18%;
-	max-height: 18%;
-	background-color: $purple;
+	max-width: 330px;
+	margin: 0 auto;
+	text-align: center;
+	height: 100%;
 	position: relative;
   transition: all $short ease-in-out;
   cursor: pointer;
   overflow: hidden;
 
-	h2 {
-		width: 100%;
-		text-align: center;
-		margin-bottom: 0;
-		transition: all $short ease;
-		position: absolute;
-		max-height: 40px;
-		bottom: calc(50% - 20px);
+  h2, p {
+  	max-width: 90%;
+  	margin: 0 auto;
+  }
 
-		@media screen and (max-width: 400px) {
-			font-size: 32px;
-			max-height: 32px;
-			bottom: calc(50% - 16px);
+  p {
+  	height: 70px;
+  }
+
+	h2 {
+		font-size: 2em;
+		text-align: center;
+		margin-top: 24px;
+		margin-bottom: 16px;
+		transition: all $short ease;
+	}
+
+	.title-img-wrap {
+		width: 100%;
+		margin-top: 24px;
+
+		.main-img {
+			display: none;
+		}
+
+		.tile-img {
+			width: 100px;
+			height: 100px;
+			border-radius: 100px;
+			opacity: 1;
+			margin: 0 auto;
+			background-image: url("/img/work-projects/all-btn-img-2.png");
+			background-size: cover;
 		}
 	}
 
-	img {
+	.tile-1 { background-position: 0 0; }
+	.tile-2 { background-position: -100px 0; }
+	.tile-3 { background-position: -200px 0; }
+	.tile-4 { background-position: -300px 0; }
+	.tile-5 { background-position: -400px 0; }
+	.tile-6 { background-position: -500px 0; }
+	.tile-7 { background-position: -600px 0; }
+	.tile-8 { background-position: -700px 0; }
+
+	.project-tags {
 		width: 100%;
-		opacity: 0;
-		top: -100%;
-		transition: all $short ease;
-    // filter: #{"grayscale(1)"}
+		margin: 0 auto;
+		padding: 0;
+
+		.label-list {
+			margin: 12px 0 0 0;
+			opacity: .7;
+		}
 	}
 
 	.full-image-close { display: none; }
+}
 
-	&:hover {
-		background-color: $midblue;
-		// h2{ color: $midblue; }
+.title-text-wrap {
+	position: relative;
+}
 
-		img { opacity: 0.3;	}
+
+
+// when opened ********************//
+.js-project-open {
+
+	&.project-wrap {
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		min-height: 100%;
+		min-height: calc(100% - 60px);
+		margin: 0;
+		z-index: 5;
+		overflow-y: scroll;
+
+		&:hover {	background-color: white; }
+
+		@media screen and (max-width: 480px) {
+			min-height: calc(100% - 40px);
+		}
 	}
 
-	&.js-project-open {
+
+	.project-title {
 		max-height: 600px;
 		background-color: white;
+		max-width: 100%;
+
+		.title-img-wrap {
+			margin-top: 0;
+		}
+
+		p { display: none; }
+
+		.project-tags { display: none;}
+
+		.main-img {
+			display: block;
+			max-width: 100%;
+		}
+
+		.tile-img { display: none; }
 
 		img {
 			opacity: 1;
@@ -78,13 +171,29 @@
 
 		.full-image-close { display: block; }
 	}
-}
+
+	.project-content {
+		max-height: 5000px;
+		padding-bottom: 12px;
+		overflow-y: visible;
+	}
+
+	.spacer { 
+		display: block;
+		width: 100%;
+		height: 80px;
+	}
+
+} //end when opened
+
+
+
+
 
 .project-content {
+	height: 1px;
 	max-height: 0;
 	overflow-y: hidden;
-	// border-bottom: 1px solid $dblue;
-	
 
 	p, h3, h4, h5, ul, li {
 		width: 600px;
@@ -120,11 +229,6 @@
 		margin-bottom: 21px;
 	}
 
-	&.js-project-open {
-		max-height: 5000px;
-		padding-bottom: 12px;
-	}
-
 	@media screen and (max-width: 400px) {
 	  p, ul, li {
 	 		font-size: 16px;
@@ -154,8 +258,7 @@
 	img {
 		margin: 32px auto;
 		display: block;
-		width: 96%;
-		max-width: 850px;
+		max-width: 100%;
 	}
 }
 
@@ -203,16 +306,6 @@
   }
 }
 
-.single-button-lrg {
-	display: block;
-  margin: 24px auto;
-  float: none;
-  padding: 4px 10px;
-  font-size: 18px;
-   width: 150px;
-  text-align: center;
-}
-
 .design-link {
 	margin: 0 auto;
   display: block;
@@ -229,9 +322,8 @@
 
 
 .close-design { 
-	bottom: 8%; 
-	@media screen and (max-width: 700px) { bottom: 10%; }
-	@media screen and (max-width: 550px) { bottom: 15%;}
+	top: 30px; 
+	@media screen and (max-width: 550px) { top: 36px;}
 }
 
 .hidden-box {

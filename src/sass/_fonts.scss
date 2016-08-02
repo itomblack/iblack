@@ -1,3 +1,106 @@
 //===============================================================================
 // FONTS
 //===============================================================================
+
+ul, h1, h2, h3 {
+	margin: 0 0 0 0;
+}
+
+h1, h2, h3 {
+	line-height: 1em;
+	font-weight: 400;
+	text-transform: uppercase;
+	opacity: 1;
+}
+h1 {
+	font-family: helvetica, arial, sans-serif;
+	font-size: 4em;
+	font-style: italic;
+	color: $yellow;
+	margin-top: -0.35em;
+}
+
+h2 {
+	font-family: 'Oswald', helvetica, arial, sans-serif;
+	font-size: 2.5em;
+	color: $ink;
+	margin-bottom: 10px;
+}
+
+h3 {
+	font-family: 'Oswald', helvetica, arial, sans-serif;
+	font-size: 1.8em;
+	color: $midgrey;
+}
+
+h6 {
+	color: $yellow;
+	font-size: 0.875em;
+	font-weight: 300;
+	padding: 0;
+	line-height: 1em;
+	margin: 0;
+	font-family: 'Oswald', helvetica, arial, sans-serif;
+
+	a & {
+		&:hover {
+			color: $coral;
+		}
+	}
+}
+
+p {
+	color: $ink;
+	font-size: 1em;
+	line-height: 1.5em;
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+
+	a {
+		color: $coral;
+		text-decoration: none;
+		
+		transition: all $short ease;
+		&:hover {
+			color: $dblue;
+		}
+	}
+}
+
+.std-button {
+  @include box-sizing;
+  font-family: 'Oswald', helvetica, arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: $ink;
+  color: white;
+  padding: 12px 16px;
+  height: 43px;
+  width: 150px;
+  display: block;
+  position: relative;
+  margin: 32px auto;
+  box-shadow: 0 1px 4px rgba(0,0,0, .4);
+  transition: all $short ease;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $purple;
+  }
+
+}
+
+.contact-button {
+	padding: 12px 16px 12px 57px;
+	margin: 0 .35em .6em .35em;
+	width: 140px;
+	display: inline-block;
+
+	img {
+	  height: 26px;
+	  position: absolute;
+	  left: 16px;
+	  top: 8px;
+	}
+}

@@ -84,7 +84,7 @@
 	li {
 		display: inline-block;
 		border: 1px solid $midblue;
-		padding: 4px 5px;
+		padding: 6px 8px;
 		margin: 0 3px 7px 0;
 		font-size: 14px;
 		line-height: 21px;
@@ -97,14 +97,14 @@
 	margin: 0 0 0 0;
 
 	li {
-		margin-left: 15px;
+		margin: 4px 0 4px 15px;
 		position: relative;
 
 		&::before {
 			content: "•";
 			position: absolute;
 			left: -15px;
-			top: 0;
+			top: 1px;
 			color: $dblue;
 			font-size: 18px; 
 		}

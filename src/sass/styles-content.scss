@@ -8,17 +8,19 @@
 @import "_variables.scss";
 
 .content-block {
-
   width: 100%;
-  padding: 60px 20px 30px 20px;
+  height: 100%;
+  height: calc(100% - 60px);
+  padding: 20px 20px 30px 20px;
   @include clearfix;
+  overflow: auto;
 
-  @media screen and (min-width: 350px) {
-    padding: 80px 20px 30px 20px;
+  @media screen and (max-width: 480px) {
+    height: calc(100% - 40px);
   }
 
-  @media screen and (min-width: 480px) {
-    padding: 100px 30px 30px 30px;
+  @media screen and (min-width: 350px) {
+    padding: 40px 20px 30px 20px;
   }
 }
 

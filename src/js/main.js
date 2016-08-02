@@ -15,7 +15,7 @@ $( document ).ready(function() {
 //************** MENU ITEMS ***************//
 
   var menuItems = [
-  'interactive-design',
+  'design',
   'illustration',
   'photography',
   'profile',
@@ -27,9 +27,9 @@ $( document ).ready(function() {
   //************** DESIGN SECTION ***************//
 
   //make project titles clickable
-  $(".project-title").click(function () {
+  $(".project-wrap").click(function () {
       $(this).toggleClass('js-project-open');
-      $(this).next().toggleClass('js-project-open');
+      // $(this).next().toggleClass('js-project-open');
 
       // scroll to top      
       var topPos = $(this).offset();

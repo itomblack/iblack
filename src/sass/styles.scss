@@ -10,9 +10,13 @@
 // define variables
 @import "_variables.scss";
 
+@import "_fonts.scss";
+
 //-------------------------------------------
 
 @import "styles-home.scss";
+
+@import "styles-menu.scss";
 
 @import "styles-content.scss";
 
@@ -24,4 +28,4 @@
 
 @import "styles-design.scss";
 
-@import "styles-profile.scss";
+@import "styles-cv.scss";
