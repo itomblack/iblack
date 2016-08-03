@@ -96,6 +96,10 @@ input[type=checkbox] {
 	padding: 8px;
 	overflow: auto;
 	background-color: $grey;
+
+	&.js-no-padding {
+		padding: 0;
+	}
 }
 
 [class*="home-ill-"] {
@@ -106,6 +110,7 @@ input[type=checkbox] {
   background-color: white;
   margin: 8px 0;
 	box-shadow: 0 2px 8px rgba(0,0,0,.4);
+	border-radius: 2px;
 
   svg {
   	max-height: 100%;

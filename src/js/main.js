@@ -25,74 +25,68 @@ $( document ).ready(function() {
 
 
   //************** DESIGN SECTION ***************//
-
+  var eTop;
+  var eLeft;
   //make project titles clickable
-  $(".project-wrap").click(function () {
-      $(this).toggleClass('js-project-open');
-      // $(this).next().toggleClass('js-project-open');
+  $(".project-title").click(function () {
+      var eTitle = this;
+      var headerElem = $(this).find('.title-text-wrap');
+      var eClicked = $(this).parent();
+      var contentElem = eClicked.find('.project-content');
+      var pageWrap = $('.home-ills-wrap');
 
-      // scroll to top      
-      var topPos = $(this).offset();
-      var menuAdjustment = $('#header-band').height();
-      $('body').animate({ scrollTop: topPos.top - menuAdjustment });
+      if ( $(eClicked).hasClass('js-project-open') ) {
+          //if open then close
+          //remove classes from stick header
+          headerElem.removeClass('js-fix-header');
+          contentElem.css({ "margin-top": "0" });
+          pageWrap.toggleClass('js-no-padding');
+          //close project
+          $(eClicked)
+            .toggleClass('js-project-open')
+          ;
+          //fade in other cards
+          $(".project-title").not(eTitle).parent()
+            .delay(200)
+            .fadeTo(200, 1);
 
+      } else {
+          // if closed then open
+          $(".project-title").not(eTitle).parent()
+            .fadeTo(200, 0, function() {
+              pageWrap.toggleClass('js-no-padding');
+              $(eClicked).toggleClass('js-project-open');
+
+                // STICKY HEADER
+                stickOnScroll(eClicked, headerElem, contentElem);
+            });          
+      }
   });
 
-  // Show hidden project //
-  var isLoaded = false;
-  
-  $(document).keypress((function(e) {
-      var pass = "showme";
-      var typed = "";
 
-      return function(e) {
-          typed += String.fromCharCode(e.which);
-          
-          if (typed.indexOf(pass) >= 0) {
-            loadWork();
-          }
-      };
-  })());
-
-  // also do if click menu button - for mobile //
-  // $('#show-hidden-work').click(function() {
-  //   if ($('#secret-sauce')) {
-  //     loadWork();
-  //   }
-  // })
-
-  var loadWork = function() {
-    if (isLoaded == false) {
-      alert("Thanks for reading my cover letter, but I just updated my site to include all the projects instead.\n\nEnjoy!");
-      isLoaded = true;
-      // $('#secret-sauce').load("work-projects.html", function() {
-      //     $('#secret-sauce .project-title').click(function() {
-      //       $(this).toggleClass('js-project-open');
-      //       $(this).next().toggleClass('js-project-open');
-      //     })
-      //     isLoaded = true;
-      // });
-    }  
-
-  };
-
-  // End hidden project //
+  // ****** STICK HEADER ****** //
+  function stickOnScroll(eClicked, headerElem, contentElem) {
+    $('.js-project-open').scroll(function(){
 
 
+      var imgElem = $(this).find('.title-img-wrap');
+      var topImg = imgElem.offset().top;
+      var heightImg = imgElem.height();
 
-
-  // ********** IE test ******** //
-
-  // function isIE () {
-  //   var myNav = navigator.userAgent.toLowerCase();
-  //   return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
-  // }
-
-  // if (isIE () < 9) {
-  //  // is IE version less than 9
-  // } else {
-  //  // is IE 9 and later or not IE
-  // }
+      if( topImg + heightImg < - 48 ) {
+          headerElem.addClass('js-fix-header'); 
+          contentElem.css({
+            "margin-top": "160px"
+          });
+      } else {
+          headerElem.removeClass('js-fix-header');
+          contentElem.css({
+            "margin-top": "0"
+          });       
+      }
+    });
+  }
+  // **** END STICK HEADER **** //
 
 
 
@@ -104,8 +98,6 @@ $( document ).ready(function() {
         var total_frames = 90;
         var path = [];
         var length = [];
-
-
 
         path = document.querySelectorAll('path');
 
