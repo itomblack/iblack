@@ -63,17 +63,15 @@ $( document ).ready(function() {
       }
   });
 
-
+  
   // ****** STICK HEADER ****** //
   function stickOnScroll(eClicked, headerElem, contentElem) {
     $('.js-project-open').scroll(function(){
 
+      var scroll =  $('.js-project-open').scrollTop();
+      var heightImg = $(this).find('.title-img-wrap').height();
 
-      var imgElem = $(this).find('.title-img-wrap');
-      var topImg = imgElem.offset().top;
-      var heightImg = imgElem.height();
-
-      if( topImg + heightImg < - 48 ) {
+      if( scroll - heightImg > 36 ) {
           headerElem.addClass('js-fix-header'); 
           contentElem.css({
             "margin-top": "160px"
