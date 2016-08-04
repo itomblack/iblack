@@ -29,30 +29,30 @@
 </script>
   </head>
 
-    
-
-  <body id="photog-body" class="design-body background-dark transition-in-page">
+  <body id="photog-body" class="design-body background-dark">
     <header>
       <!-- Menu -->
-      <div id="header-band" class="header-band"></div>
-<label for="menu-checkbox" onclick>
-  <input type="checkbox" id="menu-checkbox">
-  <div id="menu-panel" class="menu-panel">
-    <ul>
-      <a class="page-transition" href="/index.html"><li>Home</li></a>
-      <a class="page-transition" href="/interactive-design.html"><li>Design</li></a>
-      <a class="page-transition"href="/illustration.html"><li>Illustration</li></a>
-      <a class="page-transition" href="/photography.html"><li>Photography</li></a>
-      <a class="page-transition" href="/profile.html"><li>CV</li></a>
-      <a class="page-transition" href="/contact.html"><li>Contact</li></a>
-      <a href="http://www.iantblack.co.uk/" target="_blank"><li>Blog</li></a>
-      <a href="https://twitter.com/itomblack" target="_blank"><li>Twitter</li></a>
-    </ul>
-    <!-- <div id="show-hidden-work" class="hidden-work-btn"></div> -->
-  </div>
-  <img class="menu-button-text" src="img/home-svgs/menu.svg"/>
-  <div class="menu-button-pseudos"></div>
-</label>
+      <div class="opacity-in-3">
+  <div id="header-band" class="header-band"></div>
+  <label for="menu-checkbox" onclick>
+    <input type="checkbox" id="menu-checkbox">
+    <div id="menu-panel" class="menu-panel">
+      <ul>
+        <a class="page-transition" href="/index.html"><li>Home</li></a>
+        <a class="page-transition" href="/design.html"><li>Design</li></a>
+        <a class="page-transition"href="/illustration.html"><li>Illustration</li></a>
+        <a class="page-transition" href="/photography.html"><li>Photography</li></a>
+        <a class="page-transition" href="/cv.html"><li>CV</li></a>
+        <a class="page-transition" href="/contact.html"><li>Contact</li></a>
+        <a href="http://www.iantblack.co.uk/" target="_blank"><li>Blog</li></a>
+        <a href="https://twitter.com/itomblack" target="_blank"><li>Twitter</li></a>
+      </ul>
+      <!-- <div id="show-hidden-work" class="hidden-work-btn"></div> -->
+    </div>
+    <img class="menu-button-text opacity-in-3" src="img/home-svgs/menu.svg"/>
+    <div class="menu-button-pseudos opacity-in-3"></div>
+  </label>
+</div>
     </header> 
 
     <!-- IMAGE OVERLAY -->
@@ -64,23 +64,11 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <div id="content-block" class="design-content-block opacityUp">
-      <div id="photo-grid-wrap" class="photo-grid-wrap"></div>
-    </div> <!-- content block end -->
-    
-    <!-- Footer --> 
-    <footer>
-      <!-- <div id="footer-bar" class="footer-bar">
-  <a href="/index.html" title="Home page"><h6>&#169; iblack 2016</h6></a>
-  <a href="/contact.html"><h6>contact</h6></a>
-</div> -->
-    </footer>
-
+    <div id="content-block" class="photo-wrap transition-in-page"></div>
+    <!-- content block end -->
 
     <script src="js/vendor/jquery-2.1.1.min.js"></script> 
     <script src="js/main.js"></script>
-
-    
 
   </body>
 </html>

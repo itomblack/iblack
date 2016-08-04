@@ -148,104 +148,29 @@ if ( $('#home-body').length ) {
 
 
 
-//***************** ILLUSTRATION SHOW ***************//
-//***************************************************//
-
-var illustrationFeatures  = function () {
-
-    var illustration = $('.ill-thumb');
-
-    //clicking an image shows large image
-    illustration.click(function(){
-      
-      //get clicked image and load full version
-      var thumbUrl = $(this).attr('src');
-      var fullUrl = thumbUrl.replace("thumbs", "full");
 
 
-      $('#ill-full').fadeOut(200, function(){
-            $(this).attr('src', fullUrl).bind('onreadystatechange load', function(){
-                  if (this.complete) $(this).fadeIn(500);
-            });
-      });   
+//***************** IMAGE ON PAGES *********************//
+//*****************************************************//
 
-      //show page
-      var imageBack = $('#full-image-back');
-      imageBack.toggleClass('js-on-page');
-    });
+var photoUrls = [];
+var photoUrl;
+var photoShownArrayPos = "";
 
-
-    //clicking x button hides large image
-
-    $('#full-image-close').click(function(){
-      var imageBack = $('#full-image-back');
-      imageBack.toggleClass('js-on-page');
-    });
-
-
-    //FILTER
-
-    $('[id*=filter]').click( function() {
-      var filter = this.id.split('-')[1];
-      var allPics = $('.ill-thumb');
-      //if off then remove class and show images
-      if ($(this).hasClass('filter-on')) {
-          $(this).removeClass('filter-on');
-          for (i=0; i<allPics.length; i++) {
-              if ($(allPics[i]).attr('data').indexOf(filter) == 0) {
-                $(allPics[i]).removeClass('hide-illustration');
-              };
-          }
-
-      } else {
-          // else add class and hide images
-          $(this).addClass('filter-on');
-
-          // $('[data=' + filter + ']').addClass('hide-illustration')
-
-          for ( i=0; i<allPics.length; i++ ) {
-              if ($(allPics[i]).attr('data').indexOf(filter) == 0) {
-                $(allPics[i]).addClass('hide-illustration');
-              };
-          }
-
-      }
-    });
-} /* END ILLUSTRATION FEATURES */
-
-// run if on ILLUSTRATION page
-if ( $('#illustration-body').length ) { 
-  illustrationFeatures();
+var loadPhotoFolder = function (folder, folderLength, prefix) {
+  for ( i=1; i < (folderLength+1); i++ ) {
+    var currentUrl = '../img/' + folder + '/' + prefix + i + '.jpg';
+    photoUrls.push(currentUrl);
+  };
 }
 
 
-//**************** PHOTOGRAHY SHOW ******************//
-//***************************************************//
-
-var photographyFeatures  = function () {
-
-  var photoUrls = [];
-  var photoUrl;
-  var photoShownArrayPos = "";
-  
-  var loadPhotoFolder = function (folder, folderLength, prefix) {
-    for ( i=1; i < (folderLength+1); i++ ) {
-      var currentUrl = '../img/photography/' + folder + '/' + prefix + i + '.jpg';
-      photoUrls.push(currentUrl);
-    };
-  }
-
-  //load photos urls in to array
-  loadPhotoFolder('nz-web', 32, 'nz-');
-  loadPhotoFolder('rome-web', 21, 'rome-');
-  loadPhotoFolder('canada-web', 30, 'canada-');
-
+var putImagesOnPage = function ( photoUrls ) {
   //add some photos to page
   var totalPhotos = photoUrls.length;
   var photosLeft = photoUrls.length;
   var initPhotoLoad = 4;
   
-
   var loadPhotoBatch = function (startAt, numToLoad) {
       //so you can't try and load non existant photos
       if (numToLoad >= photosLeft) { numToLoad = photosLeft; };
@@ -253,40 +178,50 @@ var photographyFeatures  = function () {
       if (photosLeft > 0) {
           for ( i=startAt; i < (startAt + numToLoad); i++ ) {
             $('<img src="' + photoUrls[i] + '" alt="Just another photo">').load(function() {
-                $(this).appendTo('#photo-grid-wrap');
+                $('<div class="photo-img-wrap">').appendTo('#content-block');
+                $(this).appendTo('.photo-img-wrap:last');
                 // click to see large version
-                var photoItem = $('#photo-grid-wrap img');
+                var photoItem = $('#content-block img');
                 photoItem.unbind();
                 //clicking an image shows large image
                 photoItem.click(function(){
                   showPhotos(this);
                 });
+                showPhotoSize();   
             });
-            // $('#photo-grid-wrap').append('<img src="' + photoUrls[i] + '" alt="Just another photo">');
           };
           photosLeft = photosLeft - initPhotoLoad;
-      }      
+      }   
   };
 
+
   //choose intitial load based on screen size
-  if (window.innerWidth >= 450) { var initPhotoLoad = 8; };
-  if (window.innerWidth >= 800) { var initPhotoLoad = 16; };
-  if (window.innerWidth >= 1000) { var initPhotoLoad = 20; };
-  if (window.innerWidth >= 1200) { var initPhotoLoad = 24; };
+  if (window.innerWidth >= 550) { var initPhotoLoad = 6; };
+  if (window.innerWidth >= 850) { var initPhotoLoad = 9; };
+  if (window.innerWidth >= 1150) { var initPhotoLoad = 12; };
 
   loadPhotoBatch(0,initPhotoLoad);
 
   // load more if scrolling near bottom of page
-  window.onscroll = function(ev) {
-    if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
-      loadPhotoBatch((totalPhotos - photosLeft), initPhotoLoad);
+  var run = false;
+  $('.photo-wrap').scroll(function(ev) {
+    var pageHeight = $('.photo-wrap').innerHeight();
+    var scrollDist = $('.photo-wrap').scrollTop();
+    var imgOffset = $('.photo-img-wrap:last').offset().top;
+    var imgHeight = $('.photo-img-wrap:last').height();
+
+    if ((pageHeight >= (imgOffset + 120) ) && (run == false)) {
+        run = true;
+        loadPhotoBatch((totalPhotos - photosLeft), initPhotoLoad);
+        setTimeout(function() { run = false }, 300);
     };
-  };
+  });
 
 
- 
+  
 
   var showPhotos = function(clickedItem) {
+    console.log(clickedItem);
     //get clicked image and load full version
     photoUrl = $(clickedItem).attr('src');
 
@@ -298,18 +233,10 @@ var photographyFeatures  = function () {
     //show page
     $('#full-image-photo').toggleClass('js-on-page');
   }
-
-
-
-
-
   //clicking x button hides large image
   $('#full-image-close').click(function(){
     $('#full-image-photo').toggleClass('js-on-page');
   });
-
-
-
 
 
 
@@ -328,9 +255,7 @@ var photographyFeatures  = function () {
   var moveDirection = function(direction) {
     //work out which one this is from the array of images
     photoShownArrayPos = photoUrls.indexOf( photoUrl );
-
     nextPhotoArrayPos = photoShownArrayPos + direction;
-    
     currentlyShowingNum = totalPhotos - photosLeft - 1;
 
     if (nextPhotoArrayPos < 0) {
@@ -350,7 +275,57 @@ var photographyFeatures  = function () {
     photoUrl = photoUrls[nextPhotoArrayPos];
   };
 
-} /**************** END PHOTOGRAPHYFEATURES ****************/
+  // make sure resize shows more pictures if needed
+  var initialSize = window.innerWidth;
+  $(window).resize( function() {
+    currentSize = window.innerWidth;
+
+    if( (currentSize >= 550) && (initialSize < 550) ) {
+      initialSize = 551;
+      loadPhotoBatch((totalPhotos - photosLeft), 2);
+
+    } 
+    else if( (currentSize >= 850) && (initialSize < 850) ) {
+      initialSize = 851;
+      loadPhotoBatch((totalPhotos - photosLeft), 3);
+    }
+    else if( (currentSize >= 1150) && (initialSize < 1150) ) {
+      initialSize = 1151;
+      loadPhotoBatch((totalPhotos - photosLeft), 3);
+    }
+  })
+}
+/* end put photos on page*/
+
+
+
+function showPhotoSize() {
+  $('.photo-img-wrap').find('img').each(function(){
+      var imgClass = (this.width/this.height > 1) ? 'wide' : 'tall';
+      $(this).addClass(imgClass);
+  })
+}
+
+//**************** END PUTTING IMAGES ON PAGE ******************//
+//*************************************************************//
+
+
+
+
+
+//**************** PHOTOGRAHY SHOW ******************//
+//***************************************************//
+
+var photographyFeatures  = function () {
+
+  //load photos urls in to array
+  loadPhotoFolder('photography/nz-web', 32, 'nz-');
+  loadPhotoFolder('photography/rome-web', 21, 'rome-');
+  loadPhotoFolder('photography/canada-web', 30, 'canada-');
+
+  putImagesOnPage( photoUrls );
+
+} 
 
 // run if on photo page
 if ( $('#photog-body').length ) { 
@@ -358,8 +333,42 @@ if ( $('#photog-body').length ) {
 };
 
 
+/**************** END PHOTOGRAPHY SHOE ****************/
+
+
+
+
+
+
+
+//**************** ILLUSTRATION SHOW ******************//
+//***************************************************//
+var illustrationFeatures  = function () {
+
+    //load photos urls in to array
+    loadPhotoFolder('illustration', 59, '');
+    putImagesOnPage( photoUrls );
+
+} /* END ILLUSTRATION FEATURES */
+
+// run if on ILLUSTRATION page
+if ( $('#illustration-body').length ) { 
+  illustrationFeatures();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 // funky console message
 console.log('%cThanks for inspecting my site!','font-family: "Open sans",Helvetica,Arial,sans-serif;font-weight: 400;font-size:21px;color:#3f88e8;');
-
 
 });   //close document.ready

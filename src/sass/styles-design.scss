@@ -5,6 +5,7 @@
 @import "_variables.scss";
 
 
+
 .project-wrap {
   width: 100%;
   width: calc(100% - 16px);
@@ -21,7 +22,6 @@
 	@media screen and (min-width: 600px) {
 		width: 50%;
 		width: calc(50% - 16px);
-		margin: 8px;
 	}
 
 	@media screen and (min-width: 1150px) {
@@ -38,7 +38,7 @@
 
 .project-title {
 	width: 100%;
-	max-width: 330px;
+	padding: 0 10%;
 	margin: 0 auto;
 	text-align: center;
 	height: 100%;
@@ -49,6 +49,7 @@
 
   h2, p {
   	max-width: 90%;
+  	max-width: 330px;
   	margin: 0 auto;
   }
 
@@ -66,7 +67,8 @@
 
 	.title-img-wrap {
 		width: 100%;
-		margin-top: 24px;
+		max-width: 330px;
+		margin: 24px auto 0 auto;
 
 		.main-img {
 			display: none;
@@ -161,9 +163,12 @@
 		max-height: 600px;
 		background-color: white;
 		max-width: 100%;
+		padding: 0;
+
 
 		.title-img-wrap {
 			margin-top: 0;
+			max-width: none;
 		}
 
 		p { display: none; }

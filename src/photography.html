@@ -4,12 +4,10 @@
       @@include('./inc/head.html')
   </head>
 
-    
-
-  <body id="photog-body" class="design-body background-dark transition-in-page">
+  <body id="photog-body" class="design-body background-dark">
     <header>
       <!-- Menu -->
-      @@include('./menu.html')
+      @@include('./inc/menu.html')
     </header> 
 
     <!-- IMAGE OVERLAY -->
@@ -21,20 +19,11 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <div id="content-block" class="design-content-block opacityUp">
-      <div id="photo-grid-wrap" class="photo-grid-wrap"></div>
-    </div> <!-- content block end -->
-    
-    <!-- Footer --> 
-    <footer>
-      @@include('./footer.html')
-    </footer>
-
+    <div id="content-block" class="photo-wrap transition-in-page"></div>
+    <!-- content block end -->
 
     <script src="js/vendor/jquery-2.1.1.min.js"></script> 
     <script src="js/main.js"></script>
-
-    
 
   </body>
 </html>
