@@ -25,66 +25,63 @@ $( document ).ready(function() {
 
 
   //************** DESIGN SECTION ***************//
-  var eTop;
-  var eLeft;
-  //make project titles clickable
-  $(".project-title").click(function () {
-      var eTitle = this;
-      var headerElem = $(this).find('.title-text-wrap');
-      var eClicked = $(this).parent();
-      var contentElem = eClicked.find('.project-content');
-      var pageWrap = $('.home-ills-wrap');
-
-      if ( $(eClicked).hasClass('js-project-open') ) {
-          //if open then close
-          //remove classes from stick header
-          headerElem.removeClass('js-fix-header');
-          contentElem.css({ "margin-top": "0" });
-          pageWrap.toggleClass('js-no-padding');
-          //close project
-          $(eClicked)
-            .toggleClass('js-project-open')
-          ;
-          //fade in other cards
-          $(".project-title").not(eTitle).parent()
-            .delay(200)
-            .fadeTo(200, 1);
-
-      } else {
-          // if closed then open
-          $(".project-title").not(eTitle).parent()
-            .fadeTo(200, 0, function() {
-              pageWrap.toggleClass('js-no-padding');
-              $(eClicked).toggleClass('js-project-open');
-
-                // STICKY HEADER
-                stickOnScroll(eClicked, headerElem, contentElem);
-            });          
-      }
-  });
-
   
-  // ****** STICK HEADER ****** //
-  function stickOnScroll(eClicked, headerElem, contentElem) {
-    $('.js-project-open').scroll(function(){
+  // run if on design page
+  if ( $('#design-body').length ) { 
 
-      var scroll =  $('.js-project-open').scrollTop();
-      var heightImg = $(this).find('.title-img-wrap').height();
-
-      if( scroll - heightImg > 36 ) {
-          headerElem.addClass('js-fix-header'); 
-          contentElem.css({
-            "margin-top": "160px"
-          });
-      } else {
-          headerElem.removeClass('js-fix-header');
-          contentElem.css({
-            "margin-top": "0"
-          });       
-      }
+    var eClicked;
+    //clicking x button hides large image
+    $('#full-image-close').click(function(){
+      $('#full-page-design').toggleClass('js-on-page');
+      $(".project-wrap").not(eClicked).fadeTo(200, 1)
     });
-  }
-  // **** END STICK HEADER **** //
+
+    $(".project-title").click(function () {
+
+        eClicked = $(this).parent();
+
+        $(".project-wrap").not(eClicked).fadeTo(300, 0.3)
+        //get html
+        var projectContent = $(this).parent().html();
+        //place in to panel
+        $('#design-holder').html(projectContent);
+        //open panel
+        $('#full-page-design').toggleClass('js-on-page');
+        //close if header is clicked
+        $('#design-holder').find('.project-title').click( function() {
+          $('#full-page-design').toggleClass('js-on-page');
+          $(".project-wrap").not(eClicked).fadeTo(200, 1)
+        })
+
+
+        //apply stick header
+        stickOnScroll();
+    });
+
+    // ****** STICK HEADER ****** //
+    function stickOnScroll() {
+      $('#design-holder').scroll(function(){
+        var scroll =  $('#design-holder').scrollTop();
+        var heightImg = $(this).find('.title-img-wrap').height();
+        var headerElem = $(this).find('.title-text-wrap');
+        var contentElem = $(this).find('.project-content');
+
+        if( scroll - heightImg > 36 ) {
+            headerElem.addClass('js-fix-header'); 
+            contentElem.css({
+              "margin-top": "160px"
+            });
+        } else {
+            headerElem.removeClass('js-fix-header');
+            contentElem.css({
+              "margin-top": "0"
+            });       
+        }
+      });
+    }
+    // **** END STICK HEADER **** //
+
+} //end if on design page
 
 
 
@@ -355,12 +352,6 @@ var illustrationFeatures  = function () {
 if ( $('#illustration-body').length ) { 
   illustrationFeatures();
 }
-
-
-
-
-
-
 
 
 

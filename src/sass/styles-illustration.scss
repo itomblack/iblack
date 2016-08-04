@@ -11,20 +11,6 @@
 @import "_variables.scss";
 
 
-// .central { 
-//   text-align: center; 
-
-//   p {
-//     display: inline-block;
-//   }
-// }
-// .content-illustrations {
-//   width: 100%;
-//   display: block;
-//   overflow: scroll;
-//   margin-top: 2em;
-// }
-
 .full-image-back {
   position: fixed;
   top: 0;
@@ -57,7 +43,7 @@
   height: 36px;
   position: absolute;
   bottom: 16px;
-  right: 16px;
+  right: 32px;
   background-color: $ink;
   border-radius: 50px;
   transition: all $short ease;

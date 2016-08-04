@@ -4,7 +4,24 @@
 // define variables
 @import "_variables.scss";
 
+.design-holder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	height: calc(100% - 60px);
+	overflow: auto;
 
+	.project-content, .project-title {
+		display: none;
+
+		.js-on-page & {
+			display: block;
+		}
+	}
+
+}
 
 .project-wrap {
   width: 100%;
@@ -41,7 +58,6 @@
 	padding: 0 10%;
 	margin: 0 auto;
 	text-align: center;
-	height: 100%;
 	position: relative;
   transition: all $short ease-in-out;
   cursor: pointer;
@@ -80,7 +96,7 @@
 			border-radius: 100px;
 			opacity: 1;
 			margin: 0 auto;
-			background-image: url("/img/work-projects/all-btn-img-2.png");
+			background-image: url("/img/design/all-btn-img-2.png");
 			background-size: cover;
 		}
 	}
@@ -140,7 +156,7 @@
 }
 
 // when opened ********************//
-.js-project-open {
+.design-holder &  {
 
 	&.project-wrap {
 		position: absolute;
@@ -298,27 +314,23 @@
   box-shadow: 0 2px 5px rgba(0,0,10,.5);
 }
 
-.img-hex-1 { background-image: url(/img/interactive/hex-circle-1.png); }
-.img-hex-2 { background-image: url(/img/interactive/hex-circle-2.png); }
-.img-hex-3 { background-image: url(/img/interactive/hex-circle-3.png); }
+.img-hex-1 { background-image: url(/img/design/guesshex/hex-circle-1.png); }
+.img-hex-2 { background-image: url(/img/design/guesshex/hex-circle-2.png); }
+.img-hex-3 { background-image: url(/img/design/guesshex/hex-circle-3.png); }
 
-.img-harvest-1 { background-image: url(/img/interactive/harvest-circle-1.png); }
-.img-harvest-2 { background-image: url(/img/interactive/harvest-circle-2.png); }
-.img-harvest-3 { background-image: url(/img/interactive/harvest-circle-3.png); }
+.img-harvest-1 { background-image: url(/img/design/harvest/harvest-circle-1.png); }
+.img-harvest-2 { background-image: url(/img/design/harvest/harvest-circle-2.png); }
+.img-harvest-3 { background-image: url(/img/design/harvest/harvest-circle-3.png); }
 
-.img-metrics-0 { background-image: url(/img/work-projects/metrics/metrics-circle-0.png); }
-.img-metrics-1 { background-image: url(/img/work-projects/metrics/metrics-circle-1.png); }
-.img-metrics-2 { background-image: url(/img/work-projects/metrics/metrics-circle-2.png); }
-.img-metrics-3 { background-image: url(/img/work-projects/metrics/metrics-circle-3.png); }
-.img-metrics-4 { background-image: url(/img/work-projects/metrics/metrics-circle-4.png); }
+.img-metrics-0 { background-image: url(/img/design/metrics/metrics-circle-0.png); }
+.img-metrics-1 { background-image: url(/img/design/metrics/metrics-circle-1.png); }
+.img-metrics-2 { background-image: url(/img/design/metrics/metrics-circle-2.png); }
+.img-metrics-3 { background-image: url(/img/design/metrics/metrics-circle-3.png); }
+.img-metrics-4 { background-image: url(/img/design/metrics/metrics-circle-4.png); }
 
 @media screen and (max-width: 860px) {
   .project-circles-wrap { max-width: 450px; }
-  .circle-image {
-    // width: 127px;
-    // height: 127px;
-    margin-bottom: 12px;
-  }
+  .circle-image { margin-bottom: 12px; }
 }
 
 @media screen and (max-width: 450px) {
@@ -354,8 +366,6 @@
 	height: 100%;
 	display: inline;
 }
-
-
 
 
 // Animations
