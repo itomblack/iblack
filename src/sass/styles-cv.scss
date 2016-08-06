@@ -1,6 +1,10 @@
 // define variables
 @import "_variables.scss";
 
+.cv-margin {
+	margin: 0 8px;
+}
+
 .cv-wrap {
 	border: 1px dotted $dblue;
 	padding: 24px;

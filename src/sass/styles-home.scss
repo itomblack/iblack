@@ -93,6 +93,7 @@ input[type=checkbox] {
 	width: 100%;
 	height: 100%;
 	display: inline-block;
+	text-align: center;
 	padding: 8px;
 	overflow: auto;
 	background-color: $grey;
@@ -121,14 +122,14 @@ input[type=checkbox] {
 		.home-hover-title {	opacity: .9;}
   } //end hover
 
-	@media screen and (min-width: 480px) {
+	@media screen and (min-width: 500px) {
 		width: 50%;
 		width: calc(50% - 16px);
 		height: 40%;
 		margin: 8px;
 	}
 
-	@media screen and (min-width: 750px) {
+	@media screen and (min-width: 850px) {
 		width: 33.33%;
 		width: calc(33.33% - 16px);
 		height: 50%;

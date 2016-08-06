@@ -14,9 +14,9 @@
 }
 
 .contact-info {
-  margin-top: 20px;
+  margin-top: 60px;
   transform: scale(1);
-  transition: all $long ease;
+  transition: all $med ease;
 
    &:hover {
     transform: scale(1.075);
@@ -75,11 +75,14 @@
 //===============================================================================
 
 @keyframes colFade {
-  0% { color: $grey; }
-  25% { color: $coral; }
-  50% { color: $yellow; }
-  75% { color: $coral; }
-  100% { color: $grey; }
+  // 0% { color: $grey; }
+  // 25% { color: $coral; }
+  // 50% { color: $yellow; }
+  // 75% { color: $coral; }
+  // 100% { color: $grey; }
+  0% { color: $purple; }
+  50% { color: $midblue; }
+  100% { color: $purple; }
 }
 
 @keyframes moveDown {
