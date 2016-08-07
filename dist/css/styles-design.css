@@ -30,8 +30,9 @@ ul {
     cursor: pointer;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    display: inline-block; }
-    /* line 28, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+    display: inline-block;
+    margin-top: 0; }
+    /* line 29, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .page-intro-wrap p span {
       display: block;
       color: white;
@@ -39,19 +40,19 @@ ul {
       overflow: hidden;
       -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease; }
-    /* line 36, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+    /* line 37, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .page-intro-wrap p .quote-person {
       display: inline-block;
       border: 1px solid #000030;
       padding: 6px 12px; }
-    /* line 42, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+    /* line 43, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .page-intro-wrap p:hover {
       color: #52f4ff; }
-      /* line 45, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+      /* line 46, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
       .page-intro-wrap p:hover span {
         max-height: 100px; }
 
-/* line 52, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 53, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .design-holder {
   position: absolute;
   top: 0;
@@ -61,14 +62,14 @@ ul {
   height: -webkit-calc(100% - 60px);
   height: calc(100% - 60px);
   overflow: auto; }
-  /* line 61, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 62, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .design-holder .project-content, .design-holder .project-title {
     display: none; }
-    /* line 64, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+    /* line 65, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .js-on-page .design-holder .project-content, .js-on-page .design-holder .project-title {
       display: block; }
 
-/* line 71, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 72, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .project-wrap {
   width: 100%;
   width: -webkit-calc(100% - 16px);
@@ -102,13 +103,13 @@ ul {
       min-height: 50%;
       min-height: -webkit-calc(50% - 16px);
       min-height: calc(50% - 16px); } }
-  /* line 103, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 104, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-wrap:hover {
     -webkit-transform: scale(0.96);
     -ms-transform: scale(0.96);
     transform: scale(0.96); }
 
-/* line 108, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 109, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .project-title {
   width: 100%;
   padding: 0 10%;
@@ -119,15 +120,15 @@ ul {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   overflow: hidden; }
-  /* line 118, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 119, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title h3, .project-title p {
     max-width: 90%;
     max-width: 330px;
     margin: 0 auto; }
-  /* line 124, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 125, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title p {
     height: 70px; }
-  /* line 128, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 129, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title h3 {
     font-size: 2em;
     text-align: center;
@@ -135,15 +136,15 @@ ul {
     margin-bottom: 16px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-  /* line 136, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 137, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title .title-img-wrap {
     width: 100%;
     max-width: 330px;
     margin: 24px auto 0 auto; }
-    /* line 141, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+    /* line 142, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .project-title .title-img-wrap .main-img {
       display: none; }
-    /* line 145, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+    /* line 146, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .project-title .title-img-wrap .tile-img {
       width: 100px;
       height: 100px;
@@ -153,49 +154,49 @@ ul {
       background-image: url("/img/design/all-btn-img-2.png");
       -webkit-background-size: cover;
       background-size: cover; }
-  /* line 156, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 157, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title .tile-1 {
     background-position: 0 0; }
-  /* line 157, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 158, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title .tile-2 {
     background-position: -100px 0; }
-  /* line 158, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 159, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title .tile-3 {
     background-position: -200px 0; }
-  /* line 159, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 160, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title .tile-4 {
     background-position: -300px 0; }
-  /* line 160, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 161, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title .tile-5 {
     background-position: -400px 0; }
-  /* line 161, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 162, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title .tile-6 {
     background-position: -500px 0; }
-  /* line 162, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 163, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title .tile-7 {
     background-position: -600px 0; }
-  /* line 163, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 164, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title .tile-8 {
     background-position: -700px 0; }
-  /* line 165, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 166, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title .project-tags {
     width: 100%;
     margin: 0 auto;
     padding: 0; }
-    /* line 170, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+    /* line 171, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .project-title .project-tags .label-list {
       margin: 12px 0 0 0;
       opacity: 1; }
-  /* line 176, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 177, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-title .full-image-close {
     display: none; }
 
-/* line 179, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 180, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .title-text-wrap {
   position: relative;
   -webkit-animation: all 0.3s ease;
   animation: all 0.3s ease; }
-  /* line 183, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 184, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .title-text-wrap.js-fix-header {
     background-color: white;
     position: fixed;
@@ -205,23 +206,23 @@ ul {
     height: 60px;
     z-index: 200;
     opacity: 0.9; }
-    /* line 193, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+    /* line 194, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .title-text-wrap.js-fix-header h3 {
       -webkit-transition: none;
       transition: none;
       padding: 0 !important;
       margin: 14px auto; }
-    /* line 199, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+    /* line 200, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .title-text-wrap.js-fix-header .close-design {
       top: 13px; }
     @media screen and (max-width: 550px) {
       .title-text-wrap.js-fix-header {
         height: 50px; }
-        /* line 205, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+        /* line 206, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
         .title-text-wrap.js-fix-header h3 {
           margin: 10px auto; } }
 
-/* line 213, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 214, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .design-holder.project-wrap {
   position: absolute;
   width: 100%;
@@ -231,7 +232,7 @@ ul {
   margin: 0;
   z-index: 5;
   overflow-y: scroll; }
-  /* line 222, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 223, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .design-holder.project-wrap:hover {
     -webkit-transform: none;
     -ms-transform: none;
@@ -240,105 +241,105 @@ ul {
     .design-holder.project-wrap {
       min-height: -webkit-calc(100% - 40px);
       min-height: calc(100% - 40px); } }
-/* line 230, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 231, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .design-holder .project-title {
   max-height: 600px;
   background-color: white;
   max-width: 100%;
   padding: 0; }
-  /* line 237, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 238, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .design-holder .project-title .title-img-wrap {
     margin-top: 0;
     max-width: none; }
-  /* line 242, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 243, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .design-holder .project-title p {
     display: none; }
-  /* line 244, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 245, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .design-holder .project-title .project-tags {
     display: none; }
-  /* line 246, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 247, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .design-holder .project-title .main-img {
     display: block;
     width: 100%; }
-  /* line 252, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 253, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .design-holder .project-title .tile-img {
     display: none; }
-  /* line 254, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 255, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .design-holder .project-title img {
     opacity: 1;
     max-height: 100%;
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 10, 0.5);
     box-shadow: 0 2px 5px rgba(0, 0, 10, 0.5); }
-  /* line 260, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 261, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .design-holder .project-title h3 {
     padding: 32px 0 24px 0;
     position: static;
     max-height: 150px;
     color: #000030; }
-  /* line 267, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 268, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .design-holder .project-title .full-image-close {
     display: block; }
-/* line 270, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 271, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .design-holder .project-content {
   max-height: 5000px;
   padding-bottom: 12px;
   overflow-y: visible; }
-/* line 276, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 277, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .design-holder .spacer {
   display: block;
   width: 100%;
   height: 80px; }
 
-/* line 285, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 286, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .project-content {
   height: 1px;
   max-height: 0;
   overflow-y: hidden; }
-  /* line 290, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 291, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-content p, .project-content h3, .project-content h4, .project-content h5, .project-content ul, .project-content li {
     width: 600px;
     max-width: 86%;
     margin-left: auto;
     margin-right: auto; }
-  /* line 298, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 299, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-content p, .project-content li {
     font-size: 18px;
     line-height: 28px;
     margin: 8px auto 16px auto; }
-    /* line 303, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+    /* line 304, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .project-content p.project-note, .project-content li.project-note {
       font-style: italic;
       font-size: 14px; }
-  /* line 309, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 310, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-content p {
     text-align: justify; }
-  /* line 311, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 312, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-content li {
     text-align: left; }
-  /* line 313, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 314, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-content h4 {
     text-transform: uppercase;
     font-weight: 400;
     color: #000030;
     margin-top: 28px; }
-  /* line 320, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 321, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-content .bullet-list {
     margin-top: 21px;
     margin-bottom: 21px; }
   @media screen and (max-width: 400px) {
-    /* line 326, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+    /* line 327, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .project-content p, .project-content ul, .project-content li {
       font-size: 16px;
       line-height: 25px; } }
 
-/* line 333, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 334, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .project-circles {
   width: 100%;
   max-width: 850px;
   margin: 24px auto 0 auto;
   display: block; }
 
-/* line 341, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 342, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .project-circles-wrap {
   width: 100%;
   max-width: 850px;
@@ -346,13 +347,13 @@ ul {
   display: block;
   text-align: center; }
 
-/* line 351, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 352, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .project-central-wrap img {
   margin: 32px auto;
   display: block;
   max-width: 100%; }
 
-/* line 358, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 359, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .circle-image {
   width: 260px;
   height: 260px;
@@ -366,67 +367,67 @@ ul {
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 10, 0.5);
   box-shadow: 0 2px 5px rgba(0, 0, 10, 0.5); }
 
-/* line 370, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 371, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .img-hex-1 {
   background-image: url(/img/design/guesshex/hex-circle-1.png); }
 
-/* line 371, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 372, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .img-hex-2 {
   background-image: url(/img/design/guesshex/hex-circle-2.png); }
 
-/* line 372, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 373, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .img-hex-3 {
   background-image: url(/img/design/guesshex/hex-circle-3.png); }
 
-/* line 374, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 375, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .img-harvest-1 {
   background-image: url(/img/design/harvest/harvest-circle-1.png); }
 
-/* line 375, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 376, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .img-harvest-2 {
   background-image: url(/img/design/harvest/harvest-circle-2.png); }
 
-/* line 376, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 377, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .img-harvest-3 {
   background-image: url(/img/design/harvest/harvest-circle-3.png); }
 
-/* line 378, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 379, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .img-metrics-0 {
   background-image: url(/img/design/metrics/metrics-circle-0.png); }
 
-/* line 379, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 380, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .img-metrics-1 {
   background-image: url(/img/design/metrics/metrics-circle-1.png); }
 
-/* line 380, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 381, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .img-metrics-2 {
   background-image: url(/img/design/metrics/metrics-circle-2.png); }
 
-/* line 381, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 382, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .img-metrics-3 {
   background-image: url(/img/design/metrics/metrics-circle-3.png); }
 
-/* line 382, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 383, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .img-metrics-4 {
   background-image: url(/img/design/metrics/metrics-circle-4.png); }
 
 @media screen and (max-width: 860px) {
-  /* line 385, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 386, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-circles-wrap {
     max-width: 450px; }
-  /* line 386, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 387, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .circle-image {
     margin-bottom: 12px; } }
 
 @media screen and (max-width: 450px) {
-  /* line 390, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 391, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .circle-image {
     width: 260px;
     height: 260px;
     margin: 28px auto;
     display: block; } }
 
-/* line 398, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 399, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .design-link {
   margin: 0 auto;
   display: block;
@@ -435,62 +436,62 @@ ul {
   margin-bottom: 12px;
   margin-top: -12px;
   color: #3f88e8; }
-  /* line 407, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+  /* line 408, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .design-link:hover {
     color: #4d45ff; }
 
-/* line 413, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 414, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .close-design {
   top: 30px; }
   @media screen and (max-width: 550px) {
     .close-design {
       top: 36px; } }
 
-/* line 418, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 419, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .hidden-box {
   height: 100%;
   display: inline; }
 
-/* line 424, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 425, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .padding-top-40 {
   padding-top: 40px; }
 
-/* line 428, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 429, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .opacity-in-1 {
   -webkit-animation: opacityUp 0.4s ease;
   animation: opacityUp 0.4s ease; }
 
-/* line 429, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 430, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .opacity-in-2 {
   -webkit-animation: opacityUp 0.8s ease;
   animation: opacityUp 0.8s ease; }
 
-/* line 430, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 431, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .opacity-in-3 {
   -webkit-animation: opacityUp 1.2s ease;
   animation: opacityUp 1.2s ease; }
 
-/* line 431, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 432, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .opacity-in-4 {
   -webkit-animation: opacityUp 1.6s ease;
   animation: opacityUp 1.6s ease; }
 
-/* line 432, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 433, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .opacity-in-5 {
   -webkit-animation: opacityUp 2s ease;
   animation: opacityUp 2s ease; }
 
-/* line 433, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 434, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .opacity-in-6 {
   -webkit-animation: opacityUp 2.4s ease;
   animation: opacityUp 2.4s ease; }
 
-/* line 434, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 435, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .opacity-in-7 {
   -webkit-animation: opacityUp 2.6s ease;
   animation: opacityUp 2.6s ease; }
 
-/* line 440, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 441, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -507,7 +508,7 @@ ul {
       padding-top: 0;
       padding-bottom: 480px; } }
 
-/* line 460, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 461, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .video-container iframe, .video-container object, .video-container embed {
   position: absolute;
   top: 0;
@@ -517,6 +518,6 @@ ul {
   max-width: 853px;
   max-height: 480px; }
 
-/* line 471, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
+/* line 472, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
 .hide-project {
   display: none; }
