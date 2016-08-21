@@ -316,6 +316,7 @@ function showPhotoSize() {
 var photographyFeatures  = function () {
 
   //load photos urls in to array
+  loadPhotoFolder('photography/vancouver-web', 21, 'vancouver-');
   loadPhotoFolder('photography/nz-web', 32, 'nz-');
   loadPhotoFolder('photography/rome-web', 21, 'rome-');
   loadPhotoFolder('photography/canada-web', 30, 'canada-');
