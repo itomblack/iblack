@@ -10,7 +10,6 @@
 <meta charset="utf-8">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>iBlack</title>
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/styles.css">
@@ -27,213 +26,57 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+    <title>iBlack - Illustration</title>
   </head>
 
-  <body id="illustration-body" class="transition-in-page">
+  <body id="illustration-body" class="">
 
     <header>
       <!-- Menu -->
-      <div id="header-band" class="header-band"></div>
-<label for="menu-checkbox" onclick>
-  <input type="checkbox" id="menu-checkbox">
-  <div id="menu-panel" class="menu-panel">
-    <ul>
-      <a class="page-transition" href="/index.html"><li>Home</li></a>
-      <a class="page-transition" href="/interactive-design.html"><li>Interactive Design</li></a>
-      <a class="page-transition"href="/illustration.html"><li>Illustration</li></a>
-      <a class="page-transition" href="/photography.html"><li>Photography</li></a>
-      <a class="page-transition" href="/profile.html"><li>CV</li></a>
-      <a class="page-transition" href="/contact.html"><li>Contact</li></a>
-      <a href="http://www.iantblack.co.uk/" target="_blank"><li>Blog</li></a>
-      <a href="https://twitter.com/itomblack" target="_blank"><li>Twitter</li></a>
-    </ul>
-    <!-- <div id="show-hidden-work" class="hidden-work-btn"></div> -->
-  </div>
-  <img class="menu-button-text" src="img/home-svgs/menu.svg"/>
-  <div class="menu-button-pseudos"></div>
-</label>
+      <div class="opacity-in-3">
+  <div id="header-band" class="header-band"></div>
+  <label for="menu-checkbox" onclick>
+    <input type="checkbox" id="menu-checkbox">
+    <div id="menu-panel" class="menu-panel">
+      <ul>
+        <a class="page-transition" href="/index.html"><li>Home</li></a>
+        <a class="page-transition" href="/design.html"><li>Design</li></a>
+        <a class="page-transition"href="/illustration.html"><li>Illustration</li></a>
+        <a class="page-transition" href="/photography.html"><li>Photography</li></a>
+        <a class="page-transition" href="/cv.html"><li>CV</li></a>
+        <a class="page-transition" href="/contact.html"><li>Contact</li></a>
+        <a href="http://www.iantblack.co.uk/" target="_blank"><li>Blog</li></a>
+        <a href="https://twitter.com/itomblack" target="_blank"><li>Twitter</li></a>
+      </ul>
+      <!-- <div id="show-hidden-work" class="hidden-work-btn"></div> -->
+    </div>
+    <img class="menu-button-text opacity-in-3" src="img/home-svgs/menu.svg"/>
+    <div class="menu-button-pseudos opacity-in-3"></div>
+  </label>
+</div>
     </header> 
     
     <!-- IMAGE OVERLAY -->
-    <div id="full-image-back" class="full-image-back">
+    <div id="full-image-photo" class="full-image-back">
       <a href="#" id="full-image-close" class="full-image-close"></a>
       <div id="full-image-holder" class="full-image-holder">
-        <img id="ill-full" src="/img/ill-full/ballet.jpg" class=""/>
+        <img id="photo-full" src="" class=""/>
       </div>
     </div>
 
 
     <!-- MAIN CONTENT -->
-    <div class="content-block central moveDown">
-        <!-- Title -->
-        <h2 class="full-width">Illustration</h2>
-
-        <div class="content-visible">
-            <div class="filter-text-wrap">
-                <p class="text-underline">
-                "Drawing makes you see things clearer, and clearer and clearer still, until your eyes ache."
-                </p>
-            </div>
-            <div class="filter-wrap">
-                <div id="filter-life" class="filter-button">Life</div>
-                <div id="filter-objects" class="filter-button">Objects</div>
-                <div id="filter-places" class="filter-button">Places</div>
-            </div>
-        </div>
-    </div> <!-- Close content section wrap -->
-
-      <!-- RHS -->
-      <div id="content-illustrations" class="content-illustrations">
-
-        <img src="/img/ill-thumbs/turtle.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/fruit.jpg" class="ill-thumb" data="life" />
-  
-        <img src="/img/ill-thumbs/owl-teddy.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/owl-fred.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/tower.jpg" class="ill-thumb" data="places" />
-
-        <img src="/img/ill-thumbs/ballet.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/bankside.jpg" class="ill-thumb" data="places" />
-
-        <img src="/img/ill-thumbs/benched.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/birdchair.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/birdhead.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/birdhouse.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/birdwing.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/bnw.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/buster.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/camera1.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/camera2.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/camera3.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/camera4.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/camera5.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/casio.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/cat.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/chair.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/collection.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/covers.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/deer.jpg" class="ill-thumb" data="life" />
-
-         <img src="/img/ill-thumbs/dove.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/dracula.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/euston.jpg" class="ill-thumb" data="places life" />
-
-        <img src="/img/ill-thumbs/face.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/fly1.jpg" class="ill-thumb" data="life objects" />
-
-        <img src="/img/ill-thumbs/fly2.jpg" class="ill-thumb" data="life objects" />
-
-        <img src="/img/ill-thumbs/foot.jpg" class="ill-thumb" data="life objects" />
-
-        <img src="/img/ill-thumbs/fox.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/friend.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/holga.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/ld1.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/ld2.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/ld3.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/ld4.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/ld5.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/ld6.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/ld7.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/lego.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/lego2.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/londontv.jpg" class="ill-thumb" data="places" />
-
-        <img src="/img/ill-thumbs/mallick.jpg" class="ill-thumb" data="places" />
-
-        <img src="/img/ill-thumbs/notes.jpg" class="ill-thumb" data="places life" />
-
-        <img src="/img/ill-thumbs/owl.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/plane.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/plant.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/polaroid.jpg" class="ill-thumb" data="life objects" />
-
-        <img src="/img/ill-thumbs/foot.jpg" class="ill-thumb" data="life objects" />
-
-        <img src="/img/ill-thumbs/rothko.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/seaside.jpg" class="ill-thumb" data="places" />
-
-        <img src="/img/ill-thumbs/sg.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/shoes.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/sonofman.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/stripedpyjamas.jpg" class="ill-thumb" data="objects" />
-
-        <img src="/img/ill-thumbs/sunflowers.jpg" class="ill-thumb" data="life objects" />
-
-        <img src="/img/ill-thumbs/venue.jpg" class="ill-thumb" data="places" />
-
-        <img src="/img/ill-thumbs/wedding1.jpg" class="ill-thumb" data="places objects" />
-
-        <img src="/img/ill-thumbs/wedding2.jpg" class="ill-thumb" data="places objects" />
-
-        <img src="/img/ill-thumbs/wedding3.jpg" class="ill-thumb" data="places objects" />
-
-        <img src="/img/ill-thumbs/wedding4.jpg" class="ill-thumb" data="places objects" />
-
-        <img src="/img/ill-thumbs/wolf1.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/wolf2.jpg" class="ill-thumb" data="life" />
-
-        <img src="/img/ill-thumbs/wolf3.jpg" class="ill-thumb" data="life" />
-
-      
-
+    <div id="content-block" class="photo-wrap transition-in-page">
+      <div class="page-intro-wrap">
+        <h2>Illustration</h2>
+          <p>
+            Drawing makes you see things clearer, and clearer and clearer still, until your eyes ache.
+          <span></br><span class="quote-person">David Hockney</span></span>
+        </p>
       </div>
+    </div>
+    <!-- content block end -->
 
-
-    </div> <!-- content block end -->
-
-
-    <!-- Footer --> 
-    <footer>
-      <!-- <div id="footer-bar" class="footer-bar">
-  <a href="/index.html" title="Home page"><h6>&#169; iblack 2016</h6></a>
-  <a href="/contact.html"><h6>contact</h6></a>
-</div> -->
-    </footer>
 
     <script src="/js/vendor/jquery-2.1.1.min.js"></script> 
     <script src="/js/main.js"></script>

@@ -11,27 +11,13 @@
 @import "_variables.scss";
 
 
-.central { 
-  text-align: center; 
-
-  p {
-    display: inline-block;
-  }
-}
-.content-illustrations {
-  width: 100%;
-  display: block;
-  overflow: scroll;
-  margin-top: 2em;
-}
-
 .full-image-back {
   position: fixed;
   top: 0;
   left: -150%;
   height: 100%;
   width: 100%;
-  background-color: $ink;
+  background-color: white;
   z-index: 999;
 
   transition: all $long ease;
@@ -39,15 +25,16 @@
 
 .full-image-holder {
   width: 90%;
-  height: 90%;
+  height: calc(100% - 60px);
   margin: auto;
-  margin-top: 5%;
+  margin-top: 26px;
 
   img {
     margin: auto;
     max-width: 100%;
-    max-height: 90%;
+    max-height: 100%;
     display: block;
+    box-shadow: 0 2px 8px rgba(0,0,0,.4);
   }
 }
 
@@ -55,10 +42,11 @@
   width: 36px;
   height: 36px;
   position: absolute;
-  bottom: 5%;
-  right: 5%;
-  background-color: $coral;
+  bottom: 12px;
+  right: 32px;
+  background-color: $ink;
   border-radius: 50px;
+  transition: all $short ease;
 
   &::before, &::after {
     content: " ";
@@ -76,6 +64,7 @@
   &::after { transform: rotate(135deg); }
 
   &:hover {
+    background-color: $purple;
     &::before {
       transform: rotate(-135deg);
     }
@@ -105,91 +94,7 @@
 }
 
 
-
-
-.ill-thumb {
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 50%;
-  cursor: pointer;
-  opacity: 1;
-  max-width: 200px;
-  max-height: 200px;
-  transition: all $long ease;
-
-
-  @media screen and (min-width: 400px) { width: 33.333%; }
-  @media screen and (min-width: 600px) { width: 25%; }
-  @media screen and (min-width: 800px) { width: 20%; }
-  @media screen and (min-width: 1000px) { width: 16.666%; }
-  @media screen and (min-width: 1200px) { width: 14.285%; }
-  @media screen and (min-width: 1400px) { width: 12.5%; }
-  @media screen and (min-width: 1600px) { width: 11.111%; }
-}
-
-.hide-illustration {
-  opacity: 0;
-  max-width: 0;
-  max-height: 0;
-}
-
-
-.fade-in-short {
-  animation: fadeInShort 2s;
-}
-
-.filter-wrap {
-  display: inline-block;
-  margin: 0 auto;
-}
-
-.filter-text-wrap {
-  display: block;
-  width: 100%;
-}
-
-.filter-button {
-  font-family: 'Oswald', helvetica, arial, sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: $coral;
-  color: white;
-  padding: 2px 5px;
-  display: inline-block;
-  border-top: none;
-  border-bottom: 2px solid $ink;
-  float: left;
-  margin-right : 0.5em;
-
-  &:hover {
-    border-top: 2px solid white;
-    border-bottom: none;
-  }
-
-  &.filter-on {
-    background-color: $ink;
-    border-top: 2px solid white;
-    border-bottom: none;
-
-    &:hover {
-      border-top: none;
-      border-bottom: 2px solid $coral;
-    }
-
-  }
-}
-
-
-
-
 //===============================================================================
 // ANIMATIONS
 //===============================================================================
 
-
-@keyframes fadeInShort {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
