@@ -69,7 +69,7 @@ $( document ).ready(function() {
         if( scroll - heightImg > 36 ) {
             headerElem.addClass('js-fix-header'); 
             contentElem.css({
-              "margin-top": "160px"
+              "margin-top": "120px"
             });
         } else {
             headerElem.removeClass('js-fix-header');
