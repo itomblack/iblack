@@ -19,6 +19,7 @@
   padding: 8px;
   overflow: auto;
   background-color: white;
+  text-align: center;
 
   @media screen and (max-width: 480px) {
     height: calc(100% - 40px);
