@@ -159,7 +159,7 @@
 
 		.tile-img {
 			background-size: cover;
-			opacity: .2;
+			opacity: .15;
 			transition: opacity 0.3s ease;
 		}
 
@@ -184,11 +184,11 @@
 
 		.label-list {
 			margin: 12px 0 0 0;
-			opacity: 1;
+			opacity: .9;
 		}
 	}
 
-	.project-tags { display: none; }
+	// .project-tags { display: none; }
 
 	.full-image-close { display: none; }
 }
@@ -196,11 +196,15 @@
 .title-text-wrap {
 	position: relative;
 	animation: all $short ease;
-	padding: 48px 0 64px 0;
+	padding: 36px 0 48px 0;
 	color: white;
 	transition: opacity 0.3s ease;
 
 	h3, p { color: white; }
+
+	h3 { color: white; }
+
+	p { color: $grey; }
 
 	&.js-fix-header {
 		background-color: white;
