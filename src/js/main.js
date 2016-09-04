@@ -45,6 +45,15 @@ $( document ).ready(function() {
         var projectContent = $(this).parent().html();
         //place in to panel
         $('#design-holder').html(projectContent);
+
+        //add src to images to load
+        $('#design-holder .non-load').each(function() {
+            var imgSrc = $(this).attr('data-src');
+            $(this).attr('src', imgSrc);
+        });
+
+
+
         //open panel
         $('#full-page-design').toggleClass('js-on-page');
         //close if header is clicked

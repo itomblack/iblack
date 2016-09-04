@@ -37,6 +37,15 @@ h4 {
 	color: $ink;
 }
 
+h5 {
+	color: $dblue;
+	font-size: 14px;
+	line-height: 21px;
+	margin: 0;
+
+	span { color: $ink;	}
+}
+
 h6 {
 	color: $yellow;
 	font-size: 0.875em;
