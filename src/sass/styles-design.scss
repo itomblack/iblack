@@ -71,7 +71,7 @@
 .project-wrap {
   width: 100%;
   width: calc(100% - 16px);
-  height: 320px;
+  height: 340px;
   display: inline-block;
   position: relative;
   background-color: white;
@@ -122,17 +122,60 @@
 }
 
 .title-icon {
- height: 210px;
+ height: 235px;
  width: 100%;
- padding: 10px 0;
+ padding: 20px 0;
+
+ &.icon-bottom { padding: 35px 0; }
 
  .title-icon-img {
  		width: 80%;
  		max-width: 200px;
     height: 100%;
     margin: 0 auto;
-    @include cssSprite( $pdp-icon );
  	}
+}
+
+//background colours
+.back-pdp { 
+	background-color: #14A1DC;
+	.title-icon-img { @include cssSprite( $pdp-icon ); }
+}
+.back-whisky {
+	background-color: #ffffff;
+	.title-icon-img { @include cssSprite( $whisky-icon ); }
+}
+.back-adf {
+	background-color: #550061;
+	.title-icon-img { @include cssSprite( $adf-icon ); }
+}
+.back-sow {
+	background-color: #204E7A;
+	.title-icon-img { @include cssSprite( $sow-icon ); }
+}
+.back-beacon {
+	background-color: #00A497;
+	.title-icon-img { @include cssSprite( $beacon-icon ); }
+}
+.back-harp { 
+	background-color: #A000FF;
+	.title-icon-img { @include cssSprite( $blues-icon ); }
+}
+.back-metrics {
+	background-color: #940254;
+	.title-icon-img { @include cssSprite( $metrics-icon ); }
+}
+.back-cbt {
+	background-color: #FD0075;
+	.title-icon-img { @include cssSprite( $cbt-icon ); }
+}
+.back-hex {
+	background-color: #7D3191;
+	.title-icon-img { @include cssSprite( $hex-icon ); }
+}
+.back-sains {
+	background-color: #EF6600;
+	.title-icon-img { @include cssSprite( $pdp-icon ); }
 }
 
 .title-text-wrap {
@@ -173,16 +216,6 @@
 		img {	width: 100%; }
 	}
 	
-	.tile-1 { background: url("../img/design/pdp/pdp-photo.jpg") no-repeat center center; }
-	.tile-2 { background: url("../img/design/beacon/beacon-photo.jpg") no-repeat center center; }
-	.tile-3 { background: url("../img/design/adf/adf-photo.jpg") no-repeat center center; }
-	.tile-4 { background: url("../img/design/harp/harp-photo.jpg") no-repeat center center; }
-	.tile-5 { background: url("../img/design/whisky/whisky-photo.jpg") no-repeat center center; }
-	.tile-6 { background: url("../img/design/metrics/metrics-photo.jpg") no-repeat center center; }
-	.tile-7 { background: url("../img/design/harvest/harvest-photo.jpg") no-repeat center center; }
-	.tile-8 { background: url("../img/design/cbt/cbt-photo.jpg") no-repeat center center; }
-
-
 	h3 {
 		font-size: 2em;
 		text-align: center;
@@ -455,20 +488,6 @@
 
 
 .padding-top-40 { padding-top: 40px; }
-
-
-
-//background colours
-.back-pdp { background-color: #14A1DC; }
-.back-whisky { background-color: #000; }
-.back-adf { background-color: #550061; }
-.back-sow { background-color: #000; }
-.back-beacon { background-color: #00A497; }
-.back-harp { background-color: #000; }
-.back-metrics { background-color: #ffffff; }
-.back-cbt { background-color: #000; }
-.back-sains { background-color: #EF6600; }
-
 
 
 // Animations
