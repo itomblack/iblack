@@ -42,9 +42,18 @@ $( document ).ready(function() {
 
         $(".project-wrap").not(eClicked).fadeTo(300, 0.3)
         //get html
-        var projectContent = $(this).parent().html();
+        var projectContent = $(this).parent().find('.project-detail').html();
         //place in to panel
         $('#design-holder').html(projectContent);
+
+        //add src to images to load
+        $('#design-holder .non-load').each(function() {
+            var imgSrc = $(this).attr('data-src');
+            $(this).attr('src', imgSrc);
+        });
+
+
+
         //open panel
         $('#full-page-design').toggleClass('js-on-page');
         //close if header is clicked
@@ -63,13 +72,13 @@ $( document ).ready(function() {
       $('#design-holder').scroll(function(){
         var scroll =  $('#design-holder').scrollTop();
         var heightImg = $(this).find('.title-img-wrap').height();
-        var headerElem = $(this).find('.title-text-wrap');
+        var headerElem = $(this).find('.main-title-band');
         var contentElem = $(this).find('.project-content');
 
-        if( scroll - heightImg > 36 ) {
+        if( scroll - heightImg > 12 ) {
             headerElem.addClass('js-fix-header'); 
             contentElem.css({
-              "margin-top": "160px"
+              "margin-top": "120px"
             });
         } else {
             headerElem.removeClass('js-fix-header');
@@ -318,7 +327,7 @@ var photographyFeatures  = function () {
   //load photos urls in to array
   loadPhotoFolder('photography/vancouver-web', 21, 'vancouver-');
   loadPhotoFolder('photography/nz-web', 32, 'nz-');
-  loadPhotoFolder('photography/rome-web', 21, 'rome-');
+  loadPhotoFolder('photography/rome-web', 22, 'rome-');
   loadPhotoFolder('photography/canada-web', 30, 'canada-');
 
   putImagesOnPage( photoUrls );
