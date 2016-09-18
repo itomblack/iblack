@@ -283,7 +283,7 @@ p {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  background-color: #000030;
+  background-color: #7700FF;
   color: white;
   padding: 12px 16px;
   width: 150px;
@@ -297,7 +297,7 @@ p {
   border-radius: 4px; }
   /* line 100, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
   .std-button:hover {
-    background-color: #7700FF; }
+    background-color: #000030; }
 
 /* line 106, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
 .contact-button {

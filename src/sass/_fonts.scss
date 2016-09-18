@@ -86,7 +86,7 @@ p {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  background-color: $ink;
+  background-color: $purple;
   color: white;
   padding: 12px 16px;
   width: 150px;
@@ -98,7 +98,7 @@ p {
   border-radius: 4px;
 
   &:hover {
-    background-color: $purple;
+    background-color: $ink;
   }
 
 }
