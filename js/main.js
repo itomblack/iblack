@@ -216,7 +216,7 @@ var putImagesOnPage = function ( photoUrls ) {
     var imgOffset = $('.photo-img-wrap:last').offset().top;
     var imgHeight = $('.photo-img-wrap:last').height();
 
-    if ((pageHeight >= (imgOffset + 200) ) && (run == false)) {
+    if ((pageHeight >= (imgOffset + 140) ) && (run == false)) {
         run = true;
         loadPhotoBatch((totalPhotos - photosLeft), initPhotoLoad);
         setTimeout(function() { run = false }, 300);
