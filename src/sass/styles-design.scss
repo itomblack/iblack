@@ -129,13 +129,20 @@
 
  .title-icon-img {
  		width: 80%;
- 		max-width: 200px;
     height: 100%;
     margin: 0 auto;
  	}
 }
 
 //background colours
+.back-tsm { 
+	background-color: #27a3d9;
+	.title-icon-img { @include cssSprite( $tsm-icon ); }
+}
+.back-archive { 
+	background-color: #EE8D02;
+	.title-icon-img { @include cssSprite( $sains-icon ); }
+}
 .back-pdp { 
 	background-color: #14A1DC;
 	.title-icon-img { @include cssSprite( $pdp-icon ); }
@@ -209,7 +216,7 @@
 	.title-img-wrap {
 		display: block;
 		width: 100%;
-		max-height: 500px;
+		max-height: 600px;
 		overflow: hidden;
 		
 		img {	width: 100%; }
