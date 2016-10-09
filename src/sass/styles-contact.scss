@@ -57,6 +57,13 @@
   text-align: center;
 }
 
+.icon-twitter::before {  @include cssSprite( $twitter ); }
+.icon-instagram::before {  @include cssSprite( $instagram ); }
+.icon-pinterest::before {  @include cssSprite( $pinterest ); }
+.icon-linkedin::before {  @include cssSprite( $linkedin ); }
+
+.icon-tw
+
 .moveUp1 { animation: moveUp 0.7s ease; }
 .moveUp2 { animation: moveUp 0.9s ease; }
 .moveUp3 { animation: moveUp 1.1s ease; }
@@ -75,11 +82,6 @@
 //===============================================================================
 
 @keyframes colFade {
-  // 0% { color: $grey; }
-  // 25% { color: $coral; }
-  // 50% { color: $yellow; }
-  // 75% { color: $coral; }
-  // 100% { color: $grey; }
   0% { color: $purple; }
   50% { color: $midblue; }
   100% { color: $purple; }
