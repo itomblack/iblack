@@ -132,7 +132,7 @@ $( document ).ready(function() {
 
     // ************ LOAD SVGS INTO HOME PAGE ********** //
     function loadHomeImages (){
-      var count = 1;
+      var count = 0;
       for (i=0; i<menuItems.length; i++) {
         $( "#home-ill-" + menuItems[i] ).load("img/home-svgs/" + menuItems[i] + ".svg", function(){
           //run drawing function after final image is done loading
