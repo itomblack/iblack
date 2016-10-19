@@ -132,7 +132,7 @@ $( document ).ready(function() {
 
     // ************ LOAD SVGS INTO HOME PAGE ********** //
     function loadHomeImages (){
-      var count = 1;
+      var count = 0;
       for (i=0; i<menuItems.length; i++) {
         $( "#home-ill-" + menuItems[i] ).load("img/home-svgs/" + menuItems[i] + ".svg", function(){
           //run drawing function after final image is done loading
@@ -216,7 +216,10 @@ var putImagesOnPage = function ( photoUrls ) {
     var imgOffset = $('.photo-img-wrap:last').offset().top;
     var imgHeight = $('.photo-img-wrap:last').height();
 
-    if ((pageHeight >= (imgOffset + 140) ) && (run == false)) {
+    var offsetForImages = 140
+    if (window.innerWidth <= 550) { offsetForImages = 50; };
+
+    if ((pageHeight >= (imgOffset + offsetForImages) ) && (run == false)) {
         run = true;
         loadPhotoBatch((totalPhotos - photosLeft), initPhotoLoad);
         setTimeout(function() { run = false }, 300);
