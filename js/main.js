@@ -208,7 +208,7 @@ var putImagesOnPage = function ( photoUrls ) {
 
   loadPhotoBatch(0,initPhotoLoad);
 
- // load more if scrolling near bottom of page
+  // load more if scrolling near bottom of page
   var run = false;
   $('.photo-wrap').scroll(function(ev) {
     var pageHeight = $('.photo-wrap').innerHeight();
