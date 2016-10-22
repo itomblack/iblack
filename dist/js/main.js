@@ -30,12 +30,23 @@ $( document ).ready(function() {
   if ( $('#design-body').length ) { 
 
     var eClicked;
-    //clicking x button hides large image
+    //clicking x button hides design project
     $('#full-image-close').click(function(){
       $('#full-page-design').toggleClass('js-on-page');
-      $(".project-wrap").not(eClicked).fadeTo(200, 1)
+      $(".project-wrap").not(eClicked).fadeTo(200, 1);
     });
 
+    //clicking esc also hides design project
+    $(document).keydown(function(e) {
+        // escape key maps to keycode `27`
+        if (e.keyCode == 27) {
+          $('#full-page-design').toggleClass('js-on-page');
+          $(".project-wrap").not(eClicked).fadeTo(200, 1);
+        }
+    });
+
+
+    //clickable projects
     $(".project-title").click(function () {
 
         eClicked = $(this).parent();
@@ -373,6 +384,6 @@ if ( $('#illustration-body').length ) {
 
 
 // funky console message
-console.log('%cThanks for inspecting my site!','font-family: "Open sans",Helvetica,Arial,sans-serif;font-weight: 400;font-size:21px;color:#3f88e8;');
+console.log('%cHey ;)','font-family: "Open sans",Helvetica,Arial,sans-serif;font-weight: 400;font-size:21px;color:#5500FF;');
 
 });   //close document.ready

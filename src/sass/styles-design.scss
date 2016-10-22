@@ -183,6 +183,14 @@
 	background-color: #EF6600;
 	.title-icon-img { @include cssSprite( $pdp-icon ); }
 }
+.back-foundry {
+	background-color: #F8B31A;
+	.title-icon-img { @include cssSprite( $foundry-icon ); }
+}
+.back-emoti {
+	background-color: #FFFFFF;
+	.title-icon-img { @include cssSprite( $emoti-icon ); }
+}
 
 .title-text-wrap {
 	position: relative;
