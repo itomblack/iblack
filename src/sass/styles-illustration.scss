@@ -39,14 +39,16 @@
 }
 
 .full-image-close {
-  width: 36px;
-  height: 36px;
+  width: 37px;
+  height: 37px;
   position: absolute;
   bottom: 12px;
   right: 32px;
   background-color: $ink;
   border-radius: 50px;
   transition: all $short ease;
+  z-index: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,.4);
 
   &::before, &::after {
     content: " ";
@@ -54,8 +56,8 @@
     width: 17px;
     height: 4px;
     position: absolute;
-    bottom: 15px;
-    right: 9px;
+    bottom: 16px;
+    right: 10px;
     transform: rotate(45deg);
 
     transition: all $short ease;

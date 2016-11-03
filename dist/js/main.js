@@ -30,21 +30,41 @@ $( document ).ready(function() {
   if ( $('#design-body').length ) { 
 
     var eClicked;
-    //clicking x button hides large image
+    //clicking x button hides design project
     $('#full-image-close').click(function(){
       $('#full-page-design').toggleClass('js-on-page');
-      $(".project-wrap").not(eClicked).fadeTo(200, 1)
+      $(".project-wrap").not(eClicked).fadeTo(200, 1);
     });
 
+    //clicking esc also hides design project
+    $(document).keydown(function(e) {
+        // escape key maps to keycode `27`
+        if (e.keyCode == 27) {
+          $('#full-page-design').toggleClass('js-on-page');
+          $(".project-wrap").not(eClicked).fadeTo(200, 1);
+        }
+    });
+
+
+    //clickable projects
     $(".project-title").click(function () {
 
         eClicked = $(this).parent();
 
         $(".project-wrap").not(eClicked).fadeTo(300, 0.3)
         //get html
-        var projectContent = $(this).parent().html();
+        var projectContent = $(this).parent().find('.project-detail').html();
         //place in to panel
         $('#design-holder').html(projectContent);
+
+        //add src to images to load
+        $('#design-holder .non-load').each(function() {
+            var imgSrc = $(this).attr('data-src');
+            $(this).attr('src', imgSrc);
+        });
+
+
+
         //open panel
         $('#full-page-design').toggleClass('js-on-page');
         //close if header is clicked
@@ -63,13 +83,13 @@ $( document ).ready(function() {
       $('#design-holder').scroll(function(){
         var scroll =  $('#design-holder').scrollTop();
         var heightImg = $(this).find('.title-img-wrap').height();
-        var headerElem = $(this).find('.title-text-wrap');
+        var headerElem = $(this).find('.main-title-band');
         var contentElem = $(this).find('.project-content');
 
-        if( scroll - heightImg > 36 ) {
+        if( scroll - heightImg > 12 ) {
             headerElem.addClass('js-fix-header'); 
             contentElem.css({
-              "margin-top": "160px"
+              "margin-top": "120px"
             });
         } else {
             headerElem.removeClass('js-fix-header');
@@ -123,7 +143,7 @@ $( document ).ready(function() {
 
     // ************ LOAD SVGS INTO HOME PAGE ********** //
     function loadHomeImages (){
-      var count = 1;
+      var count = 0;
       for (i=0; i<menuItems.length; i++) {
         $( "#home-ill-" + menuItems[i] ).load("img/home-svgs/" + menuItems[i] + ".svg", function(){
           //run drawing function after final image is done loading
@@ -207,7 +227,10 @@ var putImagesOnPage = function ( photoUrls ) {
     var imgOffset = $('.photo-img-wrap:last').offset().top;
     var imgHeight = $('.photo-img-wrap:last').height();
 
-    if ((pageHeight >= (imgOffset + 200) ) && (run == false)) {
+    var offsetForImages = 140
+    if (window.innerWidth <= 550) { offsetForImages = 50; };
+
+    if ((pageHeight >= (imgOffset + offsetForImages) ) && (run == false)) {
         run = true;
         loadPhotoBatch((totalPhotos - photosLeft), initPhotoLoad);
         setTimeout(function() { run = false }, 300);
@@ -318,7 +341,7 @@ var photographyFeatures  = function () {
   //load photos urls in to array
   loadPhotoFolder('photography/vancouver-web', 21, 'vancouver-');
   loadPhotoFolder('photography/nz-web', 32, 'nz-');
-  loadPhotoFolder('photography/rome-web', 21, 'rome-');
+  loadPhotoFolder('photography/rome-web', 22, 'rome-');
   loadPhotoFolder('photography/canada-web', 30, 'canada-');
 
   putImagesOnPage( photoUrls );
@@ -361,6 +384,6 @@ if ( $('#illustration-body').length ) {
 
 
 // funky console message
-console.log('%cThanks for inspecting my site!','font-family: "Open sans",Helvetica,Arial,sans-serif;font-weight: 400;font-size:21px;color:#3f88e8;');
+console.log('%cHey ;)','font-family: "Open sans",Helvetica,Arial,sans-serif;font-weight: 400;font-size:21px;color:#5500FF;');
 
 });   //close document.ready

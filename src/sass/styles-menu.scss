@@ -9,77 +9,94 @@
 	@include changeCol;
 	opacity: 1;
 	text-align: right;
-	height: 60px;
+	height: 70px;
 	width: 100%;
-	position: fixed;
-	bottom: 0;
+	position: relative;
+	top: 0;
 	left: 0;
+	box-shadow: 0 2px 5px rgba(0,0,30,.2);
 
 	z-index: 10;
 
 	@media screen and (max-width: 480px) {
-		height: 40px;
+		height: 50px;
 	}
 }
 
-.menu-button-text {
-	height: 30px;
+.home-icon {
 	position: fixed;
-	bottom: 15px;
-	right: 20px;
-	opacity: 1;
-	transition: all $short ease;
+	z-index: 505;
+	top: 20px;
+	left: 20px;
+	@include cssSprite ( $home-icon );
 	cursor: pointer;
 
-	z-index: 15;
+	@media screen and (max-width: 480px) { top: 10px; }
+}
 
-	@media screen and (max-width: 480px) {
-		bottom: 10px;
-		height: 20px;
+.menu-link {
+	position: fixed;
+	top: 18px;
+	right: 20px;
+	width: 46px;
+	z-index: 515;
+	height: 40px;
+
+	@media screen and (max-width: 480px) { top: 8px; }
+	
+	&:hover {
+		cursor: pointer;
+		.menu-open { color: $lblue;	}
+
+		.menu-button-pseudos::before, .menu-button-pseudos::after {
+			transition: all $short ease;
+			background-color: $lblue;
+		} 
 	}
+}
+
+.menu-link-content {
+	width: 100%;
+}
+
+.menu-open {
+	position: absolute;
+	right: 0px;
+	top: 5px;
+	font-size: 21px;
+	color: white;
+	z-index: 515;
+	width: 100%;
+	text-align: center;
+	transition: all $short ease;
 }
 
 .menu-button-pseudos {
 	cursor: pointer;
 	position: fixed;
-	z-index:100;
+	z-index: 515;
+
+		&::before, &::after {
+			content: " ";
+			background-color: white;
+	    width: 46px;
+	    height: 2px;
+	    position: fixed;
+	    right: 20px;
+	    border-radius: 20px;
+	    transition: all $med ease;
+		}
 
 		&::before {
-			content: " ";
-			background-color: $ink;
-			width: 17px;
-			height: 4px;
-			position: fixed;
-			bottom: 15px;
-			right: 69px;
-
-			transition: all $short ease;
+			top: 18px;
 		}
 		&::after {
-			content: " ";
-			background-color: $ink;
-			width: 17px;
-			height: 4px;
-			position: fixed;
-			bottom: 40px;
-			right: 69px;
-
-			transition: all $long ease;
+	    top: 50px;
 		}
 
 		@media screen and (max-width: 480px) {
-			&::before {
-				width: 12px;
-				height: 3px;
-				bottom: 10px;
-				right: 52px;
-			}
-			&::after {
-				width: 12px;
-				height: 3px;
-				bottom: 27px;
-				right: 52px;
-			}
+			&::before {	top: 8px;	}
+			&::after { top: 40px;	}
 		}
 	}
 
@@ -91,8 +108,8 @@
 	background: $ink;
 	opacity: 0.95;
 	left: 150%;
-	padding-top: 3em;
-	z-index: 10;
+	padding-top: 5em;
+	z-index: 510;
 
 	transition: all $med ease;
 
@@ -126,32 +143,35 @@
 	}
 }
 
-input[type=checkbox]:checked ~ .menu-button-text {
+input[type=checkbox]:checked ~ .menu-link .menu-link-content .menu-open {
+  transform: translateX(-50px);
   opacity: 0;
 }
 	
-input[type=checkbox]:checked ~ .menu-button-pseudos{
+input[type=checkbox]:checked ~ .menu-link .menu-link-content .menu-button-pseudos{
+	
+	&::before, &::after {
+		width: 21px;
+		height: 4px;
+		border-radius: 0;
+	}
 
 	&::before {
 		transform: rotate(45deg);
-		bottom: 34px;
+		top: 27px;
 		right: 29px;
 		background-color: $coral;
 	}
 	&::after {
 		transform: rotate(135deg);
-		bottom: 24px;
+		top: 40px;
 		right: 29px;
 		background-color: $coral;
 	}
 
 	@media screen and (max-width: 480px) {
-		&::before {
-			bottom: 23px;
-		}
-		&::after {
-			bottom: 16px;
-		}
+		&::before {	top: 17px;	}
+		&::after { top: 30px;	}
 	}
 }
 

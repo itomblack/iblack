@@ -37,6 +37,15 @@ h4 {
 	color: $ink;
 }
 
+h5 {
+	color: $dblue;
+	font-size: 14px;
+	line-height: 21px;
+	margin: 0;
+
+	span { color: $ink;	}
+}
+
 h6 {
 	color: $yellow;
 	font-size: 0.875em;
@@ -57,7 +66,7 @@ p {
 	color: $ink;
 	font-size: 1em;
 	line-height: 1.5em;
-	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	font-family: 'Work Sans', helvetica, arial, sans-serif;
 
 	a {
 		color: $coral;
@@ -73,11 +82,11 @@ p {
 .std-button {
   @include box-sizing;
   font-family: 'Oswald', helvetica, arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  background-color: $ink;
+  background-color: $purple;
   color: white;
   padding: 12px 16px;
   width: 150px;
@@ -89,13 +98,13 @@ p {
   border-radius: 4px;
 
   &:hover {
-    background-color: $purple;
+    background-color: $ink;
   }
 
 }
 
 .contact-button {
-	padding: 12px 16px 12px 57px;
+	padding: 13px 16px 13px 57px;
 	margin: 0 .35em .6em .35em;
 	width: 140px;
 	display: inline-block;
@@ -106,4 +115,11 @@ p {
 	  left: 16px;
 	  top: 8px;
 	}
+
+	 &::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 10px;
+  }
 }
