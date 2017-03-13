@@ -76,8 +76,9 @@ ul {
 .menu-open {
   position: absolute;
   right: 0px;
-  top: 5px;
-  font-size: 21px;
+  top: 6px;
+  font-size: 17px;
+  font-weight: 400;
   color: white;
   z-index: 515;
   width: 100%;
@@ -85,12 +86,12 @@ ul {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
-/* line 74, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+/* line 75, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
 .menu-button-pseudos {
   cursor: pointer;
   position: fixed;
   z-index: 515; }
-  /* line 79, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+  /* line 80, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
   .menu-button-pseudos::before, .menu-button-pseudos::after {
     content: " ";
     background-color: white;
@@ -101,21 +102,21 @@ ul {
     border-radius: 20px;
     -webkit-transition: all 0.55s ease;
     transition: all 0.55s ease; }
-  /* line 90, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+  /* line 91, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
   .menu-button-pseudos::before {
     top: 18px; }
-  /* line 93, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+  /* line 94, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
   .menu-button-pseudos::after {
     top: 50px; }
   @media screen and (max-width: 480px) {
-    /* line 98, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+    /* line 99, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
     .menu-button-pseudos::before {
       top: 8px; }
-    /* line 99, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+    /* line 100, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
     .menu-button-pseudos::after {
       top: 40px; } }
 
-/* line 103, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+/* line 104, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
 .menu-panel {
   position: fixed;
   width: 100%;
@@ -128,7 +129,7 @@ ul {
   z-index: 510;
   -webkit-transition: all 0.55s ease;
   transition: all 0.55s ease; }
-  /* line 116, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+  /* line 117, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
   .menu-panel ul li {
     width: 100%;
     width: -webkit-calc(100% - 64px);
@@ -140,7 +141,7 @@ ul {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     font-size: 21px; }
-    /* line 126, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+    /* line 127, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
     .menu-panel ul li:hover {
       background-color: #7700FF; }
     @media screen and (max-width: 480px) {
@@ -150,12 +151,11 @@ ul {
         font-size: 18px;
         width: -webkit-calc(100% - 32px);
         width: calc(100% - 32px); } }
-  /* line 138, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+  /* line 139, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
   .menu-panel a {
-    font-family: 'Oswald', helvetica, arial, sans-serif;
     text-decoration: none;
-    text-transform: uppercase;
-    color: white; }
+    color: white;
+    font-weight: 700; }
 
 /* line 146, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
 input[type=checkbox]:checked ~ .menu-link .menu-link-content .menu-open {

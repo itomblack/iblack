@@ -461,13 +461,11 @@ ul {
     text-align: left; }
   /* line 369, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-content h4 {
-    text-transform: uppercase;
-    font-weight: 400;
+    text-transform: capitalize;
     color: #000030;
     margin-top: 2em; }
   /* line 376, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-content h5 {
-    text-transform: uppercase;
     margin-top: 1em; }
     /* line 380, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .project-content h5:first-of-type {

@@ -197,90 +197,83 @@ ul {
   list-style: none; }
 
 /* line 5, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
-ul, h1, h2, h3, h4 {
-  margin: 0 0 0 0; }
+ul, h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0 0;
+  font-family: 'Work Sans', helvetica, arial, sans-serif; }
 
-/* line 9, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+/* line 10, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
 h1, h2, h3 {
   line-height: 1.2em;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-weight: 700;
   opacity: 1; }
 
 /* line 15, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
 h1 {
-  font-family: 'Oswald', helvetica, arial, sans-serif;
   font-size: 3.2em;
   color: #000030; }
 
-/* line 21, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+/* line 20, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
 h2 {
-  font-family: 'Oswald', helvetica, arial, sans-serif;
   font-size: 2.6em;
   color: #000030;
   margin-bottom: 10px; }
 
-/* line 28, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+/* line 26, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
 h3 {
-  font-family: 'Oswald', helvetica, arial, sans-serif;
   font-size: 2em;
   color: #000030; }
 
-/* line 34, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+/* line 31, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
 h4 {
-  font-family: 'Oswald', helvetica, arial, sans-serif;
   font-size: 1.4em;
   color: #000030; }
 
-/* line 40, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+/* line 36, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
 h5 {
   color: #4d45ff;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 24px;
   margin: 0; }
-  /* line 46, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+  /* line 42, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
   h5 span {
     color: #000030; }
 
-/* line 49, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+/* line 45, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
 h6 {
   color: #3f88e8;
   font-size: 0.875em;
   font-weight: 300;
   padding: 0;
   line-height: 1em;
-  margin: 0;
-  font-family: 'Oswald', helvetica, arial, sans-serif; }
-  /* line 59, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+  margin: 0; }
+  /* line 54, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
   a h6:hover {
     color: #3f88e8; }
 
-/* line 65, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+/* line 60, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
 p {
   color: #000030;
   font-size: 1em;
   line-height: 1.5em;
   font-family: 'Work Sans', helvetica, arial, sans-serif; }
-  /* line 71, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+  /* line 66, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
   p a {
     color: #3f88e8;
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    /* line 76, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+    /* line 71, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
     p a:hover {
       color: #4d45ff; }
 
-/* line 82, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+/* line 77, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
 .std-button {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Oswald', helvetica, arial, sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-weight: 600;
   text-decoration: none;
   text-align: center;
   background-color: #7700FF;
@@ -295,23 +288,23 @@ p {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border-radius: 4px; }
-  /* line 100, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+  /* line 93, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
   .std-button:hover {
     background-color: #000030; }
 
-/* line 106, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+/* line 99, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
 .contact-button {
-  padding: 13px 16px 13px 57px;
+  padding: 13px 16px 13px 52px;
   margin: 0 0.35em 0.6em 0.35em;
   width: 140px;
   display: inline-block; }
-  /* line 112, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+  /* line 105, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
   .contact-button img {
     height: 26px;
     position: absolute;
     left: 16px;
     top: 8px; }
-  /* line 119, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
+  /* line 112, /Users/itomblack/Repos/iblack/src/sass/_fonts.scss */
   .contact-button::before {
     content: "";
     position: absolute;
@@ -797,8 +790,9 @@ ul {
 .menu-open {
   position: absolute;
   right: 0px;
-  top: 5px;
-  font-size: 21px;
+  top: 6px;
+  font-size: 17px;
+  font-weight: 400;
   color: white;
   z-index: 515;
   width: 100%;
@@ -806,12 +800,12 @@ ul {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
-/* line 74, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+/* line 75, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
 .menu-button-pseudos {
   cursor: pointer;
   position: fixed;
   z-index: 515; }
-  /* line 79, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+  /* line 80, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
   .menu-button-pseudos::before, .menu-button-pseudos::after {
     content: " ";
     background-color: white;
@@ -822,21 +816,21 @@ ul {
     border-radius: 20px;
     -webkit-transition: all 0.55s ease;
     transition: all 0.55s ease; }
-  /* line 90, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+  /* line 91, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
   .menu-button-pseudos::before {
     top: 18px; }
-  /* line 93, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+  /* line 94, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
   .menu-button-pseudos::after {
     top: 50px; }
   @media screen and (max-width: 480px) {
-    /* line 98, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+    /* line 99, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
     .menu-button-pseudos::before {
       top: 8px; }
-    /* line 99, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+    /* line 100, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
     .menu-button-pseudos::after {
       top: 40px; } }
 
-/* line 103, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+/* line 104, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
 .menu-panel {
   position: fixed;
   width: 100%;
@@ -849,7 +843,7 @@ ul {
   z-index: 510;
   -webkit-transition: all 0.55s ease;
   transition: all 0.55s ease; }
-  /* line 116, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+  /* line 117, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
   .menu-panel ul li {
     width: 100%;
     width: -webkit-calc(100% - 64px);
@@ -861,7 +855,7 @@ ul {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     font-size: 21px; }
-    /* line 126, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+    /* line 127, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
     .menu-panel ul li:hover {
       background-color: #7700FF; }
     @media screen and (max-width: 480px) {
@@ -871,12 +865,11 @@ ul {
         font-size: 18px;
         width: -webkit-calc(100% - 32px);
         width: calc(100% - 32px); } }
-  /* line 138, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
+  /* line 139, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
   .menu-panel a {
-    font-family: 'Oswald', helvetica, arial, sans-serif;
     text-decoration: none;
-    text-transform: uppercase;
-    color: white; }
+    color: white;
+    font-weight: 700; }
 
 /* line 146, /Users/itomblack/Repos/iblack/src/sass/styles-menu.scss */
 input[type=checkbox]:checked ~ .menu-link .menu-link-content .menu-open {
@@ -1156,7 +1149,7 @@ ul {
   height: 26px;
   background-repeat: no-repeat;
   background-image: url(../img/icons/icons.svg);
-  background-position: -105px -18px; }
+  background-position: -105px -19px; }
 
 /* line 67, /Users/itomblack/Repos/iblack/src/sass/styles-contact.scss */
 .icon-tw .moveUp1 {
@@ -2315,13 +2308,11 @@ ul {
     text-align: left; }
   /* line 369, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-content h4 {
-    text-transform: uppercase;
-    font-weight: 400;
+    text-transform: capitalize;
     color: #000030;
     margin-top: 2em; }
   /* line 376, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
   .project-content h5 {
-    text-transform: uppercase;
     margin-top: 1em; }
     /* line 380, /Users/itomblack/Repos/iblack/src/sass/styles-design.scss */
     .project-content h5:first-of-type {
